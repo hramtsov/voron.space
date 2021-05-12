@@ -1,0 +1,346 @@
+<template>
+  <!-- PAGE -->
+  <div class="page">
+    <!-- MAIN WRAPPER -->
+    <div class="pageWrapper">
+      <!-- HEADER -->
+      <div class="pageHeader" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="pageHeader-content">
+          <div
+            :class="[
+              'pageHeader-menuBtn',
+              [menuOpen ? 'pageHeader-menuBtn-Active' : ''],
+            ]"
+            @click="menuOpen = !menuOpen"
+          >
+            <span class="pageHeader-menuBtnLine"></span>
+          </div>
+
+          <div :class="['sidebarMenu', [menuOpen ? 'sidebarMenu-Active' : '']]">
+            <div class="sidebarMenu-side"></div>
+            <div class="sidebarMenu-side sidebarMenu-side-Right"></div>
+            <div class="sidebarMenu-wrapper">
+              <div
+                class="sidebarMenu-scroller"
+                @click.self="menuOpen = !menuOpen"
+              >
+                <div class="sidebarMenu-content">
+                  <nav class="sidebarMenu-main">
+                    <ul>
+                      <li>
+                        <nuxt-link to="/" exact exact-active-class="active"
+                          >Каршеринг</nuxt-link
+                        >
+                      </li>
+                      <li>
+                        <nuxt-link to="/delivery/" exact-active-class="active"
+                          >Срочная доставка</nuxt-link
+                        >
+                      </li>
+                      <li>
+                        <nuxt-link
+                          to="/partner/"
+                          exact
+                          exact-active-class="active"
+                          >Подключить автомобиль</nuxt-link
+                        >
+                      </li>
+                    </ul>
+                  </nav>
+                  <nav class="sidebarMenu-other">
+                    <ul>
+                      <li>
+                        <a href="https://voron.help">База знаний и правил</a>
+                      </li>
+                      <li>
+                        <nuxt-link
+                          to="/deposit/"
+                          exact
+                          exact-active-class="active"
+                          >Страховой депозит</nuxt-link
+                        >
+                      </li>
+                      <li>
+                        <nuxt-link
+                          to="/about/"
+                          exact
+                          exact-active-class="active"
+                          >О сервисе</nuxt-link
+                        >
+                      </li>
+                      <li>
+                        <nuxt-link
+                          to="/legal/agreement/"
+                          exact
+                          exact-active-class="active"
+                          >Договор-оферта</nuxt-link
+                        >
+                      </li>
+                      <li>
+                        <nuxt-link
+                          to="/contact/"
+                          exact
+                          exact-active-class="active"
+                          >Контакты</nuxt-link
+                        >
+                      </li>
+                    </ul>
+                  </nav>
+                  <div class="sidebarMenu-phones">
+                    <a
+                      href="tel:+7 800 555 06 79"
+                      class="sidebarMenu-phonesLink sidebarMenu-phonesLink-RU"
+                      >8 800 555 06 79</a
+                    >
+                  </div>
+                </div>
+                <div class="sidebarMenu-scrollerBar-wrapper">
+                  <div
+                    class="sidebarMenu-scrollerBar"
+                    style="height: 0px"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a href="/" class="pageHeader-logo"></a>
+          <div class="pageHeader-phones">
+            <a class="pageHeader-phonesLink" href="tel:+7 800 555 06 79"
+              >8 800 555 06 79</a
+            >
+            <!--   -->
+            <div class="pageHeader-phonesListContainer">
+              <nav class="pageHeader-phonesList">
+                <ul>
+                  <li data-tel="8 800 555 06 79">Россия</li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <nav class="pageHeader-menu">
+            <ul>
+              <li>
+                <nuxt-link to="/" exact exact-active-class="active"
+                  ><span>Каршеринг</span></nuxt-link
+                >
+              </li>
+
+              <li>
+                <nuxt-link to="/delivery/" exact exact-active-class="active"
+                  ><span>Доставка</span></nuxt-link
+                >
+              </li>
+              <li>
+                <nuxt-link to="/partner/" exact exact-active-class="active"
+                  ><span>Подключить авто</span></nuxt-link
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!-- /HEADER -->
+
+      <Nuxt />
+
+      <div class="pageFooter-Protector"></div>
+    </div>
+    <!-- /MAIN WRAPPER -->
+    <!-- FOOTER -->
+    <footer class="pageFooter" itemscope itemtype="http://schema.org/WPFooter">
+      <div class="pageFooter-content">
+        <div class="pageFooter-navi">
+          <div class="pageFooter-naviCol">
+            <div class="pageFooter-title">Меню</div>
+            <nav class="pageFooter-menu">
+              <ul>
+                <li>
+                  <nuxt-link to="/" exact exact-active-class="active"
+                    >Каршеринг</nuxt-link
+                  >
+                </li>
+
+                <li>
+                  <nuxt-link to="/delivery/" exact exact-active-class="active"
+                    >Срочная доставка</nuxt-link
+                  >
+                </li>
+
+                <li>
+                  <nuxt-link to="/partner/" exact exact-active-class="active"
+                    >Подключить автомобиль</nuxt-link
+                  >
+                </li>
+
+                <li>
+                  <a href="https://voron.help">База знаний и правил</a>
+                </li>
+                <li>
+                  <nuxt-link to="/deposit/" exact exact-active-class="active"
+                    >Страховой депозит</nuxt-link
+                  >
+                </li>
+                <li>
+                  <nuxt-link to="/about/" exact exact-active-class="active"
+                    >О сервисе</nuxt-link
+                  >
+                </li>
+                <li>
+                  <a href="https://i.voron.io" target="_blank">Партнёрам</a>
+                </li>
+                <li>
+                  <nuxt-link to="/contact/" exact exact-active-class="active"
+                    >Контакты</nuxt-link
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="pageFooter-naviCol">
+            <div class="pageFooter-title">Поддержка</div>
+            <div class="pageFooter-support">
+              <a
+                href="tel:+7 800 555 06 79"
+                class="pageFooter-supportLink pageFooter-supportLinkFlag pageFooter-supportLinkFlag-RU"
+                >8 800 555 06 79</a
+              >
+              <a
+                class="pageFooter-supportLink pageFooter-supportLink-Email"
+                href="mailto:i@voron.io"
+                >i@voron.io</a
+              >
+            </div>
+          </div>
+          <div id="appstore" class="pageFooter-naviCol">
+            <div class="pageFooter-title">Приложение</div>
+
+            <div class="pageFooter-appsLinks">
+              <a
+                style="color: #fff"
+                target="_blank"
+                :href="`https://app.voron.io/${$store.state.source}`"
+                class="pageFooter-appsLink pageFooter-appsLink-Apple"
+                ><span class="pageFooter-appsLinkText"></span
+              ></a>
+              <a
+                style="color: #fff"
+                target="_blank"
+                :href="`https://app.voron.io/${$store.state.source}`"
+                class="pageFooter-appsLink pageFooter-appsLink-Google pageFooter-appsLink-Current"
+                onclick2="Everentcar.Service.goGoogleMarketPage();"
+                ><span class="pageFooter-appsLinkText"></span
+              ></a>
+            </div>
+            <div class="pageFooter-publicLinks">
+              <div
+                class="pageFooter-publicLink pageFooter-publicLink-FB"
+                onclick="Everentcar.Service.goFbPage();"
+              ></div>
+              <div
+                class="pageFooter-publicLink pageFooter-publicLink-Instagram"
+                onclick="Everentcar.Service.goInstagramPage();"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pageFooter-infoLinks">
+          <nuxt-link to="/legal/agreement/" exact exact-active-class="active"
+            >Договор-оферта сервиса VORON</nuxt-link
+          >
+          <nuxt-link
+            to="/legal/personal-data/"
+            exact
+            exact-active-class="active"
+            >Обработка персональных данных</nuxt-link
+          >
+          <nuxt-link
+            to="/legal/privacy-policy/"
+            exact
+            exact-active-class="active"
+            >Политика конфиденциальности</nuxt-link
+          >
+          <nuxt-link to="/legal/sign-act/" exact exact-active-class="active"
+            >Акт приема-передачи</nuxt-link
+          >
+        </div>
+      </div>
+    </footer>
+    <!-- /FOOTER -->
+  </div>
+  <!-- /PAGE -->
+
+  <!-- </div>
+  </div> -->
+</template>
+
+<script>
+export default {
+  data: () => ({
+    width: 0,
+    classes: "",
+    menuOpen: false,
+  }),
+  head() {
+    return {
+      bodyAttrs: {
+        class: this.classes ? this.classes : "",
+      },
+    };
+  },
+  created() {
+    var source = this.$route.query.source;
+    if (typeof source !== "undefined" && source != null) {
+      this.$store.commit("set_source", source);
+    }
+
+    window.addEventListener("resize", this.updateWidth);
+    this.width = window.innerWidth;
+
+    this.loadJquery();
+    this.loadFotorama();
+
+    this.$router.beforeEach((to, from, next) => {
+      this.menuOpen = false;
+      next((vm) => {
+        console.log("prev rout is: " + vm.prevRoute);
+      });
+    });
+  },
+  methods: {
+    menu() {
+      this.menuOpen = !this.menuOpen;
+    },
+    updateWidth() {
+      this.width = window.innerWidth;
+    },
+
+    // add script tags to head
+    loadFotorama() {
+      let script = document.createElement("script");
+      script.src =
+        "https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js";
+      document.documentElement.firstChild.appendChild(script);
+    },
+    loadJquery() {
+      let script = document.createElement("script");
+      script.src =
+        "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js";
+      document.documentElement.firstChild.appendChild(script);
+    },
+  },
+  watch: {
+    width: function (newQuestion, oldQuestion) {
+      if (this.width < 667) {
+        this.classes = "body-MobileMode body-LteTabletMode";
+      }
+      if (this.width >= 667 && this.width < 1024) {
+        this.classes = "body-TabletMode body-LteTabletMode";
+      }
+
+      this.head;
+    },
+  },
+};
+</script>
