@@ -24,7 +24,6 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   // import '@splidejs/splide/dist/css/themes/splide-default.min.css';
   css: [
-    '@/assets/css/fotorama.css',
     '@/assets/css/main.css',
     '@/assets/css/mobile.css',
     '@/static/fa/css/all.min.css',
