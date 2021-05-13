@@ -65,8 +65,4 @@ export default {
 .advantages-item.advantages-item-active a .icon-adv:before {
   opacity: 0.9;
 }
-
-.icon-adv img {
-  max-width: 50px;
-}
 </style>

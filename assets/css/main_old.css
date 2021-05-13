@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 
-/* import '@splidejs/splide/dist/css/themes/splide-default.min.css'; */
 
 /* vendor */
 /*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
@@ -3625,7 +3624,14 @@ select, select option {
     line-height:normal
 }
 
+.body-LteTabletMode .autoComplete.autoComplete-City .autoCompleteInput {
+    padding: 9px 35px 10px 10px;
+    min-height:37px
+}
 
+.body-LteTabletMode .autoComplete.autoComplete-City:after {
+    margin-top:11px
+}
 
 .autoComplete.autoComplete-City2 .autoCompleteInput {
     color: #000;
@@ -5280,6 +5286,13 @@ select, select option {
     display:block
 }
 
+.body-MobileMode .dropdown-tab .dropdown-tab-content {
+    margin-left:0
+}
+
+.body-MobileMode .dropdown-tab .dropdown-tab-header .dropdown-tab-header-text {
+    width:65%
+}
 
 .fancybox-nav.fancybox-next {
     top: 50%;
@@ -5417,7 +5430,43 @@ select, select option {
     border-radius:50%
 }
 
+.body-MobileMode .ui-slider.ui-slider-horizontal {
+    width: 100%;
+    position: relative;
+    background-color: #fff;
+    height: 10px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    display:block
+}
 
+.body-MobileMode .ui-slider.ui-slider-horizontal .ui-slider-range.ui-widget-header {
+    height: 10px;
+    background-color: #02bbcf;
+    position: absolute;
+    display:block
+}
+
+.body-MobileMode .ui-slider.ui-slider-horizontal .ui-slider-range.ui-widget-header.ui-corner-all {
+    -moz-border-radius: 15px;
+    border-radius:15px
+}
+
+.body-MobileMode .ui-slider.ui-slider-horizontal .ui-slider-handle.ui-state-default {
+    height: 28px;
+    width: 28px;
+    background-color: #02bbcf;
+    display: block;
+    position: absolute;
+    margin-left: -14px;
+    margin-top: -9px;
+    outline:none
+}
+
+.body-MobileMode .ui-slider.ui-slider-horizontal .ui-slider-handle.ui-state-default.ui-corner-all {
+    -moz-border-radius: 50%;
+    border-radius:50%
+}
 
 .datePickWin-next:before {
     font-family: fontello;
@@ -6740,6 +6789,9 @@ select, select option {
     background: #000;
 }
 
+.body-LteTabletMode .pageWrapper {
+    margin-bottom:-6.5rem
+}
 
 .pageWrapper:after {
     content: "";
@@ -6747,13 +6799,18 @@ select, select option {
     height:17.375rem
 }
 
+.body-LteTabletMode .pageWrapper:after {
+    height:6.5rem
+}
 
 .pageContent {
     position: relative;
     min-height:500px
 }
 
-
+.body-LteTabletMode .pageContent {
+    min-height:inherit
+}
 
 .text-center {
     text-align:center
@@ -6915,7 +6972,9 @@ select, select option {
     clear:both
 }
 
-
+.body-LteTabletMode .chat.chat-Visible, .chatBox-cont .chatBox-message, .chatBox-cont .chatBox-noMsgs:after {
+    width:100%
+}
 
 .chatBox-cont .chatBox-messageUserAvatar, .chatBox-cont .chatBox-messageUserName {
     display:none
@@ -7198,8 +7257,119 @@ select, select option {
     transition:color .1s ease
 }
 
+.body-LteTabletMode .chat {
+    width:78px
+}
 
+.body-LteTabletMode .chat .chat-openButton {
+    display:none
+}
 
+.body-LteTabletMode .chat.chat-Visible .chat-mobileClose {
+    display:block
+}
+
+.body-LteTabletMode .chat .chat-mobileClose {
+    height: 48px;
+    color: #fff;
+    background-color: #26272b;
+    padding-top: 15px;
+    padding-left: 15px;
+    font-size: 12px;
+    font-weight: 600;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index:4
+}
+
+.body-LteTabletMode .chat .chat-mobileClose:after {
+    content: "";
+    background-image: url(static/images/ico/chat-close-icon.png);
+    float: right;
+    margin-right: 15px;
+    display: block;
+    width: 18px;
+    height: 18px;
+    -moz-background-size: contain;
+    background-size:contain
+}
+
+.body-LteTabletMode .chat .sidebarChat {
+    height: 100% !important;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right:0
+}
+
+.body-LteTabletMode .chat .sidebarChat .chatBox-cont {
+    height: 100% !important;
+    width:100%
+}
+
+.body-LteTabletMode .chat .sidebarChat .chatBox-cont .chatBox-list {
+    height: 100% !important;
+    padding-top: 73px;
+    padding-bottom: 50px;
+    padding-right:8px
+}
+
+.body-LteTabletMode .chat .sidebarChat .chatBox-cont .chatBox-noMsgs {
+    width:250px
+}
+
+.body-LteTabletMode .chat .sidebarChat .chatBox-cont .chatBox-message {
+    display: inline-block;
+    padding-right:12px
+}
+
+.body-LteTabletMode .chat .sidebarChat .chatBox-cont .chatBox-messageTable {
+    max-width: 255px;
+    width:100%
+}
+
+.body-LteTabletMode .chat .sidebarChat .chatBox-cont .chatBox-messageText {
+    max-width:252px
+}
+
+.body-LteTabletMode .chat .sidebarChat .chatBox-cont .chatBox-message.chatBox-message-companion {
+    margin-left:-2px
+}
+
+.body-LteTabletMode .chat .sidebarChat .chatBox-cont .chatBox-tool {
+    position: fixed;
+    width: 100%;
+    bottom:0
+}
+
+.body-LteTabletMode .chat .sidebarChat .chatBox-cont .chatBox-messageSubmit {
+    outline:none
+}
+
+.body-LteTabletMode .chat .sidebarChat .chatBox-cont .chatBox-listWrap {
+    height:100%
+}
+
+.body-MobileMode .chatBox-cont .chatBox-messageSubmit {
+    padding-right:0
+}
+
+.body-MobileMode .chatBox-cont .chatBox-message.chatBox-message-companion .chatBox-messageUserAvatar {
+    display:none
+}
+
+.body-MobileMode .chatBox-cont .chatBox-message.chatBox-message-companion .chatBox-messageUserName {
+    margin-top: 0;
+    margin-left: 8px;
+    margin-bottom:5px
+}
+
+.body-MobileMode .chatBox-cont .chatBox-message.chatBox-message-companion .chatBox-messageText {
+    margin-top: 0;
+    margin-left:8px
+}
 
 .section-index-main {
     background-repeat: no-repeat;
@@ -8148,7 +8318,9 @@ select, select option {
     margin:0 20px 0 0
 }
 
-
+.body-LteTabletMode .car-order-form .car-price-result .car-result-photo {
+    display:block
+}
 
 @media only screen and (max-width: 667px) {
     .car-order-form .car-price-result .car-result-photo {
@@ -8173,7 +8345,10 @@ select, select option {
     text-transform:uppercase
 }
 
-
+.body-LteTabletMode .car-order-form .car-price-result .car-result-car-name {
+    margin: 0 0 10px;
+    font-size:.875em
+}
 
 .car-order-form .car-price-result .car-result-h {
     color: #808289;
@@ -8192,13 +8367,21 @@ select, select option {
     margin-left:220px
 }
 
-
+.body-LteTabletMode .car-order-form .car-price-result .car-result-body {
+    display: block;
+    margin-left: 0;
+    padding:0
+}
 
 .car-order-form .car-price-result .car-result-body p {
     font-size: 13px;
     color:#2c2e37
 }
 
+.body-LteTabletMode .car-order-form .car-price-result .car-result-body p {
+    padding-bottom: 0;
+    margin-bottom:10px
+}
 
 .car-order-form .car-price-result .car-chosen-options {
     padding:0
@@ -9737,6 +9920,9 @@ select, select option {
     clear:both
 }
 
+.body-MobileMode .mobile-separator {
+    display: block
+}
 /* /main */
 /* DONE IN 0.0008 */
 
@@ -9809,6 +9995,9 @@ box-shadow:0 5px 20px rgba(0,0,0,0.25);
 .loadWin-title{font-size:20px;line-height:24px;color:#777;text-transform:uppercase;letter-spacing:2px;}
 .loadWin-text{font-size:14px;line-height:16px;color:#aaa;letter-spacing:0.5px;}
 .loadWin-title + .loadWin-text{margin-top:20px;}
+/* Мобильная версия окна */
+.body-MobileMode .loadWinBgd{background:#fff;}
+.body-MobileMode .loadWin{box-shadow:none;}
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*///////////////////////////////////////////	ВСПЛЫВАЮЩИЕ СООБЩЕНИЯ	//////////////////////////////////////////*/
@@ -9832,6 +10021,10 @@ box-shadow:0 5px 20px rgba(0,0,0,0.25);
 .msgBar-listItem-Fail{background:#ff5a6a;word-break:break-all;}
 .msgBar-listItem-Fail:before {color:#ff5a6a;}
 
+/* Мобильная версия */
+.body-MobileMode #msgBar { width: auto; left: 10px; top:56px; }
+.body-MobileMode #msgBar.msgBar-Fixed { top:10px; }
+.body-MobileMode .msgBar-listItem { font-size: 14px; line-height: 18px; }
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*///////////////////////////////////////////	СТИЛИ ДЛЯ РАЗДЕЛОВ САЙТА	//////////////////////////////////////////*/
@@ -10030,6 +10223,8 @@ transition:background 0.1s linear;
 /* информация по тикету */
 .orderForm-ticketInfo{padding:51px 51px;background:#fff;box-shadow:0px 2px 4px -2px rgba(0,0,0,0.3);box-sizing:border-box;margin:0 0 56px 0;}
 .orderForm-ticketInfoText{color:#2E3032;font-size:15px;line-height:20px;}
+.body-TabletMode .orderForm-ticketInfo{padding:51px 30px;}
+.body-MobileMode .orderForm-ticketInfo{padding:30px 10px;}
 
 /* форма на странице заказа, если оформление заказа временно недоступно */
 .orderNAForm{padding:51px 51px;background:#fff;box-shadow:0px 2px 4px -2px rgba(0,0,0,0.3);box-sizing:border-box;}
@@ -10070,8 +10265,11 @@ transition:background 0.1s linear;
 
 /*попап оформления договора*/
 .order-popupRentAgreement{padding:40px 35px;text-align: left;}
+.body-MobileMode .order-popupRentAgreement{padding:40px 15px;}
 .order-popupRentAgreement p{margin: 0px;padding: 0px;text-indent: 54px;font-size: 15px;line-height:20px;}
+.body-MobileMode .order-popupRentAgreement p{text-indent:20px;font-size:14px;line-height:19px;}
 .order-popupRentAgreement h2{text-align: center;margin:30px 0 15px 0;padding:0;color: #777;font-size:20px;line-height:24px;font-weight:600;letter-spacing:1px;}
+.body-MobileMode .order-popupRentAgreement h2{font-size:18px;line-height:22px;}
 .order-popupRentAgreement h2:first-child{margin-top:0;}
 
 /*текст ошибки о том, что введённый промо-код недействителен*/
@@ -10082,7 +10280,7 @@ transition:background 0.1s linear;
 /*================================================================*/
 
 .cabinetHeaderBonus{float:right;text-align:right;text-transform:uppercase;margin:15px 0 0 0;font-size:18px;line-height:18px;letter-spacing:1.5px;color:#808289;}
-
+.body-MobileMode .cabinetHeaderBonus{display:none;}
 .cabinetHeaderBonus-amount{color:#ffcc00;font-weight:600;}
 .cabinetHeaderBonus-info{margin:0 0 0 5px;}
 .cabinetHeaderBonus-info *[data-tooltip]{
@@ -10358,13 +10556,17 @@ body { background: #000; }
 .pageWrapper { margin: 0; }
 .pageContent { min-height: inherit; }
 .pageWrapper:after { display: none; }
+.body-LteTabletMode .pageWrapper { margin: 0; }
 
 .pageSection { background: #FBFBFB; padding: 40px 0; margin-bottom: 40px; position: relative; }
 .pageSection-Dark { background: #000; }
 .pageSection-content { max-width: 1240px; margin: 0 auto; padding: 0 30px; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .pageSection-title { font-size: 30px; color: #141414; line-height: 40px; font-weight:600; margin: 0 0 40px; }
 .pageSection-block { padding: 20px 25px; background: #fff; border: 1px solid #ebebeb; border-radius: 4px; color: #2e3032; }
-
+.body-MobileMode .pageSection { padding: 20px 0; }
+.body-MobileMode .pageSection-content { padding: 0 20px; }
+.body-MobileMode .pageSection-title { font-size: 20px; line-height: 30px; display: block; margin: 0 0 20px; }
+.body-MobileMode .pageSection-block { padding: 17px 20px; }
 
 /* Форма и заголовки на титульной */
 .section-index-main { position: relative; }
@@ -10379,12 +10581,23 @@ body { background: #000; }
 .titlePage-searchForm { position: absolute; top: 0; left: 0; width: 100%; padding: 0; }
 .titlePage-searchFormFixed { transition: background-color 1s; position: fixed; z-index: 1; padding: 0 30px; background: #080808;  }
 .titlePage-searchFormProtector { height: 143px; }
-
-
+.body-LteTabletMode .titlePage-searchFormTitle { left: 20px; }
+.body-LteTabletMode .titlePage-searchForm { padding: 0 20px; }
+.body-LteTabletMode .titlePage-searchFormFixed { padding: 0 50px; }
+.body-MobileMode .titlePage-searchFormProtector { height: 97px; }
+.body-MobileMode .titlePage-searchFormTitle { left: 0; }
+.body-MobileMode .titlePage-searchForm { padding: 0; }
+.body-MobileMode .titlePage-searchFormFixed { padding: 0 20px;}
+.body-MobileMode .titlePage-searchFormTitle h2 { font-size: 0.875em; }
 
 /* тень для обложки */
 .section-index-main:after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: -moz-linear-gradient(to top, rgba(17, 17, 17, 0) 50%, rgba(17, 17, 17, 1) 100%); background: -webkit-linear-gradient(to top, rgba(17, 17, 17, 0) 50%, rgba(17, 17, 17, 1) 100%); background: linear-gradient(to bottom, rgba(17, 17, 17, 0) 50%, rgba(17, 17, 17, 1) 100%); }
 
+.body-LteTabletMode .section-index-main .title { width: auto; font-size: 34px; line-height: 44px; padding:0 20px;}
+.body-LteTabletMode .section-index-main .sub-title { font-size: 18px; line-height: 24px; padding:0 20px 80px; }
+.body-MobileMode .section-index-main .title { font-size: 24px; line-height: 36px; }
+.body-MobileMode .section-index-main .sub-title { font-size: 16px; line-height: 22px; }
+/* .body-MobileMode .section-index-main { background-image: url('static/images/illustration/mercedes_v5.jpg'); } */
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*///////////////////////////////////////////   HEADER   /////////////////////////////////////////////*/
@@ -10501,8 +10714,28 @@ width: 130px;
 /***** Адаптив ***********************************************************/
 /*************************************************************************/
 
+.body-LteTabletMode .pageHeader-phones { display: none; }
+.body-LteTabletMode .pageHeader-auth { display: none; }
+.body-LteTabletMode .pageHeader-menu { display: none; }
+.body-LteTabletMode .pageHeader-lang { margin-right: -15px; }
+.body-LteTabletMode .pageHeader-logo { position: absolute; top: 0; left:50%; margin-left: -65px; }
 
+/* Мобильники .body-MobileMode */
+.body-MobileMode .pageFloatHeader-content { padding: 20px; }
+.body-MobileMode .pageFloatHeader-close { right: 4px; }
+.body-MobileMode .pageHeader { height: 46px; }
+.body-MobileMode .pageHeader-logo { height: 46px; top: 2px; }
+.body-MobileMode .pageHeader-menuBtn { height: 46px; }
+.body-MobileMode .pageHeader-menuBtnLine { margin: 0; }
+.body-MobileMode .pageHeader-content { padding: 0 20px; }
+.body-MobileMode .pageHeader-lang { margin-right: -5px; }
+.body-MobileMode .pageHeader-langItem { height: 46px; line-height: 50px; padding: 0 5px; font-size: 12px; }
+.body-MobileMode .pageHeader-langItem:after { display: none; }
 
+.body-MobileMode .pageHeader-Transparent { background: rgba(10, 10, 10, 0.8); }
+.body-MobileMode .pageHeader-Transparent .pageHeader-phonesList { background: rgba(10, 10, 10, 0.8); }
+.body-MobileMode .pageHeader-Transparent .pageHeader-langItemList { background: rgba(10, 10, 10, 0.8); }
+.body-MobileMode .pageHeader-Transparent .pageHeader-authMenu { background: rgba(10, 10, 10, 0.8); }
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*////////////////////////////////////////   СТРАНИЦА ГОРОДА   ///////////////////////////////////////*/
@@ -10665,6 +10898,26 @@ width: 130px;
 .DNBPopup-listItem:hover:before { background: #f7f7f7; box-shadow: 0 0 10px 10px #f7f7f7; }
 .DNBPopup-listItem:hover .DNBPopup-listItemImage { background-color: #fff; }
 
+/* Планшеты + мобильники .body-LteTabletMode */
+.body-LteTabletMode .popup.popup-WhiteBgd .popup-close { top: 10px; right: 10px; }
+.body-LteTabletMode .popup,
+.body-LteTabletMode .popup.popup-CloseAnimation{ animation: none; }
+
+/* Мобильники .body-MobileMode */
+.body-MobileMode .popup.popup-BlackBgd .popup-form { padding: 0 20px 20px; }
+.body-MobileMode .popup.popup-BlackBgd .popup-social { padding: 0 20px; }
+.body-MobileMode .popup.popup-BlackBgd .popup-social .social-btn { margin: 0 10px 10px 0; }
+.body-MobileMode .popup.popup-BlackBgd .popup-header { padding: 30px 20px; }
+.body-MobileMode .popup.popup-BlackBgd .forgot-link { font-size: 12px; padding: 20px 0; }
+
+.body-MobileMode .popup.popup-WhiteBgd { box-shadow: none; border-radius: 0; margin: 0; }
+.body-MobileMode .popup.popup-WhiteBgd .carOptionPopupImg img { border-top-left-radius: 0; border-top-right-radius: 0; }
+.body-MobileMode .popup.popup-WhiteBgd .carOptionPopupName { padding: 35px 40px 28px; font-size: 16px; line-height: 26px; }
+.body-MobileMode .popup.popup-WhiteBgd .carOptionPopupDscr { font-size: 14px; line-height: 20px; }
+.body-MobileMode .popup.popup-WhiteBgd .carOptionPopupArrowMobile:before { font-size: 25px; }
+.body-MobileMode .popup.popup-WhiteBgd .carOptionPopupMobileLeft:before { content: '\e801'; right: 18px; }
+.body-MobileMode .popup.popup-WhiteBgd .carOptionPopupMobileRight:before { content: '\e802'; left: 18px; }
+
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*//////////////////////////////////////////   ПОПАП ЗАЯВКИ НА БРОНИРОВАНИЕ   /////////////////////////////////////////*/
@@ -10712,6 +10965,8 @@ width: 130px;
 .popup.popup-BlackBgd .popup-carsListRequestBtn:hover { color: #fff; background: #ffcc00; }
 .popup.popup-BlackBgd .popup-carsListRequestError { color: red; font-size: 14px; font-weight: 600; line-height: 18px; text-align: center; }
 
+/* адаптация */
+.body-MobileMode .popup.popup-BlackBgd .popup-carsListRequest { padding: 0 20px; }
 
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -10767,6 +11022,23 @@ width: 130px;
 /***** Адаптив ***********************************************************/
 /*************************************************************************/
 
+/* Планшеты + мобильники .body-LteTabletMode */
+.body-LteTabletMode .sidebarMenu { width: 100%; }
+.body-LteTabletMode .sidebarMenu-wrapper { width: 100%; }
+.body-LteTabletMode .sidebarMenu-scroller { width: auto; }
+.body-LteTabletMode .sidebarMenu-wrapper._baron .sidebarMenu-scrollerBar-wrapper { display: none; }
+.body-LteTabletMode .sidebarMenu-authBtn { display: inline-block; }
+.body-LteTabletMode .sidebarMenu-profile { display: block; }
+.body-LteTabletMode .sidebarMenu-UnActive,
+.body-LteTabletMode .sidebarMenu-Active { animation: none; }
+
+/* Мобильники .body-MobileMode */
+.body-MobileMode .sidebarMenu-content { margin-top: 0; padding: 50px 0 30px; }
+.body-MobileMode .sidebarMenu-scroller:before { height: 46px; }
+.body-MobileMode .sidebarMenu-main ul li a { font-size: 16px; line-height: 40px; }
+.body-MobileMode .sidebarMenu-profile ul li a { font-size: 14px; line-height: 32px; }
+.body-MobileMode .sidebarMenu-other ul li a { font-size: 14px; line-height: 32px; }
+.body-MobileMode .sidebarMenu-phonesLink { font-size: 14px; line-height: 32px; }
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*///////////////////////////////////////////   FOOTER   /////////////////////////////////////////////*/
@@ -10858,6 +11130,32 @@ width: 130px;
 /***** Адаптив ***********************************************************/
 /*************************************************************************/
 
+/* Планшеты + мобильники .body-LteTabletMode */
+.body-LteTabletMode .pageFooter-Protector { height: 102px; }
+.body-LteTabletMode .pageFooter { padding: 30px 0; }
+.body-LteTabletMode .pageFooter.pageFooter-MarginBottom { padding-bottom: 95px; }
+.body-LteTabletMode .pageFooter-navi { margin: 0; height: 42px; }
+.body-LteTabletMode .pageFooter-naviCol { display: none; }
+.body-LteTabletMode .pageFooter-naviCol:last-child { display: block; width: 100%; padding: 0; }
+.body-LteTabletMode .pageFooter-title { display: none; }
+.body-LteTabletMode .pageFooter-cities { display: none; }
+.body-LteTabletMode .pageFooter-sites { display: none; }
+.body-LteTabletMode .pageFooter-infoLinks { display: none; }
+.body-LteTabletMode .pageFooter-publicLinks { height: 42px; float: left; margin: 0; }
+.body-LteTabletMode .pageFooter-publicLink { width: 42px; height: 42px; margin-right: 20px; }
+.body-LteTabletMode .pageFooter-publicLink:before,
+.body-LteTabletMode .pageFooter-publicLink:after { width: 42px; height: 42px; font-size: 42px; line-height: 42px; }
+.body-LteTabletMode .pageFooter-appsLink { margin: 0; /*display: none;*/ height: 42px; line-height: 42px; font-size: 16px; padding-left: 45px; width: 150px; }
+.body-LteTabletMode .pageFooter-appsLink:before,
+.body-LteTabletMode .pageFooter-appsLink:after{ left: 12px; margin-top: -12px; width: 24px; height: 24px; font-size: 24px; line-height: 24px; }
+.body-LteTabletMode .pageFooter-appsLink-Current { display: block; }
+.body-LteTabletMode .pageFooter-appsLinks { float: right; }
+
+/* Мобильники .body-MobileMode */
+.body-MobileMode .pageFooter-Protector { height: 82px; }
+.body-MobileMode .pageFooter { padding: 20px 0; }
+.body-MobileMode .pageFooter.pageFooter-MarginBottom { padding-bottom: 85px; }
+.body-MobileMode .pageFooter-content { padding: 0 20px; }
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*///////////////////////////////////////////	СПИСОК АВТО   ////////////////////////////////////////*/
@@ -10869,9 +11167,7 @@ width: 130px;
 
 /* Залоговок и фильтр */
 .carsPresent { background: #111; }
-.carsPresent-title { padding: 100px 0 50px; text-align: center; text-transform: uppercase; font-size: 30px; font-weight:400; margin: 0; color: rgba(255,255,255,0.5); letter-spacing: 0.25px; line-height: 30px;}
-.carsPresent-title-brands { padding: 30px 0 30px; text-align: center; text-transform: uppercase; font-size: 30px; font-weight:400; margin: 0; color: rgba(255,255,255,0.5); letter-spacing: 0.25px; line-height: 30px;}
-.carsPresent-title-models { padding: 30px 0 30px; text-align: center; text-transform: uppercase; font-size: 30px; font-weight:400; margin: 0; color: rgba(255,255,255,0.5); letter-spacing: 0.25px; line-height: 30px;}
+.carsPresent-title { opacity: 0.4; padding: 100px 0 50px; text-align: center; text-transform: uppercase; font-size: 30px; font-weight:400; margin: 0; color: #FFFFFF; letter-spacing: 0.25px; line-height: 30px;}
 .carsPresent-subTitle { padding: 100px 0 50px; text-align: center; font-size: 28px; font-weight:400; margin: 0; color: #D6D6D6; letter-spacing: 0.19px; line-height: 36px;}
 
 .carsPage { background: #111; }
@@ -10982,7 +11278,63 @@ width: 130px;
 /***** Адаптив ***********************************************************/
 /*************************************************************************/
 
+/* Планшеты + мобильники .body-LteTabletMode */
+.body-LteTabletMode .carsList { margin: 0; }
+.body-LteTabletMode .carsList-item { width: 100%; }
+.body-LteTabletMode .carsList-item-Last { margin: 0; }
+.body-LteTabletMode .carsList-itemContent { margin: 0 0 30px; padding: 0; height: 310px; }
+.body-LteTabletMode .carsList-item:last-child .carsList-itemContent { margin: 0; }
+.body-LteTabletMode .carsList-itemImage { bottom: 0; top: -40px; }
+.body-LteTabletMode .carsList-itemContent:before { bottom: 0; top: -40px; }
+.body-LteTabletMode .carsList-itemName { left: 0; bottom: 20px; }
+.body-LteTabletMode .carsList-itemPrice { right: 0; bottom: 20px; }
+.body-LteTabletMode .carsList-itemIcons { display: none; }
+.body-LteTabletMode .carsList-itemHover { display: none; }
+.body-LteTabletMode .carsList-itemDetails { display: block; }
 
+.body-LteTabletMode .carsPresent-title { padding:50px 0 0; font-size: 24px; }
+.body-LteTabletMode .carsPresent-subTitle { padding:50px 0 0; font-size: 24px; }
+.body-LteTabletMode .carsPage-headerFilter { margin-top: 6px; margin-left: -10px; float: none; height: 40px; }
+.body-LteTabletMode .carsPage-headerFilterContainer { padding: 0; margin-top: -10px; }
+.body-LteTabletMode .carsPage-filterCount { float: left; margin-top: -2px; margin-left: -10px; }
+.body-LteTabletMode .carsPage-headerCount { padding-right: 40px; height: 26px;}
+.body-LteTabletMode .carsPage-headerFilterItems:last-child { margin-right: 10px; }
+.body-LteTabletMode .carsPage-headerFilterDiv { display: none; }
+.body-LteTabletMode .carsPage-headerTitle {  width:auto; }
+.body-LteTabletMode .carsPage-headerFilterContainer { position: static; height: auto; }
+.body-LteTabletMode .carsPage-headerFilter { float: none; height: auto; display: inline-block; margin-top: 0; }
+.body-LteTabletMode .carsPage-headerFilterItems { float: none; height: auto; display: inline-block; margin-top: 0; }
+.body-LteTabletMode .carsPage-filterCount { float: none; height: auto; display: inline-block; margin-top: 0; }
+.body-LteTabletMode .autoComplete.autoComplete-City .autoCompleteInput { min-height: 43px; }
+.body-LteTabletMode .autoComplete.autoComplete-City:after { margin-top: 14px; }
+.body-LteTabletMode .carsPage-title { padding: 30px 0 0; font-size: 24px;}
+.body-LteTabletMode .carsPage-title h2 { font-size: 24px; }
+.body-LteTabletMode .carsPage-emptyFreeCars-text { font-size: 14px; line-height: 20px; }
+
+/* Мобильники .body-MobileMode */
+.body-MobileMode .carsPresent-subTitle { padding:50px 0 0; font-size: 17px; color: #E9E9E9; line-height: 22px; font-weight:600; text-align: left; }
+.body-MobileMode .carsList-itemContent { height: 270px; margin: 0; }
+.body-MobileMode .carsList-itemImage { top:-18px; }
+.body-MobileMode .carsList-itemContent:before { top:-18px; }
+.body-MobileMode .carsList-item:first-child .carsList-itemContent {  }
+.body-MobileMode .carsList-itemName { bottom: 18px; }
+.body-MobileMode .carsList-itemPrice { bottom: 18px; }
+.body-MobileMode .carsList-itemPreCaption { font-size: 10px; line-height: 12px; }
+.body-MobileMode .carsList-itemCaption { font-size: 24px; line-height: 36px; height: 36px; }
+.body-MobileMode .carsList-itemSubCaption { font-size: 12px; line-height: 12px; }
+.body-MobileMode .carsList-itemDetails { bottom:0; font-size: 10px; line-height: 10px; }
+
+.body-MobileMode .carsPage-headerCount { font-size:14px; }
+.body-MobileMode .carsPage-headerFilterHead { font-size:14px; padding:5px 30px 5px 10px; }
+.body-MobileMode .carsPage-headerFilterHead:before { top: 8px; }
+.body-MobileMode .carsPage-headerFilterContainer { margin-top: 0; }
+.body-MobileMode .carsPage-filterCount { font-size:14px; padding:5px 30px 5px 10px; margin-top: 0; }
+.body-MobileMode .carsPage-filterCount:before { top: 11px; }
+.body-MobileMode .carsPage-unFreeCarsButton { padding: 0 20px; font-size: 12px; height: 44px; line-height: 44px;}
+.body-MobileMode .carsPage-description { margin: 50px 0 0; }
+.body-MobileMode .autoComplete.autoComplete-City .autoCompleteInput { min-height: 37px; }
+.body-MobileMode .autoComplete.autoComplete-City:after { margin-top: 11px; }
+.body-MobileMode .carsPage-headerTitle { padding:20px 0; font-size: 24px; line-height: 36px; }
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*/////////////////////////////   СПИСОК АВТО ДОЛГОСРОЧНОЙ АРЕНДЫ   //////////////////////////////////*/
@@ -11105,7 +11457,93 @@ width: 130px;
 /***** Адаптив ***********************************************************/
 /*************************************************************************/
 
+/* Планшеты + мобильники .body-LteTabletMode */
+.body-LteTabletMode .carsPageLongTerm-headerTitle { width: auto; }
+.body-LteTabletMode .carsPageLongTerm-title { line-height: 30px; font-size: 24px; margin-bottom: 50px; }
+.body-LteTabletMode .carsPageLongTerm-advantages { padding: 50px 0 30px; }
+.body-LteTabletMode .carsPageLongTerm-advantages-title { font-size: 24px; letter-spacing: 0.2px; margin-bottom: 38px; }
+.body-LteTabletMode .carsPageLongTerm-advantages-items { display: none; }
+.body-LteTabletMode .carsPageLongTerm-advantages-items-Mobile { display: block; }
+.body-LteTabletMode .carsPageLongTerm-advantages-item { width: auto; float: none; height: auto; }
+.body-LteTabletMode .carsPageLongTerm-advantages-itemText { font-size: 16px; line-height: 25px; padding: 0; }
 
+.body-LteTabletMode .carsPageLongTerm-sliderBlock-Fixed .carsPageLongTerm-slider { margin-top: 25px; }
+.body-LteTabletMode .carsPageLongTerm-sliderBlock { padding: 0 30px; }
+.body-LteTabletMode .carsPageLongTerm-slider-inner { width: auto; }
+.body-LteTabletMode .carsPageLongTerm-slider:after { width: 100%; border-radius: 3px; height: 3px; }
+.body-LteTabletMode .carsPageLongTerm-slider:before,
+.body-LteTabletMode .carsPageLongTerm-sliderText-2,
+.body-LteTabletMode .carsPageLongTerm-sliderText-3 { display: none; }
+.body-LteTabletMode .carsPageLongTerm-sliderText { bottom: -10px; }
+.body-LteTabletMode .carsPageLongTerm-slider { margin-bottom: 23px; margin-top: 40px; }
+.body-LteTabletMode .carsPageLongTerm-sliderBlock .carsPageLongTerm-title { font-size: 20px; line-height: 20px; margin-bottom: 0;  }
+.body-LteTabletMode .carsPageLongTerm-slider.ui-slider.ui-slider-horizontal .ui-slider-range.ui-widget-header { height: 3px; }
+.body-LteTabletMode .carsPageLongTerm-slider.ui-slider.ui-slider-horizontal .ui-slider-range.ui-widget-header.ui-corner-all { border-radius: 3px; }
+.body-LteTabletMode .carsPageLongTerm-slider.ui-slider.ui-slider-horizontal .ui-slider-handle.ui-state-default { margin-top: 6px; }
+.body-LteTabletMode .carsPageLongTerm-slider.ui-slider.ui-slider-horizontal .ui-slider-handle.ui-state-default:after { margin-left: -8px; margin-top: -7px; width: 16px; height: 16px; }
+.body-LteTabletMode .carsPageLongTerm-slider-container { margin: 50px auto 0; width: auto; }
+.body-LteTabletMode .carsPageLongTerm-sliderText,
+.body-LteTabletMode .carsPageLongTerm-sliderHandleValue { font-size: 14px; }
+.body-LteTabletMode .carsPageLongTerm-sliderHandleValue { top: -16px; }
+.body-LteTabletMode .carsPageLongTerm-sliderHandleValue[data-value=min] { margin-left: 20px; text-align: left; }
+.body-LteTabletMode .carsPageLongTerm-sliderHandleValue[data-value=max] { margin-left: -80px; text-align: right; }
+
+.body-LteTabletMode .carsListLongTerm { margin: 0; }
+.body-LteTabletMode .carsListLongTerm-item { width: 100%; }
+.body-LteTabletMode .carsListLongTerm-item:first-child {  }
+.body-LteTabletMode .carsListLongTerm-itemContent { margin: 0 0 100px; padding: 0; height: 310px; overflow: inherit; }
+.body-LteTabletMode .carsListLongTerm-itemImage { bottom: 0; top: -40px; width: 100%; height: 100%; background-position: center; }
+.body-LteTabletMode .carsListLongTerm-itemContent:before { bottom: 0; top: -40px; width: 100%; height: 100%; background-position: center; z-index: 0; }
+.body-LteTabletMode .carsListLongTerm-itemName { left: 0; bottom: 20px; }
+.body-LteTabletMode .carsListLongTerm-itemPriceByMonth { right: 0; bottom: 20px; left: auto; }
+.body-LteTabletMode .carsListLongTerm-itemPrice { right: 0; bottom: auto; top: 320px; z-index: 1; }
+.body-LteTabletMode .carsListLongTerm-itemPriceCompare .carsListLongTerm-itemCaption { font-size: 20px; }
+.body-LteTabletMode .carsListLongTerm-itemPrice .carsListLongTerm-itemCaption { font-size: 20px; }
+.body-LteTabletMode .carsListLongTerm-itemPriceCompare { left: 0; bottom: auto; top: 320px; right: auto; width: 47%; text-align: left; z-index: 1; }
+.body-LteTabletMode .carsListLongTerm-itemPriceCompare .carsListLongTerm-itemCaption:after { left: -10%; }
+
+.body-LteTabletMode .carsListLongTerm-itemIcons { display: none; }
+.body-LteTabletMode .carsListLongTerm-itemHover { display: none; }
+.body-LteTabletMode .carsListLongTerm-itemDetails { display: block; }
+.body-LteTabletMode .carsPageLongTerm-info { width: auto; }
+
+/* Мобильники .body-MobileMode */
+.body-MobileMode .carsPageLongTerm-content { padding: 0 20px; }
+.body-MobileMode .carsPageLongTerm-header { text-align: left; padding: 160px 0 0; background-size: 250%; background-position: 60% -2%; }
+.body-MobileMode .carsPageLongTerm-headerContent { padding: 0 20px; }
+.body-MobileMode .carsPageLongTerm-headerTitle { padding: 0; font-size: 24px; line-height: 34px; margin-bottom: 25px; }
+.body-MobileMode .carsPageLongTerm-headerText { font-size: 16px; line-height: 24px; }
+.body-MobileMode .carsPageLongTerm-advantages-itemText { font-size: 14px; line-height: 20px; }
+
+.body-MobileMode .carsPageLongTerm-sliderBlock { padding: 0; }
+.body-MobileMode .carsPageLongTerm-sliderBlock-Fixed { padding: 0 20px; }
+.body-MobileMode .carsPageLongTerm-slider-container .carsPageLongTerm-title { font-size: 16px; }
+.body-MobileMode .carsPageLongTerm-sliderBlock-Fixed .carsPageLongTerm-sliderHandleValue { top: 26px; width: auto; background: #000; margin-left: 0px; white-space: nowrap; box-shadow: 0 0 7px 7px #000; }
+.body-MobileMode .carsPageLongTerm-sliderBlock-Fixed .carsPageLongTerm-slider { margin-top: 0; }
+.body-MobileMode .carsPageLongTerm-sliderBlock-Fixed .carsPageLongTerm-sliderHandleValue[data-value=min] { margin-left: 20px; }
+.body-MobileMode .carsPageLongTerm-sliderBlock-Fixed .carsPageLongTerm-sliderHandleValue[data-value=max] { margin-left: -25px; }
+
+.body-MobileMode .carsPageLongTerm-table { display: block; }
+.body-MobileMode .carsPageLongTerm-tableCell { display: block; margin-bottom: 20px; }
+.body-MobileMode .carsPageLongTerm-tableCell:last-child { text-align: left; padding: 0; margin: 0; }
+.body-MobileMode .carsPageLongTerm-infoText { padding-left: 25px; }
+.body-MobileMode .carsPageLongTerm-infoText:before { position: absolute; left: 0; top: 5px; margin: 0; }
+
+.body-MobileMode .carsListLongTerm-item { margin-bottom: 50px; }
+.body-MobileMode .carsListLongTerm-itemContent { height: 270px; margin-bottom: 50px; }
+.body-MobileMode .carsListLongTerm-itemPriceByMonth { bottom: 18px; }
+.body-MobileMode .carsListLongTerm-itemPrice,
+.body-MobileMode .carsListLongTerm-itemPriceCompare { top: 275px; width: 50%; }
+.body-MobileMode .carsListLongTerm-itemPrice .carsListLongTerm-itemPreCaption { float: right; text-align: right; width: 60%; }
+.body-MobileMode .carsListLongTerm-itemPrice .carsListLongTerm-itemCaption { display: inline-block; width: 100%; }
+.body-MobileMode .carsListLongTerm-itemImage { top:-18px; }
+.body-MobileMode .carsListLongTerm-itemContent:before { top:-18px; }
+.body-MobileMode .carsListLongTerm-item:first-child .carsListLongTerm-itemContent {  }
+.body-MobileMode .carsListLongTerm-itemName { bottom: 18px; }
+.body-MobileMode .carsListLongTerm-itemPrice { bottom: 18px; }
+.body-MobileMode .carsListLongTerm-itemPreCaption { font-size: 10px; line-height: 12px; }
+.body-MobileMode .carsListLongTerm-itemCaption { font-size: 24px; line-height: 36px; height: 36px; }
+.body-MobileMode .carsListLongTerm-itemSubCaption { font-size: 12px; line-height: 12px; }
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*///////////////////////////////////   СПИСОК АВТО СО СКИДКАМИ   ////////////////////////////////////*/
@@ -11158,6 +11596,38 @@ width: 130px;
 /***** Адаптив ***********************************************************/
 /*************************************************************************/
 
+/* Планшеты + мобильники .body-LteTabletMode */
+.body-LteTabletMode .carsPresent .carsListDiscount { margin: 30px 0; }
+.body-LteTabletMode .carsListDiscount-title { width: 100%; text-align: center; top: -42px; left: 0; color: #7F7F7F; font-size: 14px; line-height: 20px; font-weight: 600; text-transform: uppercase; }
+.body-LteTabletMode .carsListDiscount-item { width: 100%; height: 480px; }
+.body-LteTabletMode .carsListDiscount-itemContent { margin: 30px 0 100px; padding: 0; height: 310px; overflow: visible; }
+.body-LteTabletMode .carsListDiscount-itemImage { bottom: 0; top: -40px; left: 0;width: 100%; height: 100%; background-position: center; }
+.body-LteTabletMode .carsListDiscount-itemContent:before { bottom: 0; top: -40px; left: 0; width: 100%; height: 100%; background-position: center; z-index: 0; }
+.body-LteTabletMode .carsListDiscount-item:before { background: linear-gradient(180deg, rgba(255,255,255,.05) 0%, rgba(255,255,255,0) 30%); }
+.body-LteTabletMode .carsListDiscount-itemName { left: 0; bottom: 20px; }
+.body-LteTabletMode .carsListDiscount-itemPrice { right: 0; }
+.body-LteTabletMode .carsListDiscount-itemTexts { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.body-LteTabletMode .carsListDiscount-itemText { position: absolute; top: -20px; padding: 0; left: 0; width: 100%; margin: 0; text-align: center; }
+.body-LteTabletMode .carsListDiscount-itemText:before { position: static; display: inline-block; margin-right: 10px; margin-left: 0; width: 30px; margin-bottom: -3px; height: 30px; }
+.body-LteTabletMode .carsListDiscount-itemTextLine1 { display: inline-block; }
+.body-LteTabletMode .carsListDiscount-itemText:last-child { bottom: -70px; top: auto; }
+.body-LteTabletMode .carsListDiscount-itemText:last-child:before { width: 25px; }
+
+/* Мобильники .body-MobileMode */
+.body-MobileMode .carsListDiscount-item { height: 425px; }
+.body-MobileMode .carsListDiscount-itemContent { height: 270px; margin-bottom: 50px; }
+.body-MobileMode .carsListDiscount-itemPrice .carsListDiscount-itemPreCaption { float: right; text-align: right; width: 60%; }
+.body-MobileMode .carsListDiscount-itemPrice .carsListDiscount-itemCaption { display: inline-block; width: 100%; }
+.body-MobileMode .carsListDiscount-itemImage { top:-18px; }
+.body-MobileMode .carsListDiscount-itemContent:before { top:-18px; }
+.body-MobileMode .carsListDiscount-itemName { bottom: 18px; }
+.body-MobileMode .carsListDiscount-itemPrice { bottom: 18px; }
+.body-MobileMode .carsListDiscount-itemPreCaption { font-size: 10px; line-height: 12px; }
+.body-MobileMode .carsListDiscount-itemCaption { font-size: 24px; line-height: 36px; height: 36px; }
+.body-MobileMode .carsListDiscount-itemSubCaption { font-size: 12px; line-height: 12px; }
+.body-MobileMode .carsListDiscount-itemTextLine1 { font-size: 24px; }
+.body-MobileMode .carsListDiscount-itemTextLine2 { font-size: 12px; }
+.body-MobileMode .carsListDiscount-itemText:before { margin-bottom: -6px; }
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*/////////////////////////   ВСТРАИВАЕМЫЙ БЛОК "Схема работы сервиса"   /////////////////////////////*/
@@ -11236,7 +11706,27 @@ width: 130px;
 /***** Адаптив ***********************************************************/
 /*************************************************************************/
 
+/* Планшеты + мобильники .body-LteTabletMode */
+.body-LteTabletMode .howItWorks { min-height: initial; padding: 65px 0 30px; }
+.body-LteTabletMode .howItWorks-title { font-size: 24px; letter-spacing: 0.2px; margin-bottom: 38px; }
+.body-LteTabletMode .howItWorks-itemText { width: auto; }
+.body-LteTabletMode .howItWorks-icon { margin: 75px auto 35px; }
+.body-LteTabletMode .howItWorks-items { display: none; }
+.body-LteTabletMode .howItWorks-items-Mobile { display: block; }
+.body-LteTabletMode .howItWorks-numbers { display: none; }
+.body-LteTabletMode .howItWorks-item { margin: 0; width: auto; padding: 0; float: none; }
+.body-LteTabletMode .howItWorks-numberItem { margin-top: 0; margin-left: 0; left: auto; right: 0; }
+.body-LteTabletMode .howItWorks-buttonContainer { position: static; margin: 50px auto 0; }
+.body-LteTabletMode .howItWorks-doc { margin: 50px auto 0; width: auto; padding-bottom: 20px; }
+.body-LteTabletMode .howItWorks-docLink { min-width: 100%; height: auto; font-size: 16px; line-height: 18px; }
 
+.body-LteTabletMode .howItWorks-LongTerm .howItWorks-icon { margin: 0 auto 100px; }
+.body-LteTabletMode .howItWorks-LongTerm .howItWorks-numberItem { margin-top: 127px; margin-left: -25px; left: 50%; right: auto; }
+
+/* Мобильники .body-MobileMode */
+.body-MobileMode .howItWorks-itemTitle {font-size: 18px;}
+.body-MobileMode .howItWorks-itemText {font-size: 14px;}
+.body-MobileMode .howItWorks-button {font-size: 14px;}
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*/////////////////////////   ВСТРАИВАЕМЫЙ БЛОК "Преимущества"   /////////////////////////////////////*/
@@ -11247,7 +11737,7 @@ width: 130px;
 /*************************************************************************/
 
 .advantages { background: #111;color: #fff; padding: 20px 0 90px;}
-.advantages-title { opacity: 0.5; font-size: 30px;color: #FFF;letter-spacing: 0.25px;line-height: 30px; text-transform: uppercase; text-align: center;margin-bottom: 65px;}
+.advantages-title { opacity: 0.4; font-size: 30px;color: #FFF;letter-spacing: 0.25px;line-height: 30px; text-transform: uppercase; text-align: center;margin-bottom: 65px;}
 .advantages-items-Mobile { display: none; }
 .advantages-items-container { display: none; }
 .advantages-items-container-Active { display: block; }
@@ -11302,7 +11792,28 @@ width: 130px;
 /***** Адаптив ***********************************************************/
 /*************************************************************************/
 
+/* Планшеты + мобильники .body-LteTabletMode */
+.body-LteTabletMode .advantages { padding: 30px 0; }
+.body-LteTabletMode .advantages-title { font-size: 24px; letter-spacing: 0.2px; margin-bottom: 38px; }
+.body-LteTabletMode .advantages-items { display: none; }
+.body-LteTabletMode .advantages-items-Mobile { display: block; }
+.body-LteTabletMode .advantages-item { width: auto; float: none; height: auto; }
+.body-LteTabletMode .advantages-itemText { font-size: 16px; line-height: 25px; padding: 0; }
 
+.body-LteTabletMode .advantages-switchers { margin-bottom: 20px; }
+.body-LteTabletMode .advantages-switchersItem { font-size: 12px; padding: 0; text-align: left; float: left; width: 50%; }
+.body-LteTabletMode .advantages-switchersItemText { word-wrap: normal; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.body-LteTabletMode .advantages-switchersItem .advantages-switchersItemText { display: none; }
+.body-LteTabletMode .advantages-switchersItem-active .advantages-switchersItemText { display: block; }
+.body-LteTabletMode .advantages-switchersItem .advantages-switchersItemText-Mobile { display: block; }
+.body-LteTabletMode .advantages-switchersItem-active .advantages-switchersItemText-Mobile { display: none; }
+.body-LteTabletMode .advantages-switchersItem:last-child { float: right; text-align: right; }
+.body-LteTabletMode .advantages-switchersItem-active:after { left: 0; bottom: 20px; }
+.body-LteTabletMode .advantages-switchersItem:last-child.advantages-switchersItem-active:after { left: auto; right: 0; }
+
+/* Мобильники .body-MobileMode */
+.body-MobileMode .advantages-itemText { font-size: 14px; line-height: 20px; }
+.body-MobileMode .advantages-link  { padding: 14px 20px; font-size: 16px; }
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*/////////////////////////   ВСТРАИВАЕМЫЙ БЛОК C ЗАГОЛОВКАМИ И ФОРМОЙ ПОИСКА   //////////////////////*/
@@ -11316,7 +11827,7 @@ width: 130px;
 .mainSection-background { z-index: 0; position: absolute; overflow: hidden; width: 100%; height:100%; /*background-image: url(static/images/bgvideo.jpg);*/ background-repeat: no-repeat; background-position: center; background-color: #000; -moz-background-size: cover; background-size: cover;  }
 
 .mainSection-background:before { z-index: 1; content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,.1); background-position: center; background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADAQMAAABs5if8AAAABlBMVEUAAAAAAAClZ7nPAAAAAnRSTlMzxB7xrqEAAAAMSURBVHheY2hgAAIAAoYAgdd0ZlcAAAAASUVORK5CYII=); }
-.mainSection-background:after { z-index: 1; content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: -moz-linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(17, 17, 17, 1) 90%); background: -webkit-linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(17, 17, 17, 1) 90%); background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(17, 17, 17, 1) 90%); }
+.mainSection-background:after { z-index: 1; content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: -moz-linear-gradient(to top, rgba(17, 17, 17, 0) 50%, rgba(17, 17, 17, 1) 100%); background: -webkit-linear-gradient(to top, rgba(17, 17, 17, 0) 50%, rgba(17, 17, 17, 1) 100%); background: linear-gradient(to bottom, rgba(17, 17, 17, 0) 50%, rgba(17, 17, 17, 1) 100%); }
 
 
 
@@ -11352,6 +11863,30 @@ width: 130px;
 /*************************************************************************/
 /***** Адаптив ***********************************************************/
 /*************************************************************************/
+
+.body-LteTabletMode .mainSection { min-height: inherit; }
+.body-LteTabletMode .mainSection-content { overflow: inherit; position: relative; padding: 140px 0 64px; min-height: auto; }
+.body-LteTabletMode .mainSection-title { width: auto; font-size: 34px; line-height: 44px; padding: 0 20px; }
+.body-LteTabletMode .mainSection-subTitle { font-size: 18px; line-height: 24px; padding: 0 20px 80px; margin: 0; }
+.body-LteTabletMode .searchFormBar-formMedialink { display: block; }
+.body-LteTabletMode .searchFormBar-formFilterCell:first-child { width:100%; }
+.body-LteTabletMode .searchFormBar-formFilterCell:not(:first-child) { display: none; }
+
+.body-MobileMode .mainSection { margin-top: -46px; }
+.body-MobileMode .mainSection-content { padding: 80px 0 40px; }
+.body-MobileMode .mainSection-title { font-size: 24px; line-height: 36px; }
+.body-MobileMode .mainSection-subTitle { font-size: 16px; line-height: 22px; padding: 0 20px 60px; }
+.body-MobileMode .mainSection-subTitle-NoMobile { display: none; }
+
+.body-MobileMode .searchFormBar-protector { height: 97px; }
+.body-MobileMode .searchFormBar-form { padding: 50px 0 20px; }
+.body-MobileMode .searchFormBar-title { font-size: 14px; line-height: 14px; }
+.body-MobileMode .searchFormBar-form-Fixed { padding: 0 20px; }
+.body-MobileMode .searchFormBar-form-Fixed .searchFormBar-container { padding: 50px 0 20px; }
+.body-MobileMode .searchFormBar-button { min-height: 37px; padding: 10px 29px; }
+
+
+
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*////////////////////////   ВСТРАИВАЕМЫЙ БЛОК С ФОРМОЙ ПОИСКА (НОВЫЙ ДИЗАЙН)   //////////////////////*/
@@ -11568,6 +12103,37 @@ width: 130px;
 /***** Адаптив ***********************************************************/
 /*************************************************************************/
 
+.body-LteTabletMode .carsSearchBar-container { width: auto; padding: 20px 10px; }
+.body-LteTabletMode .carsPage-carsSearchBar .carsSearchBar-container { width: auto; padding: 30px 30px; }
+.body-LteTabletMode .carsPage-carsSearchBar .carsSearchBar-form-Fixed .carsSearchBar-container { padding: 50px 10px; }
+.body-LteTabletMode .carsPage-carsSearchBar .carsSearchBar-protector { height: 115px; }
+.body-LteTabletMode .carsSearchBar-formMediaLink { display: block; }
+
+.body-LteTabletMode .carsSearchBar .carsSearchBar-container { background: none; height: auto; }
+.body-LteTabletMode .carsSearchBar .carsSearchBar-line { display: none; }
+.body-LteTabletMode .carsSearchBar .carsSearchBar-formLabel { display: none; }
+.body-LteTabletMode .carsSearchBar .carsSearchBar-table { width: 100%; }
+.body-LteTabletMode .carsSearchBar .carsSearchBar-tableCell { display: none; }
+.body-LteTabletMode .carsSearchBar .carsSearchBar-tableCell-City { display: block; width: 100%; }
+.body-LteTabletMode .carsSearchBar .autoComplete.autoComplete-City .autoCompleteInput { display: none; }
+.body-LteTabletMode .carsSearchBar .autoComplete.autoComplete-City .autoCompleteInputPH { display: none; }
+.body-LteTabletMode .carsSearchBar .autoComplete.autoComplete-City .autoCompleteInputPH-StepOne { position: relative; display: block; cursor: pointer; text-align: center; font-size: 30px; height: auto; line-height: 30px; width: 100%; border-bottom: 2px solid #ffcc00; padding-bottom: 15px; }
+
+.body-MobileMode .carsSearchBar { margin-top: 20px; }
+.body-MobileMode .carsSearchBar-protector { height: 97px; }
+.body-MobileMode .carsSearchBar-form { padding: 0 0 20px; }
+.body-MobileMode .carsSearchBar-title { font-size: 14px; line-height: 14px; }
+.body-MobileMode .carsSearchBar-form-Fixed { padding: 0 20px; }
+.body-MobileMode .carsSearchBar-form-Fixed .carsSearchBar-container { padding: 20px 0; }
+.body-MobileMode .carsSearchBar-button { min-height: 37px; padding: 10px 29px; }
+.body-MobileMode .carsSearchBar-container { padding: 20px 0; }
+.body-MobileMode .carsSearchBar .autoComplete.autoComplete-City .autoCompleteInputPH { font-size: 16px; line-height: 26px; height: 30px; padding-bottom: 10px; text-overflow: ellipsis; overflow: hidden; }
+
+.body-MobileMode .carsPage-carsSearchBar .carsSearchBar { margin: 0; }
+.body-MobileMode .carsPage-carsSearchBar .carsSearchBar-container { width: auto; padding: 20px; }
+.body-MobileMode .carsPage-carsSearchBar .carsSearchBar-form { padding: 0; }
+.body-MobileMode .carsPage-carsSearchBar .carsSearchBar-protector { height: 70px; }
+.body-MobileMode .carsPage-carsSearchBar .carsSearchBar-form-Fixed .carsSearchBar-container { padding: 20px; }
 
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -11672,6 +12238,27 @@ width: 130px;
 /***** Адаптив ***********************************************************/
 /*************************************************************************/
 
+/* Мобильники .body-MobileMode */
+.body-MobileMode .profileForm { padding: 0; }
+.body-MobileMode .profileForm-table { display: block; width: auto; position: relative; }
+.body-MobileMode .profileForm-tableCell { display: block; vertical-align: inherit; margin-bottom: 30px; }
+.body-MobileMode .profileForm-tableCell-Last { position: absolute; top: 0; right: 0; }
+.body-MobileMode .profileForm-tableCell-Medium { width: auto; }
+.body-MobileMode .profileForm-tableCell-Min { width: auto; }
+
+.body-MobileMode .profileForm .customTextInput { margin-right: 0; }
+.body-MobileMode .profileForm .profileForm-customSelect { margin-right: 0; }
+.body-MobileMode .profileForm-customSelectCountry { margin-right: 0; }
+.body-MobileMode .profileForm .customRadio { margin-top: 40px; }
+.body-MobileMode .profileForm-files { margin: 20px 0 0; }
+.body-MobileMode .profileForm-filesItem { width: 100%; margin-bottom: 20px; padding: 0; }
+.body-MobileMode .profileForm-files ul:last-child li { margin-bottom: 10px; }
+.body-MobileMode .profileForm-customSelectCountry .customSelect-menuWrap { width: 100%; }
+
+.body-MobileMode .profileForm .phoneInput.phoneInput-1 .phoneInput-table { position: relative; }
+.body-MobileMode .profileForm .phoneInput.phoneInput-1 .phoneInput-tableNumber { position: absolute; left: 85px; top: 0; right: 0; }
+.body-MobileMode .profileForm .customSelect-Phone1:after { right: auto; left: 72px; }
+.body-MobileMode .profileForm .customSelect-Phone1 .customSelect-menuWrap { width: 100%; }
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////*/
 /*//////////////////////////////   СТРАНИЦА УСПЕШНОЙ ОПЛАТЫ ЗАКАЗА   /////////////////////////////////*/
@@ -11709,6 +12296,24 @@ width: 130px;
 /***** Адаптив ***********************************************************/
 /*************************************************************************/
 
+/* Планшеты + мобильники .body-LteTabletMode */
+.body-LteTabletMode .thankPage { padding-top: 30px; }
+.body-LteTabletMode .thankPage-leftCol { display: block; width: auto; padding: 0; }
+.body-LteTabletMode .thankPage-rightCol { padding: 0; margin-top: 20px; display: block; width: auto; }
+.body-MobileMode .thankPage-order { border-radius: inherit; }
+
+/* Мобильники .body-MobileMode */
+.body-MobileMode .thankPage { padding-top: 0; }
+.body-MobileMode .thankPage-content { padding: 0; }
+.body-MobileMode .thankPage-caption { font-size: 20px; line-height: 24px; }
+.body-MobileMode .thankPage-text,
+.body-MobileMode .thankPage-text-Large { font-size: 16px; line-height: 20px; }
+.body-MobileMode .thankPage-block { border-radius: inherit; padding: 20px; border-left: 0; border-right: 0; }
+
+.body-MobileMode .thankPage-orderCaption { margin-bottom: 5px; }
+.body-MobileMode .thankPage-orderCity { font-size: 20px; }
+.body-MobileMode .thankPage-orderLine { margin: 20px 0; }
+.body-MobileMode .thankPage-title { margin: 0 0 20px; font-size: 24px; letter-spacing: 0.2px; line-height: 30px; text-align: center; padding: 0 20px; }
 
 
 /*////////////////////////////////////////////////////////////////////////////////////////////////////*/
@@ -11724,6 +12329,11 @@ width: 130px;
 .langNotice-list li a { display: block; height: 46px; line-height: 46px; color: #fff; font-size: 14px; padding-right: 20px; font-weight: 600; white-space: nowrap; transition: color .3s; }
 .langNotice-list li a:hover { color: #ffcc00; }
 .langNotice-list li a img { display: inline-block; margin-right: 17px; margin-bottom: 2px; }
+
+.body-LteTabletMode .langNotice-list li { width: 50%; }
+.body-MobileMode .langNotice-list li { width: 100%; }
+
+
 
 /*************************************************************************/
 /***** ПОПАП ФОРМЫ ПОИСКА АВТО (ДЛЯ МОБИЛЬНЫХ) ***************************/
@@ -11928,7 +12538,10 @@ a.ldWidget i {
 		/*height: 370px;*/
 		height: calc(100vh - 90px);
 	}
-
+	
+	.body-LteTabletMode .howItWorks-buttonContainer {
+		margin: 50px auto 50px;
+	}
 	
 	.pageFooter-appsLink-Apple {
 		margin-bottom: 10px !important;
@@ -12055,6 +12668,11 @@ a.ldWidget i {
 	.popup.popup-BlackBgd .popup-content {
 		padding: 0;
 	}
+	.body-MobileMode .popup.popup-BlackBgd .popup-header {
+		padding: 15px 20px;
+		height: 50px;
+	}
+	
 	
 	.mainSection-video.mainSection-video-partner { position: absolute; top: 65% !important; left: 50%; min-width: 100%; min-height: 100%; width: 100% !important; height: 100% !important; -ms-transform: translateX(-50%) translateY(-50%); -moz-transform: translateX(-50%) translateY(-50%); -webkit-transform: translateX(-50%) translateY(-50%); transform: translateX(-50%) translateY(-50%); }
 	
@@ -12606,13 +13224,13 @@ a.ldWidget i {
 	
 	
 	.tab-adv {
-		display: none;
+		display: none; /* по умолчанию прячем все блоки */
 	}
 	.tab-adv-mobile {
 		display: none;
 	}
 	.tab-adv.tab-adv-active {
-		display: block;
+		display: block; /* по умолчанию показываем нужный блок */
 	}
 	
 	.tabs__caption {
@@ -12642,7 +13260,7 @@ a.ldWidget i {
 	
 	
 	@media screen and (max-width:667px){
-		/* .tab-adv,
+		.tab-adv,
 		.tab-adv.tab-adv-active {
 			display: none;
 		}
@@ -12651,7 +13269,7 @@ a.ldWidget i {
 		}
 		.tab-adv-mobile.tab-adv-mobile-active {
 			display: block !important;
-		} */
+		}
 		
 		
 		
@@ -12665,6 +13283,16 @@ a.ldWidget i {
 	}
 
 
+    body.body-LteTabletMode .contactsPage-tableCell {
+        display: block;
+        padding-right: 0;
+        padding-bottom: 20px;
+    }
+    
+    body.body-LteTabletMode .contactsPage-tableCell:last-child {
+        padding-left: 0;
+        display: block;
+    }
 
 
     .icon-adv {
@@ -12699,39 +13327,4 @@ a.ldWidget i {
 
     .brand-list {
         margin: 30px 0;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .brand-list .advantages-item {
-        width: 10%;
-        padding: 0;
-    }
-
-    .brand-list .icon-adv:before, .brand-list .icon-adv:after {
-        font-size: 90px;
-        width: 90px;
-        height: 90px;
-        line-height: 90px;
-    }
-
-    .brand-list .icon-adv {
-        line-height: 90px;
-        width: 90px;
-        height: 90px;
-    }
-
-    .brand-list .icon-adv img {
-        max-width: 50px;
-      }
-
-      .splide__pagination li {
-          width: 22px;
-          height: 22px;
-      }
-
-      .splide__pagination__page.is-active {
-          transform: none !important;
-          opacity: 1;
-      }
+    } 

@@ -125,68 +125,68 @@
             <div class="advantages-clear"></div>
           </div>
 
-          <div
-            :class="[
-              'advantages-items advantages-items-Mobile fotorama tab-adv-mobile',
-              [tab == 'one' ? 'tab-adv-mobile-active' : ''],
-            ]"
-            data-width="100%"
-            data-minwidth="100%"
-            data-height="350px"
-            data-auto_="false"
-          >
-            <AdvantagePartnerItem
-              icon="fal fa-search-dollar"
-              text="Ваш автомобиль способен генерировать пассивный доход"
-            />
-            <AdvantagePartnerItem
-              icon="fal fa-car-alt"
-              text="Вы можете пользоваться своим автомобилем, когда он необходим"
-            />
-            <AdvantagePartnerItem
-              icon="fal fa-route"
-              text="Мы подвозим его примерно за 2 часа к вашему дому"
-            />
-            <AdvantagePartnerItem
-              icon="fal fa-mask"
-              text="Не требуется наносить никаких наклеек и опознавательных знаков"
-            />
-            <AdvantagePartnerItem
-              icon="fal fa-cocktail"
-              text="Всю «головную боль» мы берем на себя"
-            />
+          <div class="advantages-items-Mobile" v-if="tab == 'one'">
+            <splide key="1" :options="{ arrows: false, height: 260 }">
+              <splide-slide>
+                <AdvantagePartnerItem
+                  icon="fal fa-search-dollar"
+                  text="Ваш автомобиль способен генерировать пассивный доход"
+                />
+              </splide-slide>
+              <splide-slide
+                ><AdvantagePartnerItem
+                  icon="fal fa-car-alt"
+                  text="Вы можете пользоваться своим автомобилем, когда он необходим"
+              /></splide-slide>
+              <splide-slide
+                ><AdvantagePartnerItem
+                  icon="fal fa-route"
+                  text="Мы подвозим его примерно за 2 часа к вашему дому"
+              /></splide-slide>
+              <splide-slide
+                ><AdvantagePartnerItem
+                  icon="fal fa-mask"
+                  text="Не требуется наносить никаких наклеек и опознавательных знаков"
+              /></splide-slide>
+              <splide-slide>
+                <AdvantagePartnerItem
+                  icon="fal fa-cocktail"
+                  text="Всю «головную боль» мы берем на себя"
+                />
+              </splide-slide>
+            </splide>
           </div>
 
-          <div
-            :class="[
-              'advantages-items advantages-items-Mobile fotorama tab-adv-mobile',
-              [tab == 'two' ? 'tab-adv-mobile-active' : ''],
-            ]"
-            data-width="100%"
-            data-minwidth="100%"
-            data-height="350px"
-            data-auto_="false"
-          >
-            <AdvantagePartnerItem
-              icon="fal fa-shower"
-              text="Заправку и мойку автомобиля мы берем на себя"
-            />
-            <AdvantagePartnerItem
-              icon="fal fa-traffic-light"
-              text="Штрафы полностью автоматизированы и вам не нужно отслеживать свои нарушения"
-            />
-            <AdvantagePartnerItem
-              icon="fal fa-parking-circle"
-              text="Вы можете оставить автомобиль в любой точке внутри МКАД и дальше это наша забота"
-            />
-            <AdvantagePartnerItem
-              icon="fal fa-street-view"
-              text="Если автомобиль вам нужен в определенной точке мы подвезем его туда"
-            />
-            <AdvantagePartnerItem
-              icon="fal fa-users-class"
-              text="Целая команда специалистов круглосуточно следит за вашим автомобилем"
-            />
+          <div class="advantages-items-Mobile" v-if="tab == 'two'">
+            <splide key="2" :options="{ arrows: false, height: 260 }">
+              <splide-slide>
+                <AdvantagePartnerItem
+                  icon="fal fa-shower"
+                  text="Заправку и мойку автомобиля мы берем на себя"
+                />
+              </splide-slide>
+              <splide-slide
+                ><AdvantagePartnerItem
+                  icon="fal fa-traffic-light"
+                  text="Штрафы полностью автоматизированы и вам не нужно отслеживать свои нарушения"
+              /></splide-slide>
+              <splide-slide
+                ><AdvantagePartnerItem
+                  icon="fal fa-parking-circle"
+                  text="Вы можете оставить автомобиль в любой точке внутри МКАД и дальше это наша забота"
+              /></splide-slide>
+              <splide-slide
+                ><AdvantagePartnerItem
+                  icon="fal fa-street-view"
+                  text="Если автомобиль вам нужен в определенной точке мы подвезем его туда"
+              /></splide-slide>
+              <splide-slide>
+                <AdvantagePartnerItem
+                  icon="fal fa-users-class"
+                  text="Целая команда специалистов круглосуточно следит за вашим автомобилем"
+                />
+              </splide-slide>
+            </splide>
           </div>
         </div>
       </div>
@@ -251,47 +251,47 @@
             text="Вы видите в режиме онлайн в личном кабинете все доходы и расходы"
           />
         </div>
-        <div
-          class="howItWorks-items howItWorks-items-Mobile fotorama"
-          data-width="100%"
-          data-minwidth="100%"
-          data-height="360px"
-          data-auto_="false"
-        >
-          <SchemeItem
-            title="Подключение"
-            icon="fal fa-car-mechanic"
-            number="1"
-            text="Мы подключаем ваш автомобиль к системе. При подключении вам ничего оплачивать не требуется"
-          />
 
-          <SchemeItem
-            title="Личное использование"
-            icon="far fa-steering-wheel"
-            number="2"
-            text="Используете авто столько сколько требуется, а когда необходимость пропадает освобождаете для клиентов сервиса"
-          />
-
-          <SchemeItem
-            title="Поездки пользователей"
-            icon="fal fa-users"
-            number="3"
-            text="Прошедшие строгую проверку пользователи берут вашу машину и платят поминутно"
-          />
-
-          <SchemeItem
-            title="Контроль"
-            icon="fal fa-robot"
-            number="4"
-            text="Наши техники занимаются регулярными осмотрами, мойкой и перегонами автомобиля"
-          />
-
-          <SchemeItem
-            title="Результат"
-            icon="al fa-sack-dollar"
-            number="5"
-            text="Вы видите в режиме онлайн в личном кабинете все доходы и расходы"
-          />
+        <div class="advantages-items-Mobile">
+          <splide key="5" :options="{ height: 320, arrows: false }">
+            <splide-slide>
+              <SchemeItem
+                title="Подключение"
+                icon="fal fa-car-mechanic"
+                number="1"
+                text="Мы подключаем ваш автомобиль к системе. При подключении вам ничего оплачивать не требуется"
+              />
+            </splide-slide>
+            <splide-slide
+              ><SchemeItem
+                title="Личное использование"
+                icon="far fa-steering-wheel"
+                number="2"
+                text="Используете авто столько сколько требуется, а когда необходимость пропадает освобождаете для клиентов сервиса"
+            /></splide-slide>
+            <splide-slide
+              ><SchemeItem
+                title="Поездки пользователей"
+                icon="fal fa-users"
+                number="3"
+                text="Прошедшие строгую проверку пользователи берут вашу машину и платят поминутно"
+            /></splide-slide>
+            <splide-slide
+              ><SchemeItem
+                title="Контроль"
+                icon="fal fa-robot"
+                number="4"
+                text="Наши техники занимаются регулярными осмотрами, мойкой и перегонами автомобиля"
+            /></splide-slide>
+            <splide-slide>
+              <SchemeItem
+                title="Результат"
+                icon="al fa-sack-dollar"
+                number="5"
+                text="Вы видите в режиме онлайн в личном кабинете все доходы и расходы"
+              />
+            </splide-slide>
+          </splide>
         </div>
       </div>
     </div>
@@ -381,68 +381,68 @@
             <div class="advantages-clear"></div>
           </div>
 
-          <div
-            :class="[
-              'advantages-items advantages-items-Mobile fotorama tab-adv-mobile',
-              [tab_2 == 'three' ? 'tab-adv-mobile-active' : ''],
-            ]"
-            data-width="100%"
-            data-minwidth="100%"
-            data-height="350px"
-            data-auto_="false"
-          >
-            <AdvantagePartnerItem
-              icon="fal fa-user-check"
-              text="Привлечение и проверка клиентов по нескольким десяткам критериев"
-            />
-            <AdvantagePartnerItem
-              icon="fal fa-satellite"
-              text="Круглосуточный контроль за перемещением автомобиля"
-            />
-            <AdvantagePartnerItem
-              icon="fal fa-gas-pump"
-              text="Заправка автомобиля, мойка снаружи и внутри, отслеживание состояния"
-            />
-            <AdvantagePartnerItem
-              icon="fal fa-route"
-              text="Перемещение автомобиля [доставка/постановка в более массовой точке/забор со штрафстоянки]"
-            />
-            <AdvantagePartnerItem
-              icon="fal fa-phone-volume"
-              text="Поддержка клиентов 24/7, прием платежей, оплата платных парковок и штрафов"
-            />
+          <div v-if="tab_2 == 'three'">
+            <splide key="3" :options="{ height: 250, arrows: false }">
+              <splide-slide>
+                <AdvantagePartnerItem
+                  icon="fal fa-user-check"
+                  text="Привлечение и проверка клиентов по нескольким десяткам критериев"
+                />
+              </splide-slide>
+              <splide-slide
+                ><AdvantagePartnerItem
+                  icon="fal fa-satellite"
+                  text="Круглосуточный контроль за перемещением автомобиля"
+              /></splide-slide>
+              <splide-slide
+                ><AdvantagePartnerItem
+                  icon="fal fa-gas-pump"
+                  text="Заправка автомобиля, мойка снаружи и внутри, отслеживание состояния"
+              /></splide-slide>
+              <splide-slide
+                ><AdvantagePartnerItem
+                  icon="fal fa-route"
+                  text="Перемещение автомобиля [доставка/постановка в более массовой точке/забор со штрафстоянки]"
+              /></splide-slide>
+              <splide-slide>
+                <AdvantagePartnerItem
+                  icon="fal fa-phone-volume"
+                  text="Поддержка клиентов 24/7, прием платежей, оплата платных парковок и штрафов"
+                />
+              </splide-slide>
+            </splide>
           </div>
 
-          <div
-            :class="[
-              'advantages-items advantages-items-Mobile fotorama tab-adv-mobile',
-              [tab_2 == 'four' ? 'tab-adv-mobile-active' : ''],
-            ]"
-            data-width="100%"
-            data-minwidth="100%"
-            data-height="350px"
-            data-auto_="false"
-          >
-            <AdvantagePartnerItem
-              icon="fas fa-mobile-alt"
-              text="В приложении заказываете доставку своего авто или бронируете его на карте"
-            />
-            <AdvantagePartnerItem
-              icon="far fa-steering-wheel"
-              text="Используете свой автомобиль столько, сколько необходимо"
-            />
-            <AdvantagePartnerItem
-              icon="fal fa-oil-can"
-              text="Проходите регламентное ТО автомобиля"
-            />
-            <AdvantagePartnerItem
-              icon="fal fa-wrench"
-              text="Осуществляете ремонт (не кузовной) по необходимости"
-            />
-            <AdvantagePartnerItem
-              icon="fal fa-sack-dollar"
-              text="Получаете пассивный доход"
-            />
+          <div v-if="tab_2 == 'four'">
+            <splide key="4" :options="{ height: 250, arrows: false }">
+              <splide-slide>
+                <AdvantagePartnerItem
+                  icon="fas fa-mobile-alt"
+                  text="В приложении заказываете доставку своего авто или бронируете его на карте"
+                />
+              </splide-slide>
+              <splide-slide
+                ><AdvantagePartnerItem
+                  icon="far fa-steering-wheel"
+                  text="Используете свой автомобиль столько, сколько необходимо"
+              /></splide-slide>
+              <splide-slide
+                ><AdvantagePartnerItem
+                  icon="fal fa-oil-can"
+                  text="Проходите регламентное ТО автомобиля"
+              /></splide-slide>
+              <splide-slide
+                ><AdvantagePartnerItem
+                  icon="fal fa-wrench"
+                  text="Осуществляете ремонт (не кузовной) по необходимости"
+              /></splide-slide>
+              <splide-slide>
+                <AdvantagePartnerItem
+                  icon="fal fa-sack-dollar"
+                  text="Получаете пассивный доход"
+                />
+              </splide-slide>
+            </splide>
           </div>
         </div>
       </div>

@@ -113,33 +113,41 @@
             <div class="advantages-clear"></div>
           </div>
 
-          <div
-            class="advantages-items advantages-items-Mobile fotorama"
-            data-width="100%"
-            data-minwidth="100%"
-            data-height="350px"
-            data-auto_="false"
-          >
-            <AdvantageItem
-              text="Разнообразный ассортимент бизнес и премиум класса"
-              img="/images/app/phone01.png"
-            />
-            <AdvantageItem
-              text="Комфортные и статусные авто на улицах города с доступом со смартфона"
-              img="/images/app/phone02.png"
-            />
-            <AdvantageItem
-              text="Авто без надписей. Поминутные, часовые и суточные тарифы"
-              img="/images/app/phone03.png"
-            />
-            <AdvantageItem
-              text="Бесплатная доставка прямо к вам для часовой поездки"
-              img="/images/app/phone04.png"
-            />
-            <AdvantageItem
-              text="Выбираете место на карте, и автомобиль через час ждет вас на парковке"
-              img="/images/app/phone05.png"
-            />
+          <div class="advantages-items-Mobile">
+            <splide
+              :options="{
+                arrows: false,
+                height: 380,
+              }"
+            >
+              <splide-slide>
+                <AdvantageItem
+                  text="Разнообразный ассортимент бизнес и премиум класса"
+                  img="/images/app/phone01.png"
+                />
+              </splide-slide>
+              <splide-slide
+                ><AdvantageItem
+                  text="Комфортные и статусные авто на улицах города с доступом со смартфона"
+                  img="/images/app/phone02.png"
+              /></splide-slide>
+              <splide-slide
+                ><AdvantageItem
+                  text="Авто без надписей. Поминутные, часовые и суточные тарифы"
+                  img="/images/app/phone03.png"
+              /></splide-slide>
+              <splide-slide
+                ><AdvantageItem
+                  text="Бесплатная доставка прямо к вам для часовой поездки"
+                  img="/images/app/phone04.png"
+              /></splide-slide>
+              <splide-slide>
+                <AdvantageItem
+                  text="Выбираете место на карте, и автомобиль через час ждет вас на парковке"
+                  img="/images/app/phone05.png"
+                />
+              </splide-slide>
+            </splide>
           </div>
         </div>
       </div>
@@ -189,72 +197,52 @@
             decsription="При желании вы можете сразу не возвращать депозит, а использовать для следующих поездок"
           />
         </div>
-        <div
-          class="howItWorks-items howItWorks-items-Mobile fotorama"
-          data-width="100%"
-          data-minwidth="100%"
-          data-height="360px"
-          data-auto_="false"
-        >
-          <div class="howItWorks-item">
-            <div class="howItWorks-numberItem">1</div>
-            <div class="icon-adv">
-              <i class="fal fa-address-card"></i>
-            </div>
-            <div class="howItWorks-itemTitle">Регистрация</div>
-            <div class="howItWorks-itemText">
-              Вы устанавливаете мобильное приложение и проходите в нем
-              регистрацию
-            </div>
-          </div>
-
-          <div class="howItWorks-item">
-            <div class="howItWorks-numberItem">2</div>
-            <div class="icon-adv">
-              <i class="fal fa-user-check"></i>
-            </div>
-
-            <div class="howItWorks-itemTitle">Подтверждение</div>
-            <div class="howItWorks-itemText">
-              Служба безопасности проверит ваши документы и активирует ваш
-              аккаунт
-            </div>
-          </div>
-
-          <div class="howItWorks-item">
-            <div class="howItWorks-numberItem">3</div>
-            <div class="icon-adv">
-              <i class="fal fa-route"></i>
-            </div>
-            <div class="howItWorks-itemTitle">Доставка / Бронь</div>
-            <div class="howItWorks-itemText">
-              Вы выбираете авто, вносите страховой депозит с банковской карты и
-              заказываете доставку. Или бронируете и забираете самостоятельно
-            </div>
-          </div>
-          <div class="howItWorks-item">
-            <div class="howItWorks-numberItem">4</div>
-            <div class="icon-adv">
-              <i class="fal fa-car-alt"></i>
-            </div>
-            <div class="howItWorks-itemTitle">Аренда</div>
-            <div class="howItWorks-itemText">
-              На время аренды у вас включен таймер в мобильном приложении и вы
-              можете контролировать расходы
-            </div>
-          </div>
-          <div class="howItWorks-item">
-            <div class="howItWorks-numberItem">5</div>
-            <div class="icon-adv">
-              <i class="fal fa-flag-checkered"></i>
-            </div>
-            <div class="howItWorks-itemTitle">Завершение</div>
-            <div class="howItWorks-itemText">
-              Зона завершения аренды подсвечена в приложении зеленым цветом.
-              Нажмите "Вернуть депозит", и в течение от 4 до 48 часов депозит
-              будет возвращен
-            </div>
-          </div>
+        <div class="advantages-items-Mobile howItWorks-items-Mobile_">
+          <splide
+            :options="{
+              arrows: false,
+              height: 380,
+            }"
+          >
+            <splide-slide>
+              <SchemeItem
+                title="Регистрация"
+                icon="fal fa-address-card"
+                number="1"
+                text="Вы устанавливаете мобильное приложение и проходите в нем регистрацию"
+              />
+            </splide-slide>
+            <splide-slide
+              ><SchemeItem
+                title="Подтверждение"
+                icon="fal fa-user-check"
+                number="2"
+                text="Служба безопасности проверит ваши документы и активирует ваш аккаунт"
+            /></splide-slide>
+            <splide-slide
+              ><SchemeItem
+                title="Доставка / Бронь"
+                icon="fal fa-route"
+                number="3"
+                text="Вы выбираете авто, вносите страховой депозит с банковской карты и заказываете доставку. Через короткое время автомобиль будет ждать вас на парковке. Или бронируете и забираете самостоятельно"
+            /></splide-slide>
+            <splide-slide
+              ><SchemeItem
+                title="Аренда"
+                icon="fal fa-car-alt"
+                number="4"
+                text="На время аренды у вас включен таймер в мобильном приложении и вы можете контролировать расходы"
+            /></splide-slide>
+            <splide-slide>
+              <SchemeItem
+                title="Завершение"
+                icon="fal fa-car-alt"
+                number="5"
+                text="Зона завершения аренды подсвечена в приложении зеленым цветом. После завершения можете нажать «Вернуть депозит», и в течение от 4 до 48 часов депозит будет автоматически возвращен"
+                decsription="При желании вы можете сразу не возвращать депозит, а использовать для следующих поездок"
+              />
+            </splide-slide>
+          </splide>
         </div>
         <div
           class="howItWorks-buttonContainer"
@@ -343,7 +331,6 @@ export default {
       cars: [],
       brands: [],
       auto: {},
-      // title: "asd",
     };
   },
   //   async validate({ params, $axios }) {

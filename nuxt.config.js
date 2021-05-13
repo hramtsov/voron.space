@@ -22,16 +22,19 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
+  // import '@splidejs/splide/dist/css/themes/splide-default.min.css';
   css: [
     '@/assets/css/fotorama.css',
     '@/assets/css/main.css',
+    '@/assets/css/mobile.css',
     '@/static/fa/css/all.min.css',
-
+    '@splidejs/splide/dist/css/themes/splide-default.min.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '@/plugins/filters',
+    '@/plugins/carousel',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
