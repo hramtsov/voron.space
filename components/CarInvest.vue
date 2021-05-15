@@ -14,7 +14,7 @@
       </div>
       <div class="carsList-itemPrice">
         <div class="carsList-itemPreCaption">
-          Цена - {{ car.price | number }}
+          Цена - {{ car.price | number }} <span class="rouble">₽</span>
         </div>
         <div class="carsList-itemCaption">
           <span

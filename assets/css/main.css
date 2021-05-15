@@ -6750,7 +6750,8 @@ select, select option {
 
 .pageContent {
     position: relative;
-    min-height:500px
+    min-height:500px;
+    background: #000;
 }
 
 
@@ -10400,6 +10401,9 @@ body { background: #000; }
 /* общие стили шапки */
 .pageHeader { z-index: 5; position: relative; height: 70px; background: #141414; font-weight: 400; font-size: 14px; line-height: 14px; color: #fff;; }
 .pageHeader-content { max-width: 1180px; margin: 0 auto; padding: 0 30px; -webkit-box-sizing: content-box; box-sizing: content-box; }
+.pageHeader-Transparent {
+    background: rgba(10, 10, 10, 0.5);
+}
 
 /* кнопка меню */
 .pageHeader-menuBtn { float: left; width: 50px; height: 70px; padding: 0 15px; margin-left: -15px; position: relative; z-index: 2; cursor: pointer; }
@@ -10529,6 +10533,11 @@ width: 130px;
 /*/////////////////////////////////////	МОДИЦИКАЦИЯ ПОПАПА	//////////////////////////////////////////*/
 /*////////////////////////////////////////////////////////////////////////////////////////////////////*/
  
+
+.rouble {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
 .popup { animation-duration: .3s; animation-fill-mode: both; animation-name: slideInDown; }
 .popup.popup-CloseAnimation{ animation-name: slideOutUp; }
 
@@ -12734,4 +12743,51 @@ a.ldWidget i {
       .splide__pagination__page.is-active {
           transform: none !important;
           opacity: 1;
+      }
+
+      /* .fade-enter-active {
+        animation: acrossIn .30s ease-out both;
+      }
+      .fade-leave-active {
+        animation: acrossOut .30s ease-in both;
+      }
+      @keyframes acrossIn {
+        0% {
+          transform: translate3d(-100%, 0, 0);
+        }
+        100% {
+          transform: translate3d(0, 0, 0);
+        }
+      }
+      @keyframes acrossOut {
+        0% {
+          transform: translate3d(0, 0, 0);
+        }
+        100% {
+          transform: translate3d(100%, 0, 0);
+        }
+      } */
+
+
+      /* Transitions using the page hook */
+      .fade-enter-active, .fade-leave-active {
+          background: #000;
+        transition: all .30s ease-out;
+      }
+      .fade-enter, .fade-leave-active {
+        opacity: 0;
+        transform-origin: 50% 50%;
+      }
+
+
+
+
+
+
+      .page-enter-active, .page-leave-active {
+        transition: all .25s ease-out;
+      }
+      .page-enter, .page-leave-active {
+        opacity: 0;
+        transform-origin: 50% 50%;
       }

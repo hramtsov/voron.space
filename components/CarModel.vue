@@ -52,15 +52,17 @@
           <span>Стаж</span>
         </div>
       </div>
-      <div class="carsList-itemDetails">Седан / 5 мест / 170 л.с.</div>
+      <div class="carsList-itemDetails">
+        {{ car.body.title }} / 5 мест / 170 л.с.
+      </div>
       <div class="carsList-itemName">
         <div class="carsList-itemPreCaption"></div>
         <div class="carsList-itemCaption">{{ car.title }}</div>
         <div class="carsList-itemSubCaption">
           {{ car.model.title }}<br /><em
             ><small
-              >Депозит {{ car.depositMax | number }} Ꝑ для новых
-              клиентов*</small
+              >Депозит для новых клиентов {{ car.depositMax | number }}
+              <span class="rouble">₽</span> *</small
             ></em
           >
         </div>
@@ -74,7 +76,8 @@
           >
         </div>
         <div class="carsList-itemSubCaption">
-          от {{ car.max_daily_cost | number }} Ꝑ/сутки
+          от {{ car.max_daily_cost | number }}
+          <span class="rouble">₽</span>/сутки
         </div>
       </div>
 

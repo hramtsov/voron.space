@@ -381,7 +381,7 @@
             <div class="advantages-clear"></div>
           </div>
 
-          <div v-if="tab_2 == 'three'">
+          <div class="advantages-items-Mobile" v-if="tab_2 == 'three'">
             <splide key="3" :options="{ height: 250, arrows: false }">
               <splide-slide>
                 <AdvantagePartnerItem
@@ -413,7 +413,7 @@
             </splide>
           </div>
 
-          <div v-if="tab_2 == 'four'">
+          <div class="advantages-items-Mobile" v-if="tab_2 == 'four'">
             <splide key="4" :options="{ height: 250, arrows: false }">
               <splide-slide>
                 <AdvantagePartnerItem

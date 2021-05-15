@@ -4,7 +4,21 @@
     <!-- MAIN WRAPPER -->
     <div class="pageWrapper">
       <!-- HEADER -->
-      <div class="pageHeader" itemscope itemtype="http://schema.org/WPHeader">
+      <div
+        :class="[
+          'pageHeader',
+          [
+            $route.name == 'index' ||
+            $route.name == 'partner' ||
+            $route.name == 'slug' ||
+            $route.name == 'slug-auto'
+              ? 'pageHeader-Transparent'
+              : '',
+          ],
+        ]"
+        itemscope
+        itemtype="http://schema.org/WPHeader"
+      >
         <div class="pageHeader-content">
           <div
             :class="[
@@ -282,29 +296,15 @@ export default {
     classes: "",
     menuOpen: false,
   }),
-  // head() {
-  //   return {
-  //     bodyAttrs: {
-  //       class: this.classes ? this.classes : "",
-  //     },
-  //   };
-  // },
   created() {
     var source = this.$route.query.source;
     if (typeof source !== "undefined" && source != null) {
       this.$store.commit("set_source", source);
     }
-
-    // window.addEventListener("resize", this.updateWidth);
-    // this.width = window.innerWidth;
-
-    // this.loadJquery();
-    // this.loadFotorama();
-
     this.$router.beforeEach((to, from, next) => {
       this.menuOpen = false;
       next((vm) => {
-        console.log("prev rout is: " + vm.prevRoute);
+        // console.log("prev rout is: " + vm.prevRoute);
       });
     });
   },
@@ -312,34 +312,6 @@ export default {
     menu() {
       this.menuOpen = !this.menuOpen;
     },
-    // updateWidth() {
-    //   this.width = window.innerWidth;
-    // },
-
-    // add script tags to head
-    // loadFotorama() {
-    //   let script = document.createElement("script");
-    //   script.src =
-    //     "https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js";
-    //   document.documentElement.firstChild.appendChild(script);
-    // },
-    // loadJquery() {
-    //   let script = document.createElement("script");
-    //   script.src =
-    //     "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js";
-    //   document.documentElement.firstChild.appendChild(script);
-    // },
-  },
-  watch: {
-    // width: function (newQuestion, oldQuestion) {
-    //   if (this.width < 667) {
-    //     this.classes = "body-MobileMode body-LteTabletMode";
-    //   }
-    //   if (this.width >= 667 && this.width < 1024) {
-    //     this.classes = "body-TabletMode body-LteTabletMode";
-    //   }
-    //   this.head;
-    // },
   },
 };
 </script>
