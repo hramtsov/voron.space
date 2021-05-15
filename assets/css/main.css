@@ -12770,24 +12770,24 @@ a.ldWidget i {
 
 
       /* Transitions using the page hook */
-      .fade-enter-active, .fade-leave-active {
+      /* .fade-enter-active, .fade-leave-active {
           background: #000;
         transition: all .30s ease-out;
       }
       .fade-enter, .fade-leave-active {
         opacity: 0;
         transform-origin: 50% 50%;
-      }
+      } */
 
 
 
 
 
 
-      .page-enter-active, .page-leave-active {
+      /* .page-enter-active, .page-leave-active {
         transition: all .25s ease-out;
       }
       .page-enter, .page-leave-active {
         opacity: 0;
         transform-origin: 50% 50%;
-      }
+      } */

@@ -9,7 +9,7 @@
       ],
     ]"
   >
-    <nuxt-link :to="`${link}#chooseBrand`">
+    <nuxt-link :to="`${link}#chooseCar`">
       <div class="icon-adv">
         <img :src="image" />
       </div>
