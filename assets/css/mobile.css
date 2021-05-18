@@ -50,7 +50,7 @@
 	.pageFooter-appsLink-Current { display: block; }
 	.pageFooter-appsLinks { float: right; }
 	.carsList { margin: 0; }
-	.carsList-item { width: 100%; }
+	.carsList-item { width: 100%; margin-bottom: 30px; }
 	.carsList-item-Last { margin: 0; }
 	.carsList-itemContent { margin: 0 0 30px; padding: 0; height: 310px; }
 	.carsList-item:last-child .carsList-itemContent { margin: 0; }
@@ -58,9 +58,16 @@
 	.carsList-itemContent:before { bottom: 0; top: -40px; }
 	.carsList-itemName { left: 0; bottom: 20px; }
 	.carsList-itemPrice { right: 0; bottom: 20px; }
-	.carsList-itemIcons { display: none; }
+	.carsList-itemIcons { 
+		/* display: none; */
+		top: 5px;
+	}
 	.carsList-itemHover { display: none; }
 	.carsList-itemDetails { display: block; }
+
+	.icon-auto {
+		margin-bottom: 4px;
+	}
 
 	.carsPresent-title { padding:50px 0 0; font-size: 24px; }
 	.carsPresent-subTitle { padding:50px 0 0; font-size: 24px; }
@@ -348,6 +355,9 @@
 
 
 @media (max-width: 667px) { /* body-MobileMode */
+	.block-icon-auto {
+		margin-right: 10px;
+	}
 	.tab-adv,
 	.tab-adv.tab-adv-active {
 		display: none;
@@ -480,7 +490,7 @@
 	.pageFooter.pageFooter-MarginBottom { padding-bottom: 85px; }
 	.pageFooter-content { padding: 0 20px; }
 	.carsPresent-subTitle { padding:50px 0 0; font-size: 17px; color: #E9E9E9; line-height: 22px; font-weight:600; text-align: left; }
-	.carsList-itemContent { height: 270px; margin: 0; }
+	.carsList-itemContent { /*height: 270px;*/ height: 300px; margin: 0; }
 	.carsList-itemImage { top:-18px; }
 	.carsList-itemContent:before { top:-18px; }
 	.carsList-itemName { bottom: 18px; }

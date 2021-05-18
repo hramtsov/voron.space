@@ -16,19 +16,21 @@
           <span>{{ car.body.title }}</span>
         </div> -->
 
-        <div class="block-icon-auto">
+        <div v-if="car.seats != 0" class="block-icon-auto">
           <div class="icon-auto">
             <i v-if="3 == 3" class="fal fa-users"></i>
             <i v-if="3 == 2" class="fal fa-user-friends"></i>
           </div>
-          <span>5 мест</span>
+          <span>{{
+            car.seats | declOfNum(["место", "места", "мест"], true)
+          }}</span>
         </div>
 
-        <div class="block-icon-auto">
+        <div v-if="car.horsepower != 0" class="block-icon-auto">
           <div class="icon-auto">
             <i class="fal fa-tachometer-alt-fastest"></i>
           </div>
-          <span>170 л.с.</span>
+          <span>{{ car.horsepower }} л.с.</span>
         </div>
 
         <div class="block-icon-auto">

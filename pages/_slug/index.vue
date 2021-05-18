@@ -47,7 +47,7 @@
     <!-- BAR: ADVANTAGES -->
     <div id="advantages" class="advantages">
       <div class="pageSection-content">
-        <div class="advantages-title">Преимущества</div>
+        <div class="advantages-title">Суть сервиса</div>
 
         <div
           class="advantages-items-container advantages-items-container-Active"
@@ -133,7 +133,7 @@
             :link="`/${brand.slug}/`"
             :slug="brand.slug"
           />
-          <BrandItem image="" name="Все" link="/" slug="" />
+          <BrandItem icon="fal fa-cars" name="Все" link="/" slug="" />
         </div>
 
         <div class="pageSection-content">
@@ -148,11 +148,12 @@
           <div class="carsList-itemSubCaption">
             <em
               ><small
-                >*Для отмены депозита засчитываются поездки на любых
-                автомобилях, при условии, что вы находились в движении минимум
-                30 минут, не нарушали правила ПДД, не нанесли ущерб автомобилю и
-                оплата за аренду производилась списанием с привязанной
-                банковской карты, а не из страхового депозита.</small
+                >* Для отмены депозита необходимо совершить минимум 10 успешных
+                поездок в сервисе. Поездка зачитывается, при условии, что вы
+                находились в движении минимум 30 минут, не нарушали правила ПДД,
+                не нанесли ущерб автомобилю и оплата за аренду производилась
+                успешным списанием с привязанной банковской карты, а не
+                погашением задолженности или из страхового депозита.</small
               ></em
             >
           </div>

@@ -9,9 +9,15 @@
       ],
     ]"
   >
-    <nuxt-link :to="`${link}#chooseCar`">
+    <nuxt-link :to="{ path: link, hash: '#chooseCar' }">
+      <!-- :to="`${link}#chooseCar`" -->
       <div class="icon-adv">
-        <img :src="image" />
+        <img v-if="image" :src="image" />
+        <i
+          style="font-size: 35px; color: rgba(255, 255, 255, 0.9)"
+          v-if="icon"
+          :class="icon"
+        />
       </div>
 
       <div class="advantages-itemText">
@@ -28,7 +34,10 @@ export default {
       required: true,
     },
     image: {
-      required: true,
+      required: false,
+    },
+    icon: {
+      required: false,
     },
     link: {
       required: false,

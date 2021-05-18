@@ -10935,7 +10935,7 @@ width: 130px;
 .carsPage-infoText:before { content: ''; position: absolute; left: 0; top: 4px; margin-right: 10px; width: 12px; height: 12px; border-radius: 12px; background: #ffcc00; }
 
 /* Блок авто */
-.carsList { margin: -20px; padding-bottom: 50px; }
+.carsList { margin: -20px; padding-bottom: 50px; display: flex; flex-wrap: wrap; justify-content: center; }
 .carsList:after { content: '';clear: both; display: block; }
 .carsList-item { float: left; width: 50%; }
 .carsList-item-Last { margin-left: 25%; }
@@ -11955,7 +11955,9 @@ a.ldWidget i {
 
 
 
-
+/* html {
+        scroll-behavior: smooth;
+} */
 
 
 .choose_models {
@@ -12791,3 +12793,5 @@ a.ldWidget i {
         opacity: 0;
         transform-origin: 50% 50%;
       } */
+
+
