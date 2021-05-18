@@ -9,8 +9,7 @@
       ],
     ]"
   >
-    <nuxt-link :to="{ path: link, hash: '#chooseCar' }">
-      <!-- :to="`${link}#chooseCar`" -->
+    <nuxt-link :to="`${link}#chooseCar`">
       <div class="icon-adv">
         <img v-if="image" :src="image" />
         <i
