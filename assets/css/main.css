@@ -11952,7 +11952,8 @@ a.ldWidget i {
 
 
 
-
+  .home-enter-active, .home-leave-active { transition: opacity .5s; }
+  .home-enter, .home-leave-active { opacity: 0; }
 
 
 /* html {

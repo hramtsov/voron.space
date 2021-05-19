@@ -10,7 +10,7 @@
           loop
           muted
           autoplay
-          poster="/images/bgvideo.jpg_"
+          poster2=""
           class="mainSection-video"
         >
           <source src="~static/video/techno.mp4" type="video/mp4" />

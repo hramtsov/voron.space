@@ -156,7 +156,9 @@
       </div>
       <!-- /HEADER -->
 
-      <Nuxt />
+      <transition name="home">
+        <Nuxt />
+      </transition>
 
       <div class="pageFooter-Protector"></div>
     </div>
