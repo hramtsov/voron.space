@@ -147,7 +147,7 @@
     <!-- BAR: ADVANTAGES -->
     <div id="advantages" class="advantages">
       <div class="pageSection-content">
-        <div class="advantages-title">Суть сервиса</div>
+        <div class="advantages-title">Сервис</div>
 
         <div
           class="advantages-items-container advantages-items-container-Active"
@@ -221,7 +221,7 @@
     <!-- BAR: HOT IT WORKS -->
     <div id="howItWorks" class="howItWorks">
       <div class="pageSection-content">
-        <div class="howItWorks-title">Схема работы сервиса</div>
+        <div class="howItWorks-title">Схема работы</div>
         <div class="howItWorks-numbers">
           <div class="howItWorks-numberItem">1</div>
           <div class="howItWorks-numberItem">2</div>
