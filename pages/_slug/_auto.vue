@@ -3,19 +3,7 @@
   <main class="pageContent" itemprop="mainContentOfPage">
     <!-- use the modal component, pass in the prop -->
     <Modal v-if="showModal" @close="showModal = false">
-      <form
-        class="callback-form"
-        slot="body"
-        v-on:submit.prevent="SendMessage()"
-      >
-        <div class="main_photo_div">
-          <img
-            class="main_photo"
-            :src="`https://img.voron.io/${auto.img}`"
-            alt=""
-          />
-        </div>
-
+      <div slot="body">
         <div class="thanks-form alert-form" v-if="form.success">
           <div class="thanks-form-title">Спасибо!</div>
           <div class="thanks-form-text">
@@ -30,42 +18,56 @@
           </div>
         </div>
 
-        <div class="form-group">
-          <label>Имя</label>
-          <input
-            type="text"
-            name="firstname"
-            class="form-control"
-            required
-            v-model.trim="form.firstname"
+        <div class="main_photo_div" v-if="!form.success">
+          <img
+            class="main_photo"
+            :src="`https://img.voron.io/${auto.img}`"
+            alt=""
           />
         </div>
 
-        <div class="form-group">
-          <label>Фамилия</label>
-          <input
-            type="text"
-            name="lastname"
-            class="form-control"
-            required
-            v-model.trim="form.lastname"
-          />
-        </div>
+        <form
+          v-if="!form.success"
+          class="callback-form"
+          v-on:submit.prevent="SendMessage()"
+        >
+          <div class="form-group">
+            <label>Имя</label>
+            <input
+              type="text"
+              name="firstname"
+              class="form-control"
+              required
+              v-model.trim="form.firstname"
+            />
+          </div>
 
-        <div class="form-group">
-          <label>Телефон</label>
-          <the-mask
-            name="phone"
-            :mask="['+7 (###) ###-##-##']"
-            placeholder="+7 (999) 999-99-99"
-            class="phone_number form-control"
-            required
-            v-model="form.phone"
-          />
-        </div>
+          <div class="form-group">
+            <label>Фамилия</label>
+            <input
+              type="text"
+              name="lastname"
+              class="form-control"
+              required
+              v-model.trim="form.lastname"
+            />
+          </div>
 
-        <button type="submit" class="btn btn-primary">Забронировать</button>
-      </form>
+          <div class="form-group">
+            <label>Телефон</label>
+            <the-mask
+              name="phone"
+              :mask="['+7 (###) ###-##-##']"
+              placeholder="+7 (999) 999-99-99"
+              class="phone_number form-control"
+              required
+              v-model="form.phone"
+            />
+          </div>
+
+          <button type="submit" class="btn btn-primary">Забронировать</button>
+        </form>
+      </div>
 
       <h3 slot="header">Забронировать {{ auto.title }}</h3>
     </Modal>
@@ -525,10 +527,11 @@ export default {
 
 .main_photo_div {
   text-align: center;
+  margin-top: -30px;
 }
 
 .main_photo {
-  max-height: 220px;
+  max-height: 150px;
   margin: 0 auto;
 }
 </style>

@@ -25,18 +25,15 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '@/assets/fa/css/all.min.css',
     '@/assets/css/main.css',
     '@/assets/css/mobile.css',
-    '@/static/fa/css/all.min.css',
-    // '@splidejs/splide/dist/css/themes/splide-default.min.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
-    '@/plugins/filters',
+    '~/plugins/filters',
     '~/plugins/vue-agile',
-    // { src: '~/plugins/splide.js', mode: 'client' }, //  , mode: 'client'     , ssr: true
-    // { src: '@/plugins/swiper.js', mode: 'client' } // , ssr: false 
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
