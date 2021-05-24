@@ -18,8 +18,8 @@
 
         <div v-if="car.seats != 0" class="block-icon-auto">
           <div class="icon-auto">
-            <i v-if="3 == 3" class="fal fa-users"></i>
-            <i v-if="3 == 2" class="fal fa-user-friends"></i>
+            <i v-if="car.seats != 2" class="fal fa-users"></i>
+            <i v-if="car.seats == 2" class="fal fa-user-friends"></i>
           </div>
           <span>{{
             car.seats | declOfNum(["место", "места", "мест"], true)
@@ -54,14 +54,14 @@
           <span>Стаж</span>
         </div>
       </div>
-      <div class="carsList-itemDetails">
-        {{ car.body.title }} / 5 мест / 170 л.с.
-      </div>
+      <!-- <div class="carsList-itemDetails">
+        {{ car.body.title }}
+      </div> -->
       <div class="carsList-itemName">
         <div class="carsList-itemPreCaption"></div>
         <div class="carsList-itemCaption">{{ car.title }}</div>
         <div class="carsList-itemSubCaption">
-          {{ car.model.title }}<br /><em
+          {{ car.body.title }} {{ car.model.title }}<br /><em
             ><small
               >Депозит для новых клиентов {{ car.depositMax | number }}
               <span class="rouble">₽</span> *</small
@@ -98,6 +98,7 @@ export default {
   props: {
     car: {
       required: true,
+      type: Object,
     },
     link: {
       required: false,

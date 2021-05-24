@@ -10,7 +10,7 @@
           loop
           muted
           autoplay
-          poster="/images/bgvideo.jpg_"
+          poster_=""
           class="mainSection-video"
         >
           <source src="~static/video/techno.mp4" type="video/mp4" />
@@ -78,40 +78,45 @@
           </div>
 
           <div class="advantages-items-Mobile">
-            <splide
-              :options="{
-                arrows: false,
-                height: 380,
-              }"
-            >
-              <splide-slide>
-                <AdvantageItem
-                  text="Разнообразный ассортимент бизнес и премиум класса"
-                  img="/images/app/phone01.png"
-                />
-              </splide-slide>
-              <splide-slide
-                ><AdvantageItem
-                  text="Комфортные и статусные авто на улицах города с доступом со смартфона"
-                  img="/images/app/phone02.png"
-              /></splide-slide>
-              <splide-slide
-                ><AdvantageItem
-                  text="Авто без надписей. Поминутные, часовые и суточные тарифы"
-                  img="/images/app/phone03.png"
-              /></splide-slide>
-              <splide-slide
-                ><AdvantageItem
-                  text="Бесплатная доставка прямо к вам для часовой поездки"
-                  img="/images/app/phone04.png"
-              /></splide-slide>
-              <splide-slide>
-                <AdvantageItem
-                  text="Выбираете место на карте, и автомобиль через час ждет вас на парковке"
-                  img="/images/app/phone05.png"
-                />
-              </splide-slide>
-            </splide>
+            <client-only placeholder="Loading...">
+              <agile
+                :options="{
+                  infinite: false,
+                  navButtons: false,
+                }"
+              >
+                <div class="slide">
+                  <AdvantageItem
+                    text="Разнообразный ассортимент бизнес и премиум класса"
+                    img="/images/app/phone01.png"
+                  />
+                </div>
+                <div class="slide">
+                  <AdvantageItem
+                    text="Комфортные и статусные авто на улицах города с доступом со смартфона"
+                    img="/images/app/phone02.png"
+                  />
+                </div>
+                <div class="slide">
+                  <AdvantageItem
+                    text="Авто без надписей. Поминутные, часовые и суточные тарифы"
+                    img="/images/app/phone03.png"
+                  />
+                </div>
+                <div class="slide">
+                  <AdvantageItem
+                    text="Бесплатная доставка прямо к вам для часовой поездки"
+                    img="/images/app/phone04.png"
+                  />
+                </div>
+                <div class="slide">
+                  <AdvantageItem
+                    text="Выбираете место на карте, и автомобиль через час ждет вас на парковке"
+                    img="/images/app/phone05.png"
+                  />
+                </div>
+              </agile>
+            </client-only>
           </div>
         </div>
       </div>
@@ -133,7 +138,7 @@
             :link="`/${brand.slug}/`"
             :slug="brand.slug"
           />
-          <BrandItem icon="fal fa-cars" name="Все" link="/" slug="" />
+          <BrandItem icon="far fa-ellipsis-h" name="Все" link="/" slug="" />
         </div>
 
         <div class="pageSection-content">
@@ -207,51 +212,56 @@
         </div>
 
         <div class="advantages-items-Mobile howItWorks-items-Mobile_">
-          <splide
-            :options="{
-              arrows: false,
-              height: 380,
-            }"
-          >
-            <splide-slide>
-              <SchemeItem
-                title="Регистрация"
-                icon="fal fa-address-card"
-                number="1"
-                text="Вы устанавливаете мобильное приложение и проходите в нем регистрацию"
-              />
-            </splide-slide>
-            <splide-slide
-              ><SchemeItem
-                title="Подтверждение"
-                icon="fal fa-user-check"
-                number="2"
-                text="Служба безопасности проверит ваши документы и активирует ваш аккаунт"
-            /></splide-slide>
-            <splide-slide
-              ><SchemeItem
-                title="Доставка / Бронь"
-                icon="fal fa-route"
-                number="3"
-                text="Вы выбираете авто, вносите страховой депозит с банковской карты и заказываете доставку. Через короткое время автомобиль будет ждать вас на парковке. Или бронируете и забираете самостоятельно"
-            /></splide-slide>
-            <splide-slide
-              ><SchemeItem
-                title="Аренда"
-                icon="fal fa-car-alt"
-                number="4"
-                text="На время аренды у вас включен таймер в мобильном приложении и вы можете контролировать расходы"
-            /></splide-slide>
-            <splide-slide>
-              <SchemeItem
-                title="Завершение"
-                icon="fal fa-car-alt"
-                number="5"
-                text="Зона завершения аренды подсвечена в приложении зеленым цветом. После завершения можете нажать «Вернуть депозит», и в течение от 4 до 48 часов депозит будет автоматически возвращен"
-                decsription="При желании вы можете сразу не возвращать депозит, а использовать для следующих поездок"
-              />
-            </splide-slide>
-          </splide>
+          <client-only placeholder="Loading...">
+            <agile
+              :options="{
+                infinite: false,
+                navButtons: false,
+              }"
+            >
+              <div class="slide">
+                <SchemeItem
+                  title="Регистрация"
+                  icon="fal fa-address-card"
+                  number="1"
+                  text="Вы устанавливаете мобильное приложение и проходите в нем регистрацию"
+                />
+              </div>
+              <div class="slide">
+                <SchemeItem
+                  title="Подтверждение"
+                  icon="fal fa-user-check"
+                  number="2"
+                  text="Служба безопасности проверит ваши документы и активирует ваш аккаунт"
+                />
+              </div>
+              <div class="slide">
+                <SchemeItem
+                  title="Доставка / Бронь"
+                  icon="fal fa-route"
+                  number="3"
+                  text="Вы выбираете авто, вносите страховой депозит с банковской карты и заказываете доставку. Через короткое время автомобиль будет ждать вас на парковке. Или бронируете и забираете самостоятельно"
+                />
+              </div>
+              <div class="slide">
+                <SchemeItem
+                  title="Аренда"
+                  icon="fal fa-car-alt"
+                  number="4"
+                  text="На время аренды у вас включен таймер в мобильном приложении и вы можете контролировать расходы"
+                />
+              </div>
+              <div class="slide">
+                <SchemeItem
+                  title="Завершение"
+                  icon="fal fa-car-alt"
+                  number="5"
+                  text="Зона завершения аренды подсвечена в приложении зеленым цветом. После завершения можете нажать «Вернуть депозит», и в течение от 4 до 48 часов депозит будет автоматически возвращен"
+                  decsription="При желании вы можете сразу не возвращать депозит, а использовать для следующих поездок"
+                />
+              </div>
+            </agile>
+          </client-only>
         </div>
 
         <div

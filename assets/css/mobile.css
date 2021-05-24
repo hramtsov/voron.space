@@ -154,7 +154,7 @@
 	.howItWorks-items { display: none; }
 	.howItWorks-items-Mobile { display: block; }
 	.howItWorks-numbers { display: none; }
-	.howItWorks-item { margin: 0; width: auto; padding: 0; float: none; }
+	.howItWorks-item { margin: 0; width: auto; padding: 0; float: none; position: relative; margin: 0 !important; }
 	.howItWorks-numberItem { margin-top: 0; margin-left: 0; left: auto; right: 0; }
 	.howItWorks-buttonContainer { position: static; margin: 50px auto 0; }
 	.howItWorks-doc { margin: 50px auto 0; width: auto; padding-bottom: 20px; }

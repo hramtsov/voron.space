@@ -1,9 +1,11 @@
 export default {
-  // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-  ssr: true,
 
-  // Target: https://go.nuxtjs.dev/config-target
-  target: 'static',
+  ssr: true,
+  target: 'server',
+
+  // ssr: false,
+  // target: 'static',
+
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -22,18 +24,19 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  // import '@splidejs/splide/dist/css/themes/splide-default.min.css';
   css: [
     '@/assets/css/main.css',
     '@/assets/css/mobile.css',
     '@/static/fa/css/all.min.css',
-    '@splidejs/splide/dist/css/themes/splide-default.min.css'
+    // '@splidejs/splide/dist/css/themes/splide-default.min.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '@/plugins/filters',
-    { src: '@/plugins/carousel' }, // , mode: 'client' 
+    '~/plugins/vue-agile',
+    // { src: '~/plugins/splide.js', mode: 'client' }, //  , mode: 'client'     , ssr: true
+    // { src: '@/plugins/swiper.js', mode: 'client' } // , ssr: false 
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -58,7 +61,8 @@ export default {
       plugins: [
         ['@babel/plugin-proposal-private-methods', { loose: true }]
       ]
-    }
+    },
+    transpile: ['vue-agile']
   },
 
   loading: false,

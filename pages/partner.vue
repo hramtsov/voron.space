@@ -10,7 +10,7 @@
           muted
           autoplay
           preload="none"
-          poster_="~static/images/bgvideo.jpg_"
+          poster_=""
           class="mainSection-video mainSection-video-partner"
         >
           <source src="~static/video/car.mp4" type="video/mp4" />
@@ -126,67 +126,87 @@
           </div>
 
           <div class="advantages-items-Mobile" v-if="tab == 'one'">
-            <splide key="1" :options="{ arrows: false, height: 260 }">
-              <splide-slide>
-                <AdvantagePartnerItem
-                  icon="fal fa-search-dollar"
-                  text="Ваш автомобиль способен генерировать пассивный доход"
-                />
-              </splide-slide>
-              <splide-slide
-                ><AdvantagePartnerItem
-                  icon="fal fa-car-alt"
-                  text="Вы можете пользоваться своим автомобилем, когда он необходим"
-              /></splide-slide>
-              <splide-slide
-                ><AdvantagePartnerItem
-                  icon="fal fa-route"
-                  text="Мы подвозим его примерно за 2 часа к вашему дому"
-              /></splide-slide>
-              <splide-slide
-                ><AdvantagePartnerItem
-                  icon="fal fa-mask"
-                  text="Не требуется наносить никаких наклеек и опознавательных знаков"
-              /></splide-slide>
-              <splide-slide>
-                <AdvantagePartnerItem
-                  icon="fal fa-cocktail"
-                  text="Всю «головную боль» мы берем на себя"
-                />
-              </splide-slide>
-            </splide>
+            <client-only placeholder="Loading...">
+              <agile
+                :options="{
+                  infinite: false,
+                  navButtons: false,
+                }"
+              >
+                <div class="slide">
+                  <AdvantagePartnerItem
+                    icon="fal fa-search-dollar"
+                    text="Ваш автомобиль способен генерировать пассивный доход"
+                  />
+                </div>
+                <div class="slide">
+                  <AdvantagePartnerItem
+                    icon="fal fa-car-alt"
+                    text="Вы можете пользоваться своим автомобилем, когда он необходим"
+                  />
+                </div>
+                <div class="slide">
+                  <AdvantagePartnerItem
+                    icon="fal fa-route"
+                    text="Мы подвозим его примерно за 2 часа к вашему дому"
+                  />
+                </div>
+                <div class="slide">
+                  <AdvantagePartnerItem
+                    icon="fal fa-mask"
+                    text="Не требуется наносить никаких наклеек и опознавательных знаков"
+                  />
+                </div>
+                <div class="slide">
+                  <AdvantagePartnerItem
+                    icon="fal fa-cocktail"
+                    text="Всю «головную боль» мы берем на себя"
+                  />
+                </div>
+              </agile>
+            </client-only>
           </div>
 
           <div class="advantages-items-Mobile" v-if="tab == 'two'">
-            <splide key="2" :options="{ arrows: false, height: 260 }">
-              <splide-slide>
-                <AdvantagePartnerItem
-                  icon="fal fa-shower"
-                  text="Заправку и мойку автомобиля мы берем на себя"
-                />
-              </splide-slide>
-              <splide-slide
-                ><AdvantagePartnerItem
-                  icon="fal fa-traffic-light"
-                  text="Штрафы полностью автоматизированы и вам не нужно отслеживать свои нарушения"
-              /></splide-slide>
-              <splide-slide
-                ><AdvantagePartnerItem
-                  icon="fal fa-parking-circle"
-                  text="Вы можете оставить автомобиль в любой точке внутри МКАД и дальше это наша забота"
-              /></splide-slide>
-              <splide-slide
-                ><AdvantagePartnerItem
-                  icon="fal fa-street-view"
-                  text="Если автомобиль вам нужен в определенной точке мы подвезем его туда"
-              /></splide-slide>
-              <splide-slide>
-                <AdvantagePartnerItem
-                  icon="fal fa-users-class"
-                  text="Целая команда специалистов круглосуточно следит за вашим автомобилем"
-                />
-              </splide-slide>
-            </splide>
+            <client-only placeholder="Loading...">
+              <agile
+                :options="{
+                  infinite: false,
+                  navButtons: false,
+                }"
+              >
+                <div class="slide">
+                  <AdvantagePartnerItem
+                    icon="fal fa-shower"
+                    text="Заправку и мойку автомобиля мы берем на себя"
+                  />
+                </div>
+                <div class="slide">
+                  <AdvantagePartnerItem
+                    icon="fal fa-traffic-light"
+                    text="Штрафы полностью автоматизированы и вам не нужно отслеживать свои нарушения"
+                  />
+                </div>
+                <div class="slide">
+                  <AdvantagePartnerItem
+                    icon="fal fa-parking-circle"
+                    text="Вы можете оставить автомобиль в любой точке внутри МКАД и дальше это наша забота"
+                  />
+                </div>
+                <div class="slide">
+                  <AdvantagePartnerItem
+                    icon="fal fa-street-view"
+                    text="Если автомобиль вам нужен в определенной точке мы подвезем его туда"
+                  />
+                </div>
+                <div class="slide">
+                  <AdvantagePartnerItem
+                    icon="fal fa-users-class"
+                    text="Целая команда специалистов круглосуточно следит за вашим автомобилем"
+                  />
+                </div>
+              </agile>
+            </client-only>
           </div>
         </div>
       </div>
@@ -253,45 +273,55 @@
         </div>
 
         <div class="advantages-items-Mobile">
-          <splide key="5" :options="{ height: 320, arrows: false }">
-            <splide-slide>
-              <SchemeItem
-                title="Подключение"
-                icon="fal fa-car-mechanic"
-                number="1"
-                text="Мы подключаем ваш автомобиль к системе. При подключении вам ничего оплачивать не требуется"
-              />
-            </splide-slide>
-            <splide-slide
-              ><SchemeItem
-                title="Личное использование"
-                icon="far fa-steering-wheel"
-                number="2"
-                text="Используете авто столько сколько требуется, а когда необходимость пропадает освобождаете для клиентов сервиса"
-            /></splide-slide>
-            <splide-slide
-              ><SchemeItem
-                title="Поездки пользователей"
-                icon="fal fa-users"
-                number="3"
-                text="Прошедшие строгую проверку пользователи берут вашу машину и платят поминутно"
-            /></splide-slide>
-            <splide-slide
-              ><SchemeItem
-                title="Контроль"
-                icon="fal fa-robot"
-                number="4"
-                text="Наши техники занимаются регулярными осмотрами, мойкой и перегонами автомобиля"
-            /></splide-slide>
-            <splide-slide>
-              <SchemeItem
-                title="Результат"
-                icon="al fa-sack-dollar"
-                number="5"
-                text="Вы видите в режиме онлайн в личном кабинете все доходы и расходы"
-              />
-            </splide-slide>
-          </splide>
+          <client-only placeholder="Loading...">
+            <agile
+              :options="{
+                infinite: false,
+                navButtons: false,
+              }"
+            >
+              <div class="slide">
+                <SchemeItem
+                  title="Подключение"
+                  icon="fal fa-car-mechanic"
+                  number="1"
+                  text="Мы подключаем ваш автомобиль к системе. При подключении вам ничего оплачивать не требуется"
+                />
+              </div>
+              <div class="slide">
+                <SchemeItem
+                  title="Личное использование"
+                  icon="far fa-steering-wheel"
+                  number="2"
+                  text="Используете авто столько сколько требуется, а когда необходимость пропадает освобождаете для клиентов сервиса"
+                />
+              </div>
+              <div class="slide">
+                <SchemeItem
+                  title="Поездки пользователей"
+                  icon="fal fa-users"
+                  number="3"
+                  text="Прошедшие строгую проверку пользователи берут вашу машину и платят поминутно"
+                />
+              </div>
+              <div class="slide">
+                <SchemeItem
+                  title="Контроль"
+                  icon="fal fa-robot"
+                  number="4"
+                  text="Наши техники занимаются регулярными осмотрами, мойкой и перегонами автомобиля"
+                />
+              </div>
+              <div class="slide">
+                <SchemeItem
+                  title="Результат"
+                  icon="al fa-sack-dollar"
+                  number="5"
+                  text="Вы видите в режиме онлайн в личном кабинете все доходы и расходы"
+                />
+              </div>
+            </agile>
+          </client-only>
         </div>
       </div>
     </div>
@@ -382,67 +412,87 @@
           </div>
 
           <div class="advantages-items-Mobile" v-if="tab_2 == 'three'">
-            <splide key="3" :options="{ height: 250, arrows: false }">
-              <splide-slide>
-                <AdvantagePartnerItem
-                  icon="fal fa-user-check"
-                  text="Привлечение и проверка клиентов по нескольким десяткам критериев"
-                />
-              </splide-slide>
-              <splide-slide
-                ><AdvantagePartnerItem
-                  icon="fal fa-satellite"
-                  text="Круглосуточный контроль за перемещением автомобиля"
-              /></splide-slide>
-              <splide-slide
-                ><AdvantagePartnerItem
-                  icon="fal fa-gas-pump"
-                  text="Заправка автомобиля, мойка снаружи и внутри, отслеживание состояния"
-              /></splide-slide>
-              <splide-slide
-                ><AdvantagePartnerItem
-                  icon="fal fa-route"
-                  text="Перемещение автомобиля [доставка/постановка в более массовой точке/забор со штрафстоянки]"
-              /></splide-slide>
-              <splide-slide>
-                <AdvantagePartnerItem
-                  icon="fal fa-phone-volume"
-                  text="Поддержка клиентов 24/7, прием платежей, оплата платных парковок и штрафов"
-                />
-              </splide-slide>
-            </splide>
+            <client-only placeholder="Loading...">
+              <agile
+                :options="{
+                  infinite: false,
+                  navButtons: false,
+                }"
+              >
+                <div class="slide">
+                  <AdvantagePartnerItem
+                    icon="fal fa-user-check"
+                    text="Привлечение и проверка клиентов по нескольким десяткам критериев"
+                  />
+                </div>
+                <div class="slide">
+                  <AdvantagePartnerItem
+                    icon="fal fa-satellite"
+                    text="Круглосуточный контроль за перемещением автомобиля"
+                  />
+                </div>
+                <div class="slide">
+                  <AdvantagePartnerItem
+                    icon="fal fa-gas-pump"
+                    text="Заправка автомобиля, мойка снаружи и внутри, отслеживание состояния"
+                  />
+                </div>
+                <div class="slide">
+                  <AdvantagePartnerItem
+                    icon="fal fa-route"
+                    text="Перемещение автомобиля [доставка/постановка в более массовой точке/забор со штрафстоянки]"
+                  />
+                </div>
+                <div class="slide">
+                  <AdvantagePartnerItem
+                    icon="fal fa-phone-volume"
+                    text="Поддержка клиентов 24/7, прием платежей, оплата платных парковок и штрафов"
+                  />
+                </div>
+              </agile>
+            </client-only>
           </div>
 
           <div class="advantages-items-Mobile" v-if="tab_2 == 'four'">
-            <splide key="4" :options="{ height: 250, arrows: false }">
-              <splide-slide>
-                <AdvantagePartnerItem
-                  icon="fas fa-mobile-alt"
-                  text="В приложении заказываете доставку своего авто или бронируете его на карте"
-                />
-              </splide-slide>
-              <splide-slide
-                ><AdvantagePartnerItem
-                  icon="far fa-steering-wheel"
-                  text="Используете свой автомобиль столько, сколько необходимо"
-              /></splide-slide>
-              <splide-slide
-                ><AdvantagePartnerItem
-                  icon="fal fa-oil-can"
-                  text="Проходите регламентное ТО автомобиля"
-              /></splide-slide>
-              <splide-slide
-                ><AdvantagePartnerItem
-                  icon="fal fa-wrench"
-                  text="Осуществляете ремонт (не кузовной) по необходимости"
-              /></splide-slide>
-              <splide-slide>
-                <AdvantagePartnerItem
-                  icon="fal fa-sack-dollar"
-                  text="Получаете пассивный доход"
-                />
-              </splide-slide>
-            </splide>
+            <client-only placeholder="Loading...">
+              <agile
+                :options="{
+                  infinite: false,
+                  navButtons: false,
+                }"
+              >
+                <div class="slide">
+                  <AdvantagePartnerItem
+                    icon="fas fa-mobile-alt"
+                    text="В приложении заказываете доставку своего авто или бронируете его на карте"
+                  />
+                </div>
+                <div class="slide">
+                  <AdvantagePartnerItem
+                    icon="far fa-steering-wheel"
+                    text="Используете свой автомобиль столько, сколько необходимо"
+                  />
+                </div>
+                <div class="slide">
+                  <AdvantagePartnerItem
+                    icon="fal fa-oil-can"
+                    text="Проходите регламентное ТО автомобиля"
+                  />
+                </div>
+                <div class="slide">
+                  <AdvantagePartnerItem
+                    icon="fal fa-wrench"
+                    text="Осуществляете ремонт (не кузовной) по необходимости"
+                  />
+                </div>
+                <div class="slide">
+                  <AdvantagePartnerItem
+                    icon="fal fa-sack-dollar"
+                    text="Получаете пассивный доход"
+                  />
+                </div>
+              </agile>
+            </client-only>
           </div>
         </div>
       </div>

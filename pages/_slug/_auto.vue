@@ -8,6 +8,14 @@
         slot="body"
         v-on:submit.prevent="SendMessage()"
       >
+        <div class="main_photo_div">
+          <img
+            class="main_photo"
+            :src="`https://img.voron.io/${auto.img}`"
+            alt=""
+          />
+        </div>
+
         <div class="thanks-form alert-form" v-if="form.success">
           <div class="thanks-form-title">Спасибо!</div>
           <div class="thanks-form-text">
@@ -63,7 +71,6 @@
     </Modal>
 
     <!-- BAR: MAIN SECTION -->
-
     <div class="mainSection mainSection-IndexPage">
       <div class="mainSection-background">
         <video
@@ -79,6 +86,7 @@
           class="mainSection-video"
         >
           <source
+            v-if="auto.video"
             :src="`https://img.voron.io/videos/${auto.video}`"
             type="video/mp4"
           />
@@ -87,11 +95,14 @@
       <div class="mainSection-content">
         <div class="pageSection-content">
           <h1 class="mainSection-title">
-            <template v-if="auto.title.includes(auto.brand.title)">{{
-              auto.title
-            }}</template>
-            <template v-else>{{ auto.brand.title }} {{ auto.title }}</template>
-
+            <template v-if="auto && typeof auto.title === 'string'">
+              <template v-if="auto.title.includes(auto.brand.title)">{{
+                auto.title
+              }}</template>
+              <template v-else
+                >{{ auto.brand.title }} {{ auto.title }}</template
+              >
+            </template>
             <div class="mainSection-subTitle">
               с доступом со смартфона по технологии каршеринга
             </div>
@@ -125,10 +136,16 @@
         <div class="carsList">
           <CarModel :car="auto" :link="false" />
         </div>
-        <div class="carsList">
+        <div class="carsList2">
           <div class="carsList-itemSubCaption">
-            <em
-              ><small
+            <em>
+              <small v-if="auto.depositMin > 0"
+                >* При наличии положительной истории поездок в серисе депозит
+                может быть снижен до {{ auto.depositMin | number }}
+                <span class="rouble">₽</span></small
+              >
+
+              <small v-else
                 >* Для отмены депозита необходимо совершить минимум 10 успешных
                 поездок в сервисе. Поездка зачитывается, при условии, что вы
                 находились в движении минимум 30 минут, не нарушали правила ПДД,
@@ -178,40 +195,45 @@
           </div>
 
           <div class="advantages-items-Mobile">
-            <splide
-              :options="{
-                arrows: false,
-                height: 380,
-              }"
-            >
-              <splide-slide>
-                <AdvantageItem
-                  text="Разнообразный ассортимент бизнес и премиум класса"
-                  img="/images/app/phone01.png"
-                />
-              </splide-slide>
-              <splide-slide
-                ><AdvantageItem
-                  text="Комфортные и статусные авто на улицах города с доступом со смартфона"
-                  img="/images/app/phone02.png"
-              /></splide-slide>
-              <splide-slide
-                ><AdvantageItem
-                  text="Авто без надписей. Поминутные, часовые и суточные тарифы"
-                  img="/images/app/phone03.png"
-              /></splide-slide>
-              <splide-slide
-                ><AdvantageItem
-                  text="Бесплатная доставка прямо к вам для часовой поездки"
-                  img="/images/app/phone04.png"
-              /></splide-slide>
-              <splide-slide>
-                <AdvantageItem
-                  text="Выбираете место на карте, и автомобиль через час ждет вас на парковке"
-                  img="/images/app/phone05.png"
-                />
-              </splide-slide>
-            </splide>
+            <client-only placeholder="Loading...">
+              <agile
+                :options="{
+                  infinite: false,
+                  navButtons: false,
+                }"
+              >
+                <div class="slide">
+                  <AdvantageItem
+                    text="Разнообразный ассортимент бизнес и премиум класса"
+                    img="/images/app/phone01.png"
+                  />
+                </div>
+                <div class="slide">
+                  <AdvantageItem
+                    text="Комфортные и статусные авто на улицах города с доступом со смартфона"
+                    img="/images/app/phone02.png"
+                  />
+                </div>
+                <div class="slide">
+                  <AdvantageItem
+                    text="Авто без надписей. Поминутные, часовые и суточные тарифы"
+                    img="/images/app/phone03.png"
+                  />
+                </div>
+                <div class="slide">
+                  <AdvantageItem
+                    text="Бесплатная доставка прямо к вам для часовой поездки"
+                    img="/images/app/phone04.png"
+                  />
+                </div>
+                <div class="slide">
+                  <AdvantageItem
+                    text="Выбираете место на карте, и автомобиль через час ждет вас на парковке"
+                    img="/images/app/phone05.png"
+                  />
+                </div>
+              </agile>
+            </client-only>
           </div>
         </div>
       </div>
@@ -262,51 +284,56 @@
           />
         </div>
         <div class="advantages-items-Mobile howItWorks-items-Mobile_">
-          <splide
-            :options="{
-              arrows: false,
-              height: 380,
-            }"
-          >
-            <splide-slide>
-              <SchemeItem
-                title="Регистрация"
-                icon="fal fa-address-card"
-                number="1"
-                text="Вы устанавливаете мобильное приложение и проходите в нем регистрацию"
-              />
-            </splide-slide>
-            <splide-slide
-              ><SchemeItem
-                title="Подтверждение"
-                icon="fal fa-user-check"
-                number="2"
-                text="Служба безопасности проверит ваши документы и активирует ваш аккаунт"
-            /></splide-slide>
-            <splide-slide
-              ><SchemeItem
-                title="Доставка / Бронь"
-                icon="fal fa-route"
-                number="3"
-                text="Вы выбираете авто, вносите страховой депозит с банковской карты и заказываете доставку. Через короткое время автомобиль будет ждать вас на парковке. Или бронируете и забираете самостоятельно"
-            /></splide-slide>
-            <splide-slide
-              ><SchemeItem
-                title="Аренда"
-                icon="fal fa-car-alt"
-                number="4"
-                text="На время аренды у вас включен таймер в мобильном приложении и вы можете контролировать расходы"
-            /></splide-slide>
-            <splide-slide>
-              <SchemeItem
-                title="Завершение"
-                icon="fal fa-car-alt"
-                number="5"
-                text="Зона завершения аренды подсвечена в приложении зеленым цветом. После завершения можете нажать «Вернуть депозит», и в течение от 4 до 48 часов депозит будет автоматически возвращен"
-                decsription="При желании вы можете сразу не возвращать депозит, а использовать для следующих поездок"
-              />
-            </splide-slide>
-          </splide>
+          <client-only placeholder="Loading...">
+            <agile
+              :options="{
+                infinite: false,
+                navButtons: false,
+              }"
+            >
+              <div class="slide">
+                <SchemeItem
+                  title="Регистрация"
+                  icon="fal fa-address-card"
+                  number="1"
+                  text="Вы устанавливаете мобильное приложение и проходите в нем регистрацию"
+                />
+              </div>
+              <div class="slide">
+                <SchemeItem
+                  title="Подтверждение"
+                  icon="fal fa-user-check"
+                  number="2"
+                  text="Служба безопасности проверит ваши документы и активирует ваш аккаунт"
+                />
+              </div>
+              <div class="slide">
+                <SchemeItem
+                  title="Доставка / Бронь"
+                  icon="fal fa-route"
+                  number="3"
+                  text="Вы выбираете авто, вносите страховой депозит с банковской карты и заказываете доставку. Через короткое время автомобиль будет ждать вас на парковке. Или бронируете и забираете самостоятельно"
+                />
+              </div>
+              <div class="slide">
+                <SchemeItem
+                  title="Аренда"
+                  icon="fal fa-car-alt"
+                  number="4"
+                  text="На время аренды у вас включен таймер в мобильном приложении и вы можете контролировать расходы"
+                />
+              </div>
+              <div class="slide">
+                <SchemeItem
+                  title="Завершение"
+                  icon="fal fa-car-alt"
+                  number="5"
+                  text="Зона завершения аренды подсвечена в приложении зеленым цветом. После завершения можете нажать «Вернуть депозит», и в течение от 4 до 48 часов депозит будет автоматически возвращен"
+                  decsription="При желании вы можете сразу не возвращать депозит, а использовать для следующих поездок"
+                />
+              </div>
+            </agile>
+          </client-only>
         </div>
         <div
           class="howItWorks-buttonContainer"
@@ -457,7 +484,7 @@ export default {
         );
 
         // console.log(this.form);
-        // console.log(response);
+        console.log(response);
 
         if (response.result) {
           this.form.success = true;
@@ -494,5 +521,14 @@ export default {
 
 .carsList-item {
   width: 100%;
+}
+
+.main_photo_div {
+  text-align: center;
+}
+
+.main_photo {
+  max-height: 220px;
+  margin: 0 auto;
 }
 </style>
