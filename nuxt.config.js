@@ -25,9 +25,9 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '@/assets/fa/css/all.min.css',
     '@/assets/css/main.css',
     '@/assets/css/mobile.css',
+    '@/assets/fa/css/all.min.css',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
