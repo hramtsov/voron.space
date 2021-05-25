@@ -83,7 +83,7 @@
           :poster="[
             auto.video
               ? ''
-              : `https://img.voron.io/gallery/${auto.tid}/${auto.first_photo}@3x.jpg`,
+              : `https://img.voron.io/gallery/${auto.tid}/${auto.photos[0]}@3x.jpg`,
           ]"
           class="mainSection-video"
         >
@@ -136,7 +136,7 @@
       <div class="pageSection-content">
         <!-- CARS LIST BAR -->
         <div class="carsList">
-          <CarModel :car="auto" :link="false" />
+          <CarModel :car="auto" :link="false" :carousel="true" />
         </div>
         <div class="carsList2">
           <div class="carsList-itemSubCaption">

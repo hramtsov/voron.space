@@ -1,5 +1,9 @@
 @media (min-width: 668px) and (max-width: 1024px) {
 	.orderForm-ticketInfo{padding:51px 30px;}
+
+	.carsList-itemContent.carsList-itemContent-agile {
+		height: 415px;
+	}
 }
 @media (max-width: 1024px) {
 	.carsList > .carsList-itemSubCaption {
@@ -53,6 +57,11 @@
 	.carsList-item { width: 100%; margin-bottom: 30px; }
 	.carsList-item-Last { margin: 0; }
 	.carsList-itemContent { margin: 0 0 30px; padding: 0; height: 310px; }
+
+	.carousel-agile .carsList-itemContent {
+		height: 560px !important;
+	  }
+
 	.carsList-item:last-child .carsList-itemContent { margin: 0; }
 	.carsList-itemImage { bottom: 0; top: -40px; }
 	.carsList-itemContent:before { bottom: 0; top: -40px; }
@@ -490,7 +499,12 @@
 	.pageFooter.pageFooter-MarginBottom { padding-bottom: 85px; }
 	.pageFooter-content { padding: 0 20px; }
 	.carsPresent-subTitle { padding:50px 0 0; font-size: 17px; color: #E9E9E9; line-height: 22px; font-weight:600; text-align: left; }
-	.carsList-itemContent { /*height: 270px;*/ height: 300px; margin: 0; }
+	.carsList-itemContent { height: 300px; margin: 0; }
+
+	.carsList-itemContent.carsList-itemContent-agile {
+		height: 390px;
+	}
+
 	.carsList-itemImage { top:-18px; }
 	.carsList-itemContent:before { top:-18px; }
 	.carsList-itemName { bottom: 18px; }
