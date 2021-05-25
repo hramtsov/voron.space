@@ -177,14 +177,14 @@ export default {
   top: 50%;
   width: 100%;
   margin-top: -16px;
-  padding: 0 10px;
+  padding: 0 15px !important;
 }
 
 .carousel-agile .agile__actions button {
   background: rgba(0, 0, 0, 0.5);
   color: #fff;
-  width: 32px;
-  height: 32px;
+  width: 32px !important;
+  height: 32px !important;
   line-height: 28px;
   text-align: center;
   border-radius: 50%;

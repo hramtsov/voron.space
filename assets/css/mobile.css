@@ -2,7 +2,7 @@
 	.orderForm-ticketInfo{padding:51px 30px;}
 
 	.carsList-itemContent.carsList-itemContent-agile {
-		height: 415px;
+		height: 430px;
 	}
 }
 @media (max-width: 1024px) {
@@ -502,7 +502,7 @@
 	.carsList-itemContent { height: 300px; margin: 0; }
 
 	.carsList-itemContent.carsList-itemContent-agile {
-		height: 390px;
+		height: 400px;
 	}
 
 	.carsList-itemImage { top:-18px; }
