@@ -7,7 +7,7 @@
         <div class="thanks-form alert-form" v-if="form.success">
           <div class="thanks-form-title">Спасибо!</div>
           <div class="thanks-form-text">
-            Мы свяжемся с вами в ближайшее время!
+            Мы направили вам SMS-сообщение с ссылкой на завершение регистрации.
           </div>
         </div>
 
