@@ -3,7 +3,7 @@
     <div
       :class="[
         'carsList-itemImage',
-        [carousel && car.photos.length > 1 ? 'opacity-05' : ''],
+        [carousel && car.photos.length > 1 ? 'opacity-0' : ''],
       ]"
       :style="`background-image: url('https://img.voron.io/${car.side_img}')`"
     ></div>
@@ -25,7 +25,7 @@
       <agile
         :options="{
           autoplay: true,
-          centerMode: true,
+          //centerMode: true,
           dots: false,
           navButtons: true,
           slidesToShow: 1,
@@ -209,6 +209,10 @@ export default {
 
 .opacity-05 {
   opacity: 0.5;
+}
+
+.opacity-0 {
+  opacity: 0;
 }
 
 /* .carousel-agile .carsList-itemContent {
