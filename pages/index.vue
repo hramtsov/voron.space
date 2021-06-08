@@ -327,7 +327,7 @@ export default {
     BrandItem,
   },
   async asyncData({ context, $axios }) {
-    let response = await $axios.get(`https://i2.voron.io/api/getauto`);
+    let response = await $axios.get(`/api/getauto`);
     // console.log(response.data["cars"]);
     return { cars: response.data["cars"], brands: response.data["brands"] };
   },

@@ -451,9 +451,7 @@ export default {
   // }
   //   },
   async asyncData({ context, $axios, params }) {
-    let response = await $axios.get(
-      `https://i2.voron.io/api/getauto?slug=${params.auto}`
-    );
+    let response = await $axios.get(`/api/getauto?slug=${params.auto}`);
     return {
       cars: response.data["cars"],
       brands: response.data["brands"],
@@ -473,17 +471,14 @@ export default {
       ) {
         // console.log("отправим");
 
-        var response = await this.$axios.$post(
-          "https://i2.voron.io/api/voron_black_booking/",
-          {
-            token: "Voron.black_45dffaj5",
-            auto_slug: this.$route.params.auto,
-            lastname: this.form.lastname,
-            firstname: this.form.firstname,
-            phone: this.form.phone,
-            source: this.$store.state.source,
-          }
-        );
+        var response = await this.$axios.$post("/api/voron_black_booking/", {
+          token: "Voron.black_45dffaj5",
+          auto_slug: this.$route.params.auto,
+          lastname: this.form.lastname,
+          firstname: this.form.firstname,
+          phone: this.form.phone,
+          source: this.$store.state.source,
+        });
 
         // console.log(this.form);
         console.log(response);

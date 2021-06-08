@@ -54,7 +54,11 @@
         <div class="advantages-title">В чем суть?</div>
 
         <div
-          class="advantages-items-container advantages-items-container-Active advantages-items-container2"
+          class="
+            advantages-items-container
+            advantages-items-container-Active
+            advantages-items-container2
+          "
         >
           <ul class="tabs__caption">
             <li :class="[tab == 'one' ? 'active' : '']" @click="tab = 'one'">
@@ -335,7 +339,11 @@
         </div>
 
         <div
-          class="advantages-items-container advantages-items-container-Active advantages-items-container2"
+          class="
+            advantages-items-container
+            advantages-items-container-Active
+            advantages-items-container2
+          "
         >
           <ul class="tabs__caption">
             <li
@@ -718,7 +726,7 @@ export default {
   },
   directives: { mask },
   // async asyncData({ context, $axios }) {
-  //   let response = await $axios.get(`https://i2.voron.io/api/getauto`);
+  //   let response = await $axios.get(`/api/getauto`);
   //   // console.log(response.data);
 
   //   return { cars: response.data };
@@ -736,7 +744,7 @@ export default {
         // console.log("отправим");
 
         var response = await this.$axios.$post(
-          "https://i2.voron.io/api/voron_black_mail/",
+          "/api/voron_black_mail/",
           // this.form
           {
             token: "Voron.black_sfewta35",

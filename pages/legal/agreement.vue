@@ -41,9 +41,7 @@ export default {
     Nav,
   },
   async asyncData({ context, $axios }) {
-    let response = await $axios.get(
-      `https://i2.voron.io/api/getpage?alias=agreement`
-    );
+    let response = await $axios.get(`/api/getpage?alias=agreement`);
     return { content: response.data };
   },
 };

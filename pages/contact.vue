@@ -194,7 +194,7 @@ export default {
         // console.log("отправим");
 
         var response = await this.$axios.$post(
-          "https://i2.voron.io/api/voron_black_contact_mail/",
+          "/api/voron_black_contact_mail/",
           // this.form
           {
             name: this.form.name,

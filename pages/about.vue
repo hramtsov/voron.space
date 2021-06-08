@@ -36,9 +36,7 @@ export default {
     };
   },
   async asyncData({ context, $axios }) {
-    let response = await $axios.get(
-      `https://i2.voron.io/api/getpage?alias=about`
-    );
+    let response = await $axios.get(`/api/getpage?alias=about`);
     return { content: response.data };
   },
 };

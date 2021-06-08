@@ -41,9 +41,7 @@ export default {
     Nav,
   },
   async asyncData({ context, $axios }) {
-    let response = await $axios.get(
-      `https://i2.voron.io/api/getpage?alias=sign-act`
-    );
+    let response = await $axios.get(`/api/getpage?alias=sign-act`);
     return { content: response.data };
   },
 };

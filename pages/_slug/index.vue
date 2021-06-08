@@ -334,18 +334,12 @@ export default {
   // }
   //   },
   async asyncData({ context, $axios, params }) {
-    let response = await $axios.get(
-      `https://i2.voron.io/api/getauto?brand=${params.slug}`
-    );
+    let response = await $axios.get(`/api/getauto?brand=${params.slug}`);
     return {
       cars: response.data["cars"],
       brands: response.data["brands"],
       brand_data: response.data["brand"],
     };
-  },
-  created() {
-    // console.log("тест");
-    // console.log(this.$route.params.slug);
   },
   methods: {},
 };
