@@ -110,8 +110,8 @@
             </div>
           </h1>
 
-          <h2 class="mainSection-subTitle">
-            {{ auto.description }}
+          <h2 class="mainSection-subTitle" v-html="auto.description">
+            <!-- {{ auto.description }}` -->
           </h2>
 
           <div class="mainSection-subTitle-NoMobile"></div>
