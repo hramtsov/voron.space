@@ -219,7 +219,9 @@
     <!-- BAR: CARS PRESENTATION -->
     <div class="carsPresent">
       <div class="pageSection-content">
-        <h2 id="chooseCar" class="carsPresent-title">Доход владельцев авто</h2>
+        <h2 id="chooseCar" class="carsPresent-title">
+          Доход владельца автомобиля
+        </h2>
       </div>
 
       <div class="pageSection-content">
@@ -269,7 +271,7 @@
 
           <SchemeItem
             title="Результат"
-            icon="al fa-sack-dollar"
+            icon="fal fa-sack-dollar"
             text="Вы видите в режиме онлайн в личном кабинете все доходы и расходы"
           />
         </div>
@@ -317,7 +319,7 @@
               <div class="slide">
                 <SchemeItem
                   title="Результат"
-                  icon="al fa-sack-dollar"
+                  icon="fal fa-sack-dollar"
                   number="5"
                   text="Вы видите в режиме онлайн в личном кабинете все доходы и расходы"
                 />
