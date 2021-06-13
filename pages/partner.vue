@@ -219,9 +219,7 @@
     <!-- BAR: CARS PRESENTATION -->
     <div class="carsPresent">
       <div class="pageSection-content">
-        <h2 id="chooseCar" class="carsPresent-title">
-          Примеры чистого дохода владельцев авто
-        </h2>
+        <h2 id="chooseCar" class="carsPresent-title">Доход владельцев авто</h2>
       </div>
 
       <div class="pageSection-content">
