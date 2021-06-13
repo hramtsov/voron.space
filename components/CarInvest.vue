@@ -9,7 +9,7 @@
         <div class="carsList-itemPreCaption">{{ car.brand.title }}</div>
         <div class="carsList-itemCaption">{{ car.title }}</div>
         <div class="carsList-itemSubCaption">
-          <em>{{ car.year }}</em>
+          <em>{{ car.car_year }}</em>
         </div>
       </div>
       <div class="carsList-itemPrice">
