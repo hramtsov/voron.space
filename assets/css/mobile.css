@@ -5,6 +5,34 @@
 		height: 430px;
 	}
 }
+
+@media (max-width: 668px) {
+.pageFooter-appsLinks {
+	padding-right: 70px;
+}
+/* .pageFooter-publicLinks {
+	float: none !important;
+} */
+
+.pageFooter-publicLink:before, .pageFooter-publicLink:after {
+	width: 30px !important;
+    height: 30px !important;
+    font-size: 30px !important;
+    line-height: 30px !important;
+}
+
+.pageFooter-publicLink {
+	width: 30px !important;
+    height: 30px !important;
+	margin-right: 10px !important;
+}
+
+.pageFooter-publicLinks {
+	padding-top: 5px !important;
+}
+
+}
+
 @media (max-width: 1024px) {
 	.carsList > .carsList-itemSubCaption {
 		padding: 0;

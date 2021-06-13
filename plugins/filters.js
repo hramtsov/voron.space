@@ -31,11 +31,11 @@ export default ({ app }) => {
 	// })
 
 	// Округление
-	// Vue.filter('round', function (value, digits = 0) {
-	// 	var pow = Math.pow(10, digits);
-	// 	var rounded = Math.round(value * pow) / pow;
-	// 	return rounded;
-	// })
+	Vue.filter('round', function (value, digits = 0) {
+		var pow = Math.pow(10, digits);
+		var rounded = Math.round(value * pow) / pow;
+		return rounded;
+	})
 
 	// Округление в большую сторону
 	// Vue.filter('ceil', function (value, digits = 0) {

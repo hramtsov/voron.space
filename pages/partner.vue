@@ -646,62 +646,63 @@ export default {
   },
   data() {
     return {
-      cars: [
-        {
-          title: "640i xDrive",
-          brand: "BMW",
-          year: "2014",
-          income: 110700,
-          percent: 63,
-          price: 2100000,
-          image: "/images/car_model/640d.png",
-        },
-        {
-          title: "E200",
-          brand: "MERCEDES-BENZ",
-          year: "2018",
-          income: 80950,
-          percent: 43,
-          price: 2250000,
-          image: "/images/car_model/e200.png",
-        },
-        {
-          title: "SLK250",
-          brand: "MERCEDES-BENZ",
-          year: "2013",
-          income: 77100,
-          percent: 47,
-          price: 1970000,
-          image: "/images/car_model/slk.png",
-        },
-        {
-          title: "TT Quattro",
-          brand: "AUDI",
-          year: "2015",
-          income: 101150,
-          percent: 50,
-          price: 2450000,
-          image: "/images/car_model/auditt.png",
-        },
-        {
-          title: "G500",
-          brand: "MERCEDES-BENZ",
-          year: "2008",
-          income: 113500,
-          percent: 57,
-          price: 2400000,
-          image: "/images/car_model/gelik.png",
-        },
-        {
-          title: "Evoque",
-          brand: "Range Rover",
-          year: "2012",
-          income: 70800,
-          percent: 58,
-          price: 1470000,
-          image: "/images/car_model/evoque.png",
-        },
-      ],
+      cars: [],
+      // cars: [
+      //   {
+      //     title: "640i xDrive",
+      //     brand: "BMW",
+      //     year: "2014",
+      //     income: 110700,
+      //     percent: 63,
+      //     price: 2100000,
+      //     image: "/images/car_model/640d.png",
+      //   },
+      //   {
+      //     title: "E200",
+      //     brand: "MERCEDES-BENZ",
+      //     year: "2018",
+      //     income: 80950,
+      //     percent: 43,
+      //     price: 2250000,
+      //     image: "/images/car_model/e200.png",
+      //   },
+      //   {
+      //     title: "SLK250",
+      //     brand: "MERCEDES-BENZ",
+      //     year: "2013",
+      //     income: 77100,
+      //     percent: 47,
+      //     price: 1970000,
+      //     image: "/images/car_model/slk.png",
+      //   },
+      //   {
+      //     title: "TT Quattro",
+      //     brand: "AUDI",
+      //     year: "2015",
+      //     income: 101150,
+      //     percent: 50,
+      //     price: 2450000,
+      //     image: "/images/car_model/auditt.png",
+      //   },
+      //   {
+      //     title: "G500",
+      //     brand: "MERCEDES-BENZ",
+      //     year: "2008",
+      //     income: 113500,
+      //     percent: 57,
+      //     price: 2400000,
+      //     image: "/images/car_model/gelik.png",
+      //   },
+      //   {
+      //     title: "Evoque",
+      //     brand: "Range Rover",
+      //     year: "2012",
+      //     income: 70800,
+      //     percent: 58,
+      //     price: 1470000,
+      //     image: "/images/car_model/evoque.png",
+      //   },
+      // ],
       showModal: false,
       tab: "one",
       tab_2: "three",
@@ -725,12 +726,10 @@ export default {
     SchemeItem,
   },
   directives: { mask },
-  // async asyncData({ context, $axios }) {
-  //   let response = await $axios.get(`/api/getauto`);
-  //   // console.log(response.data);
-
-  //   return { cars: response.data };
-  // },
+  async asyncData({ context, $axios }) {
+    let response = await $axios.get(`/api/getauto?invest=1`);
+    return { cars: response.data["cars"], brands: response.data["brands"] };
+  },
   methods: {
     async SendMessage() {
       if (

@@ -218,7 +218,11 @@
             <div class="pageFooter-support">
               <a
                 href="tel:+7 800 555 06 79"
-                class="pageFooter-supportLink pageFooter-supportLinkFlag pageFooter-supportLinkFlag-RU"
+                class="
+                  pageFooter-supportLink
+                  pageFooter-supportLinkFlag
+                  pageFooter-supportLinkFlag-RU
+                "
                 >8 800 555 06 79</a
               >
               <a
@@ -233,6 +237,7 @@
 
             <div class="pageFooter-appsLinks">
               <a
+                v-if="os == 'iOS' || os == 'unknown'"
                 style="color: #fff"
                 target="_blank"
                 :href="`https://app.voron.io/${$store.state.source}`"
@@ -240,10 +245,15 @@
                 ><span class="pageFooter-appsLinkText"></span
               ></a>
               <a
+                v-if="os == 'Android' || os == 'unknown'"
                 style="color: #fff"
                 target="_blank"
                 :href="`https://app.voron.io/${$store.state.source}`"
-                class="pageFooter-appsLink pageFooter-appsLink-Google pageFooter-appsLink-Current"
+                class="
+                  pageFooter-appsLink
+                  pageFooter-appsLink-Google
+                  pageFooter-appsLink-Current
+                "
                 onclick2="Everentcar.Service.goGoogleMarketPage();"
                 ><span class="pageFooter-appsLinkText"></span
               ></a>
@@ -295,9 +305,14 @@
 export default {
   data: () => ({
     // width: 0,
+    os: "",
     classes: "",
     menuOpen: false,
   }),
+  mounted() {
+    this.os = this.getMobileOperatingSystem();
+    console.log(this.os);
+  },
   created() {
     var source = this.$route.query.source;
     if (typeof source !== "undefined" && source != null) {
@@ -313,6 +328,26 @@ export default {
   methods: {
     menu() {
       this.menuOpen = !this.menuOpen;
+    },
+
+    getMobileOperatingSystem() {
+      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      // Windows Phone must come first because its UA also contains "Android"
+      if (/windows phone/i.test(userAgent)) {
+        return "Windows Phone";
+      }
+
+      if (/android/i.test(userAgent)) {
+        return "Android";
+      }
+
+      // iOS detection from: http://stackoverflow.com/a/9039885/177710
+      if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        return "iOS";
+      }
+
+      return "unknown";
     },
   },
 };
