@@ -172,8 +172,10 @@ export default {
 }
 
 .carousel-agile .agile__actions {
-  z-index: 100000;
+  z-index: 1000;
   position: absolute !important;
+  left: auto;
+  right: auto;
   top: 50%;
   width: 100%;
   margin-top: -16px;
@@ -181,6 +183,7 @@ export default {
 }
 
 .carousel-agile .agile__actions button {
+  -webkit-appearance: button;
   background: rgba(0, 0, 0, 0.5);
   color: #fff;
   width: 32px !important;
@@ -191,6 +194,9 @@ export default {
   border: none;
   transition: 0.3s all ease-in-out;
   font-size: 1.3rem;
+
+  left: auto;
+  right: auto;
 }
 
 .carousel-agile .agile__actions button:hover {
