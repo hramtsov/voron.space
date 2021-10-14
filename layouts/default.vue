@@ -259,14 +259,16 @@
               ></a>
             </div>
             <div class="pageFooter-publicLinks">
-              <div
+              <a
                 class="pageFooter-publicLink pageFooter-publicLink-FB"
-                onclick="Everentcar.Service.goFbPage();"
-              ></div>
-              <div
+                target="_blank"
+                href="https://ru-ru.facebook.com/voron.io"
+              ></a>
+              <a
                 class="pageFooter-publicLink pageFooter-publicLink-Instagram"
-                onclick="Everentcar.Service.goInstagramPage();"
-              ></div>
+                target="_blank"
+                href="https://www.instagram.com/voronblack_official"
+              ></a>
             </div>
           </div>
         </div>
