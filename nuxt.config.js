@@ -1,7 +1,9 @@
-export default {
+// import serveStatic from 'serve-static'
+
+export default { 
 
   ssr: true,
-  target: 'server',
+  target: 'server', 
 
   // ssr: false,
   // target: 'static',
@@ -65,6 +67,10 @@ export default {
   },
 
   loading: false,
+
+  serverMiddleware: [
+    '~/serverMiddleware/seo.js'
+  ],
 
 
   // router: {
