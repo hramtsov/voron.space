@@ -19,7 +19,7 @@
       <div class="mainSection-content">
         <div class="pageSection-content">
           <h1 class="mainSection-title">
-            Личный автомобиль
+            Ваш личный автопарк
             <div class="mainSection-subTitle">
               с доступом со смартфона по технологии каршеринга
             </div>

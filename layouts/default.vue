@@ -9,7 +9,7 @@
           'pageHeader',
           [
             $route.name == 'index' ||
-            $route.name == 'partner' ||
+            $route.name == 'connect' ||
             $route.name == 'slug' ||
             $route.name == 'slug-auto'
               ? 'pageHeader-Transparent'
@@ -53,7 +53,7 @@
                       </li>
                       <li>
                         <nuxt-link
-                          to="/partner/"
+                          to="/connect/"
                           exact
                           exact-active-class="active"
                           >Подключить автомобиль</nuxt-link
@@ -146,7 +146,7 @@
                 >
               </li>
               <li>
-                <nuxt-link to="/partner/" exact exact-active-class="active"
+                <nuxt-link to="/connect/" exact exact-active-class="active"
                   ><span>Подключить авто</span></nuxt-link
                 >
               </li>
@@ -184,7 +184,7 @@
                 </li>
 
                 <li>
-                  <nuxt-link to="/partner/" exact exact-active-class="active"
+                  <nuxt-link to="/connect/" exact exact-active-class="active"
                     >Подключить автомобиль</nuxt-link
                   >
                 </li>
