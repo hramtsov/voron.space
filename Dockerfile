@@ -2,7 +2,7 @@
 # FROM node:alpine
 # FROM node:17-alpine
 
-FROM node:12
+FROM node:12.2.0-alpine
 
 # FROM node:12.2.0-alpine
 # FROM node:12
