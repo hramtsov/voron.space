@@ -57,6 +57,9 @@ export default {
     id: '45891591',
     webvisor: true,
     clickmap: true,
+    trackLinks: true,
+    accurateTrackBounce: true,
+    trackHash: true,
   },
 
 
