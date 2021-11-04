@@ -262,12 +262,12 @@
               <a
                 class="pageFooter-publicLink pageFooter-publicLink-FB"
                 target="_blank"
-                href="https://ru-ru.facebook.com/voron.io"
+                href="https://facebook.com/voron.space"
               ></a>
               <a
                 class="pageFooter-publicLink pageFooter-publicLink-Instagram"
                 target="_blank"
-                href="https://www.instagram.com/voronblack_official"
+                href="https://instagram.com/voron.space"
               >
               </a>
 
