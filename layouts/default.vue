@@ -258,7 +258,7 @@
                 ><span class="pageFooter-appsLinkText"></span
               ></a>
             </div>
-            <div class="pageFooter-publicLinks">
+            <div class="pageFooter-publicLinks  footer-social-block__">
               <a
                 class="pageFooter-publicLink pageFooter-publicLink-FB"
                 target="_blank"
@@ -268,7 +268,13 @@
                 class="pageFooter-publicLink pageFooter-publicLink-Instagram"
                 target="_blank"
                 href="https://www.instagram.com/voronblack_official"
-              ></a>
+              >
+              </a>
+
+              <a class="pageFooter-publicLink footer-social-icon" href="https://vk.com/voron.space" target="_blank" >
+                <i class="fab fa-vk"></i>
+              </a> 
+
             </div>
           </div>
         </div>

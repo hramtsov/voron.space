@@ -1,5 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 
+.footer-social-block {
+    display: block;
+    margin-top: 20px;
+}
+
+.pageFooter-publicLinks {
+    display: flex;
+}
+
+.footer-social-icon {
+    /* display: inline-block; */
+    /* margin-right: 10px; */
+    
+    
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    background: #fff;
+
+    display: inline-flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-social-icon i {
+    display: block;
+    font-size: 1.5rem;
+    color: #000;
+    transition: 0.3s all ease-in-out;
+}
+
+.footer-social-icon:hover,
+.footer-social-icon:focus,
+.footer-social-icon:active {
+    background-color: #ffcc00;
+}
+
+
 .tooltipster-default {
     -moz-border-radius: 5px;
     border-radius: 5px;
