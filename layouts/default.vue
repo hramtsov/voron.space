@@ -1,6 +1,100 @@
 <template>
   <!-- PAGE -->
   <div class="page">
+
+    <!-- use the modal component, pass in the prop -->
+    <Modal v-if="showModalCityVisible" @close="showModalCityVisible = false">
+      <form
+        class="callback-form"
+        slot="body"
+        v-on:submit.prevent="SendMessageCity()"
+      >
+
+        <div style="margin-bottom: 30px;">
+          В данный момент мы в процессе работы над запуском нашего сервиса в <template v-if="city_modal == 'kzn'">Казани</template><template v-if="city_modal == 'spb'">Санкт-Петербурге</template><template v-if="city_modal == 'msc'">Москве</template><template v-if="city_modal == 'sochi'">Сочи</template><template v-if="city_modal == 'krd'">Краснодаре</template>.
+          Если вы хотели бы воспользоваться сервисом в этом городе, то, пожалуйста, напишите нам об этом.
+          Если у вас есть автомобиль в этом городе, то оставьте заявку тут - <span class="link-to-connect" @click="to_connect">Подключить автомобиль</span>
+        </div>
+
+
+        <div class="thanks-form alert-form" v-if="form.success">
+          <div class="thanks-form-title">Спасибо!</div>
+          <div class="thanks-form-text">
+            Мы свяжемся с вами в ближайшее время!
+          </div>
+        </div>
+
+        <div class="error-form alert-form" v-if="form.errors">
+          <div class="thanks-form-title">Ошибка!</div>
+          <div class="thanks-form-text">
+            Попробуйте заполнить форму еще раз!
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Имя</label>
+          <input
+            type="text"
+            name="firstname"
+            class="form-control"
+            required
+            v-model.trim="form.firstname"
+          />
+        </div>
+
+        <div class="form-group">
+          <label>Фамилия</label>
+          <input
+            type="text"
+            name="lastname"
+            class="form-control"
+            required
+            v-model.trim="form.lastname"
+          />
+        </div>
+
+        <div class="form-group">
+          <label>Телефон</label>
+          <the-mask
+            name="phone"
+            :mask="['+7 (###) ###-##-##']"
+            placeholder="+7 (999) 999-99-99"
+            class="phone_number form-control"
+            required
+            v-model="form.phone"
+          />
+        </div>
+
+        <div class="form-group">
+          <label>E-mail</label>
+          <input
+            type="email"
+            name="email"
+            class="form-control"
+            required
+            v-model.trim="form.email"
+          />
+        </div>
+
+        <div class="form-group">
+          <label>Комментарий</label>
+          <input
+            type="text"
+            name="auto"
+            class="form-control"
+            v-model.trim="form.comment"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Отправить</button>
+      </form>
+
+      <h3 slot="header">
+        <template v-if="city_modal == 'kzn'">Казань</template><template v-if="city_modal == 'spb'">Санкт-Петербург</template><template v-if="city_modal == 'msc'">Москва</template><template v-if="city_modal == 'sochi'">Сочи</template><template v-if="city_modal == 'krd'">Краснодар</template>
+      </h3>
+    </Modal>
+
+
     <!-- MAIN WRAPPER -->
     <div class="pageWrapper">
       <!-- HEADER -->
@@ -166,6 +260,20 @@
     <!-- FOOTER -->
     <footer class="pageFooter" itemscope itemtype="http://schema.org/WPFooter">
       <div class="pageFooter-content">
+
+
+        <div class="">
+          <div class="pageFooter-title">Города</div>
+          <div class="list_cities">
+            <a>Москва</a>
+            <a @click="showModalCity('spb')">Санкт-Петербург</a>
+            <a @click="showModalCity('sochi')">Сочи</a>
+            <a @click="showModalCity('krd')">Краснодар</a>
+            <a @click="showModalCity('kzn')">Казань</a>
+          </div>
+        </div>
+
+
         <div class="pageFooter-navi">
           <div class="pageFooter-naviCol">
             <div class="pageFooter-title">Меню</div>
@@ -236,11 +344,21 @@
             <div class="pageFooter-title">Приложение</div>
 
             <div class="pageFooter-appsLinks">
+
+              <!-- <a
+                style="color: #fff; padding-left: 18px;"
+                target="_blank"
+                :href="`https://voron.app/${$store.state.source}`"
+                class="pageFooter-appsLink"
+                >
+                  <img style="max-height: 28px;" src="/images/logo_voron.png" />
+                </a> -->
+
               <a
                 v-if="os == 'iOS' || os == 'unknown'"
                 style="color: #fff"
                 target="_blank"
-                :href="`https://app.voron.io/${$store.state.source}`"
+                :href="`https://voron.app/${$store.state.source}`"
                 class="pageFooter-appsLink pageFooter-appsLink-Apple"
                 ><span class="pageFooter-appsLinkText"></span
               ></a>
@@ -248,7 +366,7 @@
                 v-if="os == 'Android' || os == 'unknown'"
                 style="color: #fff"
                 target="_blank"
-                :href="`https://app.voron.io/${$store.state.source}`"
+                :href="`https://voron.app/${$store.state.source}`"
                 class="
                   pageFooter-appsLink
                   pageFooter-appsLink-Google
@@ -310,13 +428,29 @@
 </template>
 
 <script>
+import { TheMask, mask } from "vue-the-mask";
 export default {
   data: () => ({
     // width: 0,
     os: "",
     classes: "",
     menuOpen: false,
+    showModalCityVisible: false,
+    form: {
+      firstname: "",
+      lastname: "",
+      phone: "",
+      email: "",
+      comment: "",
+      city: "",
+      success: false,
+      errors: false,
+    },
+    city_modal: 'msk'
   }),
+  components: {
+    TheMask,
+  },
   mounted() {
     this.os = this.getMobileOperatingSystem();
     console.log(this.os);
@@ -334,6 +468,69 @@ export default {
     });
   },
   methods: {
+
+    to_connect () {
+      this.showModalCityVisible = false;
+      this.$router.push('/connect');
+    },
+
+    showModalCity(city) {
+      this.showModalCityVisible = true;
+      this.city_modal = city;
+
+      if (city == 'msk') this.form.city = "Москва";
+      if (city == 'spb') this.form.city = "Санкт-Петербург";
+      if (city == 'krd') this.form.city = "Краснодар";
+      if (city == 'sochi') this.form.city = "Сочи";
+      if (city == 'kzn') this.form.city = "Казань";
+    },  
+
+    async SendMessageCity() {
+      if (
+        this.form.lastname != "" &&
+        this.form.firstname != "" &&
+        this.form.phone != "" &&
+        this.form.email != "" &&
+        this.form.city != ""
+      ) {
+        // console.log("отправим");
+
+        var response = await this.$axios.$post(
+          "/api/voron_black_mail_city/",
+          // this.form
+          {
+            token: "Voron.black_sfewta35",
+            lastname: this.form.lastname,
+            firstname: this.form.firstname,
+            phone: this.form.phone,
+            email: this.form.email,
+            comment: this.form.comment,
+            city: this.form.city,
+          }
+        );
+
+        // console.log(this.form);
+        // console.log(response);
+
+        if (response.result) {
+          this.form.success = true;
+          this.form.errors = false;
+          this.form.lastname = "";
+          this.form.firstname = "";
+          this.form.phone = "";
+          this.form.email = "";
+          this.form.comment = "";
+          this.form.city = "";
+        } else {
+          this.form.success = false;
+          this.form.errors = true;
+        }
+      } else {
+        this.form.success = false;
+        this.form.errors = true;
+      }
+    },
+
     menu() {
       this.menuOpen = !this.menuOpen;
     },
@@ -360,3 +557,33 @@ export default {
   },
 };
 </script>
+
+
+<style scoped>
+  .list_cities {
+    /* display: flex; */
+    /* flex-direction: row; */
+    margin-bottom: 40px;
+  }
+  .list_cities a {
+    margin-right: 35px;
+    color: #ABABAB;
+    height: 36px;
+    font-size: 15px;
+    line-height: 36px;
+    transition: color .3s;
+    display: inline-block;
+  }
+
+  .link-to-connect {
+    color: #0000FF;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .link-to-connect:hover,
+  .link-to-connect:active,
+  .link-to-connect:focus {
+    text-decoration: none;
+  }
+
+</style>

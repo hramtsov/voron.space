@@ -39,7 +39,7 @@
 //
 </script>
 
-<style scoped>
+<style>
 .modal-mask {
   position: fixed;
   z-index: 9998;
@@ -84,16 +84,17 @@
   margin-top: 0;
   color: #000;
   padding-top: 0;
+  margin: 0;
 }
 
 .modal-body {
   /* margin: 20px 0; */
-  padding: 30px 40px;
+  padding: 25px 40px;
 }
 
 .modal-body label {
   font-size: 14px;
-  margin-bottom: 7px;
+  margin-bottom: 5px !important;
 }
 
 /*

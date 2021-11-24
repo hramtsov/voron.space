@@ -11,8 +11,8 @@
                 <h2 class="contactsPage-h2">Поддержка</h2>
 
                 <div class="contactsPage-table">
-                  <div class="contactsPage-tableCell">
-                    <div class="contactsPage-text">Россия</div>
+                  <div class="contactsPage-tableCell" style="padding-left: 0;" >
+                    <!-- <div class="contactsPage-text">Россия</div> -->
                     <a class="contactsPage-link" href="tel:+88005550679">
                       8 800 555 06 79
                     </a>
@@ -20,20 +20,37 @@
                   </div>
                 </div>
 
-                <h2 class="contactsPage-h2">Офис</h2>
+                <h2 class="contactsPage-h2">ЦЕНТРАЛЬНЫЙ ОФИС</h2>
                 <div class="contactsPage-table">
                   <div
-                    class="contactsPage-tableCell contactsPage-tableCell-NPB"
+                    class="contactsPage-tableCell contactsPage-tableCell-NPB" style="padding-left: 0;"
                   >
-                    <h3 class="contactsPage-h3">Россия</h3>
+                    <!-- <h3 class="contactsPage-h3">Россия</h3> -->
 
-                    <address class="contactsPage-address">
+                    <address class="contactsPage-address" style="margin-top: 0;">
                       г. Москва, ул. Ленинская Слобода, д.19
                       <br />
                       БЦ "Омега Плаза"
                     </address>
                   </div>
                 </div>
+
+                <h2 class="contactsPage-h2">ГОРОДА</h2>
+                <div class="contactsPage-table">
+                  <div
+                    class="contactsPage-tableCell contactsPage-tableCell-NPB" style="padding-left: 0;"
+                  >
+
+                    <span class="city-item">Москва</span>
+                    <span class="city-item">Санкт-Петербург</span>
+                    <span class="city-item">Сочи</span>
+                    <span class="city-item">Краснодар</span>
+                    <span class="city-item">Казань</span>
+
+                  </div>
+                </div>
+
+
               </div>
             </div>
             <div class="contactsPage-tableCell">
@@ -226,3 +243,23 @@ export default {
   },
 };
 </script>
+
+
+<style scoped>
+  .contactsPage-h2 {
+    margin-bottom: 8px;
+  }
+  .pageSection-block .contactsPage-tableCell {
+    padding-bottom: 30px;
+  }
+
+  .city-item {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 14px;
+    line-height: 20px;
+    
+  }
+
+ 
+</style>

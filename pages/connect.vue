@@ -542,6 +542,17 @@
         </div>
 
         <div class="form-group">
+          <label>Город</label>
+          <select name="city" class="form-control" v-model.trim="form.city">
+            <option value="msk" >Москва</option>
+            <option value="spb" >Санкт-Петербург</option>
+            <option value="sochi" >Сочи</option>
+            <option value="krd" >Краснодар</option>
+            <option value="kzn" >Казань</option>
+          </select>
+        </div>
+
+        <div class="form-group">
           <label>Имя</label>
           <input
             type="text"
@@ -713,6 +724,7 @@ export default {
         email: "",
         auto: "",
         year: "",
+        city: "msk",
         success: false,
         errors: false,
       },
@@ -738,7 +750,8 @@ export default {
         this.form.phone != "" &&
         this.form.email != "" &&
         this.form.auto != "" &&
-        this.form.year != ""
+        this.form.year != "" &&
+        this.form.city != ""
       ) {
         // console.log("отправим");
 
@@ -753,6 +766,7 @@ export default {
             email: this.form.email,
             auto: this.form.auto,
             year: this.form.year,
+            city: this.form.city,
           }
         );
 
@@ -768,6 +782,7 @@ export default {
           this.form.email = "";
           this.form.auto = "";
           this.form.year = "";
+          this.form.city = "";
         } else {
           this.form.success = false;
           this.form.errors = true;
@@ -780,3 +795,9 @@ export default {
   },
 };
 </script>
+
+<style>
+  a.carsList-itemContent {
+    cursor: default;
+  }
+</style>
