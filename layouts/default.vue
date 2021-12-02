@@ -575,6 +575,12 @@ export default {
     display: inline-block;
   }
 
+  .list_cities a:hover,
+  .list_cities a:focus,
+  .list_cities a:active {
+    color: #ffcc00;
+  }
+
   .city_active {
     color: #ffcc00 !important;
   }
