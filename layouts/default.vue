@@ -265,7 +265,7 @@
         <div class="">
           <div class="pageFooter-title">Города</div>
           <div class="list_cities">
-            <a>Москва</a>
+            <a class="city_active">Москва</a>
             <a @click="showModalCity('spb')">Санкт-Петербург</a>
             <a @click="showModalCity('sochi')">Сочи</a>
             <a @click="showModalCity('krd')">Краснодар</a>
@@ -575,6 +575,10 @@ export default {
     display: inline-block;
   }
 
+  .city_active {
+    color: #ffcc00 !important;
+  }
+
   .link-to-connect {
     color: #0000FF;
     text-decoration: underline;
@@ -586,4 +590,4 @@ export default {
     text-decoration: none;
   }
 
-</style>
+</style> 
