@@ -42,10 +42,10 @@
                   >
 
                     <span class="city-item">Москва</span>
-                    <span class="city-item">Санкт-Петербург</span>
-                    <span class="city-item">Сочи</span>
-                    <span class="city-item">Краснодар</span>
-                    <span class="city-item">Казань</span>
+                    <span class="city-item city-no-active">Санкт-Петербург</span>
+                    <span class="city-item city-no-active">Сочи</span>
+                    <span class="city-item city-no-active">Краснодар</span>
+                    <span class="city-item city-no-active">Казань</span>
 
                   </div>
                 </div>
@@ -258,7 +258,11 @@ export default {
     margin-right: 15px;
     font-size: 14px;
     line-height: 20px;
-    
+    color: #000;
+  }
+
+  .city-no-active {
+    opacity: 0.4;
   }
 
  
