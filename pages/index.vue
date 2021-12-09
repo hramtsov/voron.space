@@ -34,7 +34,8 @@
 
           <div class="advantages-link-container">
             <a
-              :href="`https://app.voron.io/${$store.state.source}`"
+              @click="installApp"
+              :href__="`https://app.voron.io/${$store.state.source}`"
               class="toScroll_ advantages-link"
               >Установить приложение</a
             >
@@ -330,6 +331,17 @@ export default {
     let response = await $axios.get(`/api/getauto`);
     // console.log(response.data["cars"]);
     return { cars: response.data["cars"], brands: response.data["brands"] };
+  },
+  methods: {
+    installApp() {
+
+      this.$yandexMetrika.reachGoal('install_app');
+      
+      // window.ym(45891591,'reachGoal','install_app');
+
+
+      document.location.href = `https://app.voron.io/${this.$store.state.source}`;
+    }
   },
 };
 </script>
