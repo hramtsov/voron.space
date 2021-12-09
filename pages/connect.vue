@@ -27,7 +27,7 @@
           </h2>
           <b>Эпоха владения автомобилем 2.0</b>
           <div class="advantages-link-container">
-            <a @click="showModal = true" class="howItWorks-button"
+            <a @click="connectAutoTop" class="howItWorks-button"
               >Подключить автомобиль</a
             >
           </div>
@@ -508,7 +508,7 @@
         class="howItWorks-buttonContainer"
         style="position: static; margin-top: 50px"
       >
-        <a @click="showModal = true" class="howItWorks-button">
+        <a @click="connectAutoBottom" class="howItWorks-button">
           <i class="far fa-check-circle"></i> Подключить автомобиль
         </a>
       </div>
@@ -743,6 +743,17 @@ export default {
     return { cars: response.data["cars"], brands: response.data["brands"] };
   },
   methods: {
+
+    connectAutoTop() {
+      this.$yandexMetrika.reachGoal('plug_car_1');
+      this.showModal = true;
+    },
+
+    connectAutoBottom() {
+      this.$yandexMetrika.reachGoal('plug_car_2');
+      this.showModal = true;
+    },
+
     async SendMessage() {
       if (
         this.form.lastname != "" &&
@@ -754,6 +765,8 @@ export default {
         this.form.city != ""
       ) {
         // console.log("отправим");
+
+        this.$yandexMetrika.reachGoal('submit_connect');
 
         var response = await this.$axios.$post(
           "/api/voron_black_mail/",
