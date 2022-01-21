@@ -36,6 +36,7 @@ export default {
   plugins: [
     '~/plugins/filters',
     '~/plugins/vue-agile',
+    '~/plugins/facebook-pixel'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
