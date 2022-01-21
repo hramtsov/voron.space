@@ -36,7 +36,7 @@ export default {
   plugins: [
     '~/plugins/filters',
     '~/plugins/vue-agile',
-    '~/plugins/facebook-pixel'
+    // '~/plugins/facebook-pixel'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -68,6 +68,15 @@ export default {
         trackHash: true,
       },
     ],
+
+    // With options
+    ['nuxt-facebook-pixel-module', {
+      /* module options */
+      track: 'PageView',
+      pixelId: '1114923232613760',
+      autoPageView: true,
+      disabled: false
+    }],
 
   ],
 
