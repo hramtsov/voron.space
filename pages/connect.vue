@@ -767,8 +767,8 @@ export default {
         // console.log("отправим");
 
         this.$yandexMetrika.reachGoal('submit_connect');
-        // fbq('trackCustom', 'ShareDiscount', {promotion: 'Lead'});
-
+        this.$fb.track('Lead')
+        
         var response = await this.$axios.$post(
           "/api/voron_black_mail/",
           // this.form
