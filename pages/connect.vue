@@ -742,6 +742,13 @@ export default {
     let response = await $axios.get(`/api/getauto?invest=1`);
     return { cars: response.data["cars"], brands: response.data["brands"] };
   },
+
+  mounted() {
+    if (typeof(this.$route.query.form) !== "undefined" && this.$route.query.form !== null && this.$route.query.form == 'open') {
+      this.showModal = true
+    }
+  },
+
   methods: {
 
     connectAutoTop() {
