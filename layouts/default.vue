@@ -267,7 +267,8 @@
           <div class="list_cities">
             <a class="city_active">Москва</a>
             <a @click="showModalCity('spb')">Санкт-Петербург</a>
-            <a @click="showModalCity('sochi')">Сочи</a>
+            <a class="city_active" >Сочи</a>
+            <!-- @click="showModalCity('sochi')" -->
             <a @click="showModalCity('krd')">Краснодар</a>
             <a @click="showModalCity('kzn')">Казань</a>
           </div>
@@ -458,6 +459,7 @@ export default {
   created() {
     var source = this.$route.query.source;
     if (typeof source !== "undefined" && source != null) {
+      console.log('source', source)
       this.$store.commit("set_source", source);
     }
     this.$router.beforeEach((to, from, next) => {
