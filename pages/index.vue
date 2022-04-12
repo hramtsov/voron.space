@@ -27,7 +27,7 @@
 
           <h2 class="mainSection-subTitle">
             Бесконтактная аренда автомобилей бизнес-класса без надписей<br />
-            <b>Срочная бесплатная доставка в указанное место</b>
+            <b>Доставка за 30-90 мин в указанное место бесплатно</b>
           </h2>
 
           <div class="mainSection-subTitle-NoMobile"></div>
@@ -83,7 +83,7 @@
               <agile
                 :options="{
                   infinite: false,
-                  navButtons: false,
+                  navButtons: false
                 }"
               >
                 <div class="slide">
@@ -217,7 +217,7 @@
             <agile
               :options="{
                 infinite: false,
-                navButtons: false,
+                navButtons: false
               }"
             >
               <div class="slide">
@@ -300,15 +300,15 @@ export default {
         hid: "keywords",
         name: "keywords",
         content:
-          "каршеринг, каршеринг бизнес-класса, каршеринг без надписей, каршеринг ворон, аренда авто, прокат авто, аренда авто представительского класса, прокат авто москва, аренда авто в россии",
+          "каршеринг, каршеринг бизнес-класса, каршеринг без надписей, каршеринг ворон, аренда авто, прокат авто, аренда авто представительского класса, прокат авто москва, аренда авто в россии"
       },
       {
         hid: "description",
         name: "description",
         content:
-          "VORON – Личный автомобиль бизнес-класса по технологии каршеринга",
-      },
-    ],
+          "VORON – Личный автомобиль бизнес-класса по технологии каршеринга"
+      }
+    ]
   },
   data() {
     return {
@@ -316,16 +316,16 @@ export default {
       brands: [],
       swiperOptions: {
         pagination: {
-          el: ".swiper-pagination",
-        },
-      },
+          el: ".swiper-pagination"
+        }
+      }
     };
   },
   components: {
     CarModel,
     AdvantageItem,
     SchemeItem,
-    BrandItem,
+    BrandItem
   },
   async asyncData({ context, $axios }) {
     let response = await $axios.get(`/api/getauto`);
@@ -334,14 +334,12 @@ export default {
   },
   methods: {
     installApp() {
+      this.$yandexMetrika.reachGoal("install_app");
 
-      this.$yandexMetrika.reachGoal('install_app');
-      
       // window.ym(45891591,'reachGoal','install_app');
-
 
       document.location.href = `https://app.voron.io/${this.$store.state.source}`;
     }
-  },
+  }
 };
 </script>
