@@ -205,6 +205,8 @@ export default {
     if (typeof source !== "undefined" && source != null) {
       console.log('source', source)
       this.$store.commit("set_source", source);
+    } else {
+      this.$store.commit("set_source", "start");
     }
     this.$router.beforeEach((to, from, next) => {
       this.menuOpen = false;
