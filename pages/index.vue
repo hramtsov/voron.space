@@ -79,7 +79,7 @@
           </div>
 
           <div class="advantages-items-Mobile">
-            <client-only placeholder="Loading...">
+            <client-only placeholder="Загрузка...">
               <agile
                 :options="{
                   infinite: false,
