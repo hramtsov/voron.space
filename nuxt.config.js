@@ -8,6 +8,9 @@ export default {
   // ssr: false,
   // target: 'static',
 
+  ignorePaths: [
+    "/eco"
+  ],
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
