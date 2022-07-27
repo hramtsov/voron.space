@@ -34,7 +34,7 @@
 
           <div class="advantages-link-container">
             <a
-              :href="`https://app.voron.io/${$store.state.source}`"
+              :href="`https://app.voron.io/${$utm()}`"
               class="toScroll_ advantages-link"
               >Установить приложение</a
             >

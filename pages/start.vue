@@ -45,7 +45,7 @@
             <div class="advantages-link-container">
               <a
                 @click="installApp"
-                :href__="`https://app.voron.io/${$store.state.source}`"
+                :href__="`https://app.voron.io/${$utm()}`"
                 class="toScroll_ advantages-link"
                 >Установить приложение</a
               >
@@ -113,7 +113,7 @@ export default {
 
       // window.ym(45891591,'reachGoal','install_app');
 
-      document.location.href = `https://app.voron.io/${this.$store.state.source}`;
+      document.location.href = `https://app.voron.io/${$utm()}`;
     }
   }
 };

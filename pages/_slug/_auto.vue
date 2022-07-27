@@ -477,7 +477,7 @@ export default {
           lastname: this.form.lastname,
           firstname: this.form.firstname,
           phone: this.form.phone,
-          source: this.$store.state.source,
+          source: this.$utm(),
         });
 
         // console.log(this.form);

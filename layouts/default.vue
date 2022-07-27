@@ -355,11 +355,12 @@
                   <img style="max-height: 28px;" src="/images/logo_voron.png" />
                 </a> -->
 
+              <!-- ${$store.state.source} -->
               <a
                 v-if="os == 'iOS' || os == 'unknown'"
                 style="color: #fff"
                 target="_blank"
-                :href="`https://voron.app/${$store.state.source}`"
+                :href="`https://voron.app/${$utm()}`"
                 class="pageFooter-appsLink pageFooter-appsLink-Apple"
                 ><span class="pageFooter-appsLinkText"></span
               ></a>
@@ -367,7 +368,7 @@
                 v-if="os == 'Android' || os == 'unknown'"
                 style="color: #fff"
                 target="_blank"
-                :href="`https://voron.app/${$store.state.source}`"
+                :href="`https://voron.app/${$utm()}`"
                 class="
                   pageFooter-appsLink
                   pageFooter-appsLink-Google
@@ -457,11 +458,11 @@ export default {
     console.log(this.os);
   },
   created() {
-    var source = this.$route.query.source;
-    if (typeof source !== "undefined" && source != null) {
-      console.log('source', source)
-      this.$store.commit("set_source", source);
-    }
+    // var source = this.$route.query.source;
+    // if (typeof source !== "undefined" && source != null) {
+    //   console.log('source', source)
+    //   this.$store.commit("set_source", source);
+    // }
     this.$router.beforeEach((to, from, next) => {
       this.menuOpen = false;
       next((vm) => {

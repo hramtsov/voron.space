@@ -92,3 +92,4 @@ sw.*
 .editorconfig
 .nuxt
 npm-debug*
+.DS_Store

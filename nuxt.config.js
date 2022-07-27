@@ -1,5 +1,7 @@
 // import serveStatic from 'serve-static'
 
+// npm i cookie-universal-nuxt --legacy-peer-deps 
+
 export default { 
 
   ssr: true,
@@ -39,6 +41,7 @@ export default {
   plugins: [
     '~/plugins/filters',
     '~/plugins/vue-agile',
+    '~/plugins/functions',
     // '~/plugins/facebook-pixel'
   ],
 
@@ -53,6 +56,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    'cookie-universal-nuxt',
     // '@nuxtjs/yandex-metrika',
 
 
@@ -114,6 +118,10 @@ export default {
   serverMiddleware: [
     '~/serverMiddleware/seo.js'
   ],
+
+  router: {
+    middleware: ["utm"],
+  },
 
 
   // router: {
