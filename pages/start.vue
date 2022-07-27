@@ -113,7 +113,7 @@ export default {
 
       // window.ym(45891591,'reachGoal','install_app');
 
-      document.location.href = `https://app.voron.io/${$utm()}`;
+      document.location.href = `https://app.voron.io/${this.$utm()}`;
     }
   }
 };
