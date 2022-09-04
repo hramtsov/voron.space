@@ -13,7 +13,7 @@
           poster_=""
           class="mainSection-video"
         >
-          <source src="~static/video/techno.mp4" type="video/mp4" />
+          <source src="~static/video/voron_site.mp4" type="video/mp4" />
         </video>
       </div>
       <div class="mainSection-content">
