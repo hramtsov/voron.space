@@ -11,7 +11,7 @@
           muted
           autoplay
           poster_=""
-          class="mainSection-video"
+          class="mainSection-video mainSection-video-home"
         >
           <source src="~static/video/voron_site.mp4" type="video/mp4" />
         </video>
