@@ -77,13 +77,13 @@ export default {
     ],
 
     // With options
-    ['nuxt-facebook-pixel-module', {
-      /* module options */
-      track: 'PageView',
-      pixelId: '1114923232613760',
-      autoPageView: true,
-      disabled: false
-    }],
+    // ['nuxt-facebook-pixel-module', {
+    //   /* module options */
+    //   track: 'PageView',
+    //   pixelId: '1114923232613760',
+    //   autoPageView: true,
+    //   disabled: false
+    // }],
 
   ],
 

@@ -5,16 +5,29 @@
 
     <div class="mainSection mainSection-IndexPage">
       <div class="mainSection-background">
+        
         <video
           playsinline
           loop
           muted
           autoplay
           poster_=""
-          class="mainSection-video mainSection-video-home"
+          class="mainSection-video mainSection-video-home mainVideoMobile"
+        >
+          <source src="~static/video/voron_site_mobile.mp4" type="video/mp4" />
+        </video>
+
+        <video
+          playsinline
+          loop
+          muted
+          autoplay
+          poster_=""
+          class="mainSection-video mainSection-video-home mainVideoBig"
         >
           <source src="~static/video/voron_site.mp4" type="video/mp4" />
         </video>
+
       </div>
       <div class="mainSection-content">
         <div class="pageSection-content">
@@ -317,7 +330,8 @@ export default {
         pagination: {
           el: ".swiper-pagination"
         }
-      }
+      },
+      sizeX: 0
     };
   },
   components: {
@@ -339,6 +353,6 @@ export default {
 
       document.location.href = `https://app.voron.io/${this.$utm()}`;
     }
-  }
+  },
 };
 </script>
