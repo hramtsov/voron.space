@@ -153,6 +153,11 @@
                           >Подключить автомобиль</nuxt-link
                         >
                       </li>
+                      <li> 
+                        <a href="https://voron.io"
+                          ><span>Экосистема</span></a
+                        >
+                      </li>
                     </ul>
                   </nav>
                   <nav class="sidebarMenu-other">
@@ -240,6 +245,11 @@
                 >
               </li>
               <li>
+                <a href="https://voron.io"
+                  ><span>Экосистема</span></a
+                >
+              </li>
+              <li>
                 <nuxt-link to="/connect/" exact exact-active-class="active"
                   ><span>Подключить авто</span></nuxt-link
                 >
@@ -291,7 +301,11 @@
                     >Срочная доставка</nuxt-link
                   >
                 </li>
-
+                <li> 
+                  <a href="https://voron.io"
+                    ><span>Экосистема</span></a
+                  >
+                </li>
                 <li>
                   <nuxt-link to="/connect/" exact exact-active-class="active"
                     >Подключить автомобиль</nuxt-link

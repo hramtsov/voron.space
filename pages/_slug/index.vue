@@ -131,12 +131,12 @@
       <div class="pageSection-content">
         <div class="brand-list">
           <BrandItem
-            v-for="(brand, key) in brands"
+            v-for="(b, key) in brands"
             :key="key"
-            :image="`https://img.voron.io/catalog/${brand.icon}.png`"
-            :name="brand.title"
-            :link="`/${brand.slug}/`"
-            :slug="brand.slug"
+            :image="`https://img.voron.io/catalog/${b.icon}.png`"
+            :name="b.title"
+            :link="`/${b.slug}/`"
+            :slug="b.slug"
           />
           <BrandItem icon="far fa-ellipsis-h" name="Все" link="/" slug="" />
         </div>
@@ -147,7 +147,9 @@
 
         <!-- CARS LIST BAR -->
         <div class="carsList">
-          <CarModel v-for="(car, key) in cars" :key="key" :car="car" />
+          <template v-for="(car, key) in cars" >
+            <CarModel :key="key" v-if="car.slug" :car="car" />
+          </template>
         </div>
         <div class="carsList">
           <div class="carsList-itemSubCaption">
@@ -158,8 +160,8 @@
                 находились в движении минимум 30 минут, не нарушали правила ПДД,
                 не нанесли ущерб автомобилю и оплата за аренду производилась
                 успешным списанием с привязанной банковской карты, а не
-                погашением задолженности или из страхового депозита.</small
-              ></em
+                погашением задолженности или из страхового депозита, подробнее тут → <a style="color: rgb(255, 204, 0);" target="_blank" href="https://voron.help/deposit/deposit" >voron.help</a></small
+              ></em 
             >
           </div>
         </div>
@@ -320,25 +322,18 @@ export default {
     return {
       cars: [],
       brands: [],
-      brand_data: [],
+      brand_data: {},
     };
   },
-  //   async validate({ params, $axios }) {
-  // try {
-  //   let response = await $axios.get(
-  //     "http://127.0.0.1:8000/api/v1/person/" + params.slug
-  //   );
-  //   return true;
-  // } catch (error) {
-  //   return false;
-  // }
-  //   },
+
+
   async asyncData({ context, $axios, params }) {
-    let response = await $axios.get(`/api/getauto?brand=${params.slug}`);
+    let response = await $axios.$get(`/api/getauto?brand=${params.slug}`);
+    console.log(response["cars"])
     return {
-      cars: response.data["cars"],
-      brands: response.data["brands"],
-      brand_data: response.data["brand"],
+      cars: response["cars"],
+      brands: response["brands"],
+      brand_data: response["brand"],
     };
   },
   methods: {},

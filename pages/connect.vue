@@ -586,7 +586,7 @@
           />
         </div>
 
-        <div class="form-group">
+        <!-- <div class="form-group">
           <label>E-mail</label>
           <input
             type="email"
@@ -595,7 +595,7 @@
             required
             v-model.trim="form.email"
           />
-        </div>
+        </div> -->
 
         <div class="form-group">
           <label>Марка и модель автомобиля</label>
@@ -721,7 +721,7 @@ export default {
         firstname: "",
         lastname: "",
         phone: "",
-        email: "",
+        // email: "",
         auto: "",
         year: "",
         city: "msk",
@@ -767,7 +767,7 @@ export default {
         this.form.lastname != "" &&
         this.form.firstname != "" &&
         this.form.phone != "" &&
-        this.form.email != "" &&
+        // this.form.email != "" &&
         this.form.auto != "" &&
         this.form.year != "" &&
         this.form.city != ""
@@ -785,7 +785,7 @@ export default {
             lastname: this.form.lastname,
             firstname: this.form.firstname,
             phone: this.form.phone,
-            email: this.form.email,
+            // email: this.form.email,
             auto: this.form.auto,
             year: this.form.year,
             city: this.form.city,
@@ -803,7 +803,7 @@ export default {
           this.form.lastname = "";
           this.form.firstname = "";
           this.form.phone = "";
-          this.form.email = "";
+          // this.form.email = "";
           this.form.auto = "";
           this.form.year = "";
           this.form.city = "";

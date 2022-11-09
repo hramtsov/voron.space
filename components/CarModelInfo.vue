@@ -118,11 +118,15 @@
       <div class="carsList-itemSubCaption">
         {{ car.body.title }}
         {{ car.model.title }}<br /><em
-          ><small
-            >Депозит для новых клиентов {{ car.depositMax | number }}
-            <span class="rouble">₽</span> *</small
-          ></em
-        >
+          ><small>
+            <template v-if="car.depositMax != 0" >
+              Депозит для новых клиентов {{ car.depositMax | number }}
+              <span class="rouble">₽</span> *
+            </template>
+            <span style="color: #ffcc00;" v-else >
+              Депозит не требуется
+            </span>
+            </small></em>
       </div>
     </div>
     <div class="carsList-itemPrice">

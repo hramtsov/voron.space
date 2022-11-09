@@ -33,13 +33,13 @@
         <div class="pageSection-content">
           <h1 class="mainSection-title">
             Ваш личный автопарк
-            <div class="mainSection-subTitle">
+            <div class="mainSection-subTitle mainSection-subTitle-first">
               с доступом со смартфона по технологии каршеринга
             </div>
           </h1>
 
           <h2 class="mainSection-subTitle">
-            Бесконтактная аренда автомобилей бизнес-класса без надписей<br />
+            Бесконтактная аренда комфорт, бизнес и премиум автомобилей без надписей<br />
             <b>Доставка за 30-90 мин в указанное место бесплатно</b>
           </h2>
 
@@ -349,9 +349,8 @@ export default {
     installApp() {
       this.$yandexMetrika.reachGoal("install_app");
 
-      // window.ym(45891591,'reachGoal','install_app');
-
-      document.location.href = `https://app.voron.io/${this.$utm()}`;
+      // document.location.href = `https://app.voron.io/${this.$utm()}`;
+       document.location.href = `https://voron.app/${this.$utm()}`;
     }
   },
 };

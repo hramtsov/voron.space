@@ -217,7 +217,7 @@
 	.mainSection { min-height: inherit; }
 	.mainSection-content { overflow: inherit; position: relative; padding: 140px 0 64px; min-height: auto; }
 	.mainSection-title { width: auto; font-size: 34px; line-height: 44px; padding: 0 20px; }
-	.mainSection-subTitle { font-size: 18px; line-height: 24px; padding: 0 20px 80px; margin: 0; }
+	.mainSection-subTitle { font-size: 18px; line-height: 24px; padding: 0 20px 80px; margin: 0 !important; }
 	.searchFormBar-formMedialink { display: block; }
 	.searchFormBar-formFilterCell:first-child { width:100%; }
 	.searchFormBar-formFilterCell:not(:first-child) { display: none; }
