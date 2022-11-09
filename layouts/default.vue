@@ -154,7 +154,7 @@
                         >
                       </li>
                       <li> 
-                        <a href="https://voron.io"
+                        <a :href="`https://voron.io/${$utm(true)}`"
                           ><span>Экосистема</span></a
                         >
                       </li>
@@ -245,7 +245,7 @@
                 >
               </li>
               <li>
-                <a href="https://voron.io"
+                <a :href="`https://voron.io/${$utm(true)}`"
                   ><span>Экосистема</span></a
                 >
               </li>
@@ -302,7 +302,7 @@
                   >
                 </li>
                 <li> 
-                  <a href="https://voron.io"
+                  <a :href="`https://voron.io/${$utm(true)}`"
                     ><span>Экосистема</span></a
                   >
                 </li>
