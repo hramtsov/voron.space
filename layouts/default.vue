@@ -13,7 +13,10 @@
         <div style="margin-bottom: 30px;">
           В данный момент мы в процессе работы над запуском нашего сервиса в <template v-if="city_modal == 'kzn'">Казани</template><template v-if="city_modal == 'spb'">Санкт-Петербурге</template><template v-if="city_modal == 'msc'">Москве</template><template v-if="city_modal == 'sochi'">Сочи</template><template v-if="city_modal == 'krd'">Краснодаре</template>.
           Если вы хотели бы воспользоваться сервисом в этом городе, то, пожалуйста, напишите нам об этом.
-          Если у вас есть автомобиль в этом городе, то оставьте заявку тут - <span class="link-to-connect" @click="to_connect">Подключить автомобиль</span>
+          Если у вас есть автомобиль в этом городе, то оставьте заявку тут - 
+          <a class="link-to-connect" target="_blank" :href="`https://voron.io/${$utm(true)}`" >Подключить автомобиль</a>
+          <!-- <a class="link-to-connect" target="_blank" :href="`https://voron.io/invest/${$utm(true)}`" >Авто как инвестиция</a> -->
+          <!-- <span class="link-to-connect" @click="to_connect">Подключить автомобиль</span> -->
         </div>
 
 
@@ -146,12 +149,14 @@
                         >
                       </li>
                       <li>
-                        <nuxt-link
+                        <!-- <nuxt-link
                           to="/connect/"
                           exact
                           exact-active-class="active"
                           >Подключить автомобиль</nuxt-link
-                        >
+                        > -->
+
+                        <a target="_blank" :href="`https://voron.io/invest/${$utm(true)}`" >Авто как инвестиция</a>
                       </li>
                       <li> 
                         <a :href="`https://voron.io/${$utm(true)}`"
@@ -244,15 +249,16 @@
                   ><span>Доставка</span></nuxt-link
                 >
               </li>
-              <li>
+              <!-- <li>
                 <a :href="`https://voron.io/${$utm(true)}`"
                   ><span>Экосистема</span></a
                 >
-              </li>
+              </li> -->
               <li>
-                <nuxt-link to="/connect/" exact exact-active-class="active"
+                <!-- <nuxt-link to="/connect/" exact exact-active-class="active"
                   ><span>Подключить авто</span></nuxt-link
-                >
+                > -->
+                <a target="_blank" :href="`https://voron.io/invest/${$utm(true)}`" >Инвестиция в авто</a>
               </li>
             </ul>
           </nav>
@@ -277,8 +283,8 @@
           <div class="list_cities">
             <a class="city_active">Москва</a>
             <a @click="showModalCity('spb')">Санкт-Петербург</a>
-            <a class="city_active" >Сочи</a>
-            <!-- @click="showModalCity('sochi')" -->
+            <a  @click="showModalCity('sochi')" >Сочи</a>
+            <!-- class="city_active" -->
             <a @click="showModalCity('krd')">Краснодар</a>
             <a @click="showModalCity('kzn')">Казань</a>
           </div>
@@ -287,7 +293,7 @@
 
         <div class="pageFooter-navi">
           <div class="pageFooter-naviCol">
-            <div class="pageFooter-title">Меню</div>
+            <div class="pageFooter-title">Пользователю</div>
             <nav class="pageFooter-menu">
               <ul>
                 <li>
@@ -301,17 +307,12 @@
                     >Срочная доставка</nuxt-link
                   >
                 </li>
-                <li> 
+                <!-- <li> 
                   <a :href="`https://voron.io/${$utm(true)}`"
                     ><span>Экосистема</span></a
                   >
-                </li>
-                <li>
-                  <nuxt-link to="/connect/" exact exact-active-class="active"
-                    >Подключить автомобиль</nuxt-link
-                  >
-                </li>
-
+                </li> -->
+                
                 <li>
                   <a href="https://voron.help">База знаний и правил</a>
                 </li>
@@ -325,9 +326,7 @@
                     >О сервисе</nuxt-link
                   >
                 </li>
-                <li>
-                  <a href="https://i.voron.io" target="_blank">Партнёрам</a>
-                </li>
+                
                 <li>
                   <nuxt-link to="/contact/" exact exact-active-class="active"
                     >Контакты</nuxt-link
@@ -337,7 +336,36 @@
             </nav>
           </div>
           <div class="pageFooter-naviCol">
-            <div class="pageFooter-title">Поддержка</div>
+
+            <div class="pageFooter-title" >Владельцу авто</div>
+            <nav class="pageFooter-menu">
+              <ul>
+                <li>
+                <!-- <nuxt-link to="/connect/" exact exact-active-class="active"
+                  >Подключить автомобиль</nuxt-link
+                > -->
+                  <a target="_blank" :href="`https://voron.io/${$utm(true)}`" >Подключить автомобиль</a>
+                </li>
+                <li>
+                  <a href="https://i.voron.io" target="_blank">Личный кабинет</a>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="pageFooter-title" style="margin-top: 25px;">Инвестору</div>
+            <nav class="pageFooter-menu">
+              <ul>
+                <li>
+                <!-- <nuxt-link to="/connect/" exact exact-active-class="active"
+                  >Подключить автомобиль</nuxt-link
+                > -->
+                  <a target="_blank" :href="`https://voron.io/invest/${$utm(true)}`" >Авто как инвестиция</a>
+                </li>
+              </ul>
+            </nav>
+
+              
+            <div class="pageFooter-title" style="margin-top: 25px;">Поддержка</div>
             <div class="pageFooter-support">
               <a
                 href="tel:+7 800 555 06 79"
@@ -348,11 +376,11 @@
                 "
                 >8 800 555 06 79</a
               >
-              <a
+              <!-- <a
                 class="pageFooter-supportLink pageFooter-supportLink-Email"
                 href="mailto:i@voron.io"
                 >i@voron.io</a
-              >
+              > -->
             </div>
           </div>
           <div id="appstore" class="pageFooter-naviCol">
@@ -393,11 +421,7 @@
               ></a>
             </div>
             <div class="pageFooter-publicLinks  footer-social-block__">
-              <a
-                class="pageFooter-publicLink pageFooter-publicLink-FB"
-                target="_blank"
-                href="https://facebook.com/voron.space"
-              ></a>
+              
               <a
                 class="pageFooter-publicLink pageFooter-publicLink-Instagram"
                 target="_blank"
@@ -408,6 +432,12 @@
               <a class="pageFooter-publicLink footer-social-icon" href="https://vk.com/voron.space" target="_blank" >
                 <i class="fab fa-vk"></i>
               </a> 
+
+              <a
+                class="pageFooter-publicLink pageFooter-publicLink-FB"
+                target="_blank"
+                href="https://facebook.com/voron.space"
+              ></a>
 
             </div>
           </div>
