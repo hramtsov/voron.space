@@ -40,8 +40,9 @@ export default {
   components: {
     Nav,
   },
-  async asyncData({ context, $axios }) {
-    let response = await $axios.get(`/api/getpage?alias=privacy-policy`);
+  async asyncData({ context, $axios, route }) {
+    let date = `&date=${route?.query?.date}` || ''
+    let response = await $axios.get(`/api/getpage?alias=privacy-policy${date}`);
     return { content: response.data };
   },
 };

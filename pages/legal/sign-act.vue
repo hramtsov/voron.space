@@ -40,8 +40,9 @@ export default {
   components: {
     Nav,
   },
-  async asyncData({ context, $axios }) {
-    let response = await $axios.get(`/api/getpage?alias=sign-act`);
+  async asyncData({ context, $axios, route }) {
+    let date = `&date=${route?.query?.date}` || ''
+    let response = await $axios.get(`/api/getpage?alias=sign-act${date}`);
     return { content: response.data };
   },
 };
